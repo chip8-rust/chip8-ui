@@ -16,6 +16,8 @@ extern crate window;
 extern crate opengl_graphics;
 extern crate quack;
 
+extern crate chip8_vm;
+
 use std::cell::RefCell;
 use sdl2_window::Sdl2Window;
 use window::WindowSettings;
@@ -31,11 +33,7 @@ use quack::Set;
 // use input::keyboard::Key;
 use input::Button;
 
-use vm::Vm;
-
-mod error;
-mod ops;
-mod vm;
+use chip8_vm::vm::Vm;
 
 const TITLE: &'static str = "Chip8";
 const BEEP_TITLE: &'static str = "♬ Chip8 ♬";

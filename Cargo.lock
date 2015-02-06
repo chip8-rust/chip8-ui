@@ -2,6 +2,7 @@
 name = "chip8"
 version = "0.0.1"
 dependencies = [
+ "chip8_vm 0.0.1",
  "piston2d-graphics 0.0.13 (git+https://github.com/pistondevelopers/graphics)",
  "piston2d-opengl_graphics 0.0.6 (git+https://github.com/pistondevelopers/opengl_graphics)",
  "pistoncore-event 0.0.8 (git+https://github.com/pistondevelopers/event)",
@@ -16,6 +17,10 @@ dependencies = [
 name = "bitflags"
 version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "chip8_vm"
+version = "0.0.1"
 
 [[package]]
 name = "clock_ticks"
