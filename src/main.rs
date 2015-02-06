@@ -5,7 +5,6 @@
 #![feature(io)]
 #![feature(os)]
 #![feature(path)]
-#![feature(rand)]
 
 extern crate shader_version;
 extern crate input;
