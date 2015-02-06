@@ -1,0 +1,5 @@
+[package]
+
+name = "chip8_vm"
+version = "0.0.1"
+authors = ["robo9k <robo@9k.lv>"]
