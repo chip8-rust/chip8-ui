@@ -1,14 +1,21 @@
-Chip-8 interpreter in Rust
+Chip-8 emulator in Rust
 ==
-This is an educational/toy project for me to get some more practice coding in
-Rust / organizing modules, testing etc. Feedback is more than welcome!
+This is an emulator with a GUI Built on top of the `chip8_vm` library.
+
+See the `chip8_vm` directory's [README](https://github.com/jakerr/chip8-rust/blob/master/src/chip8_vm/README.md) for instructions on including the VM in your own project.
+
+![screen shot - pong2](https://cloud.githubusercontent.com/assets/322861/6091672/b7db0636-aefa-11e4-84f3-24d66e06dbba.png)
+*Running [PONG2](http://www.chip8.com/?page=109) from chip8.com program pack*
 
 Status
 ==
-* All 35 original Chip-8 instructions are implemented.
 * Graphics are implemented with [Piston](http://www.piston.rs/).
 * Sound is not supported but is faked by updating the title bar with a note
 symbol when sound should be playing.
+
+Dependencies
+==
+The provided UI depends on SDL2 via [Piston](http://www.piston.rs/) for it's graphics. See: [Piston Tutorials - Getting Started](https://github.com/PistonDevelopers/Piston-Tutorials/tree/master/getting-started) for help setting up your development environment.
 
 Usage
 ==
@@ -25,13 +32,6 @@ Controls are mapped to these 16 buttons:
   Q  |  W  |  E  |  R
   A  |  S  |  D  |  F
   Z  |  X  |  C  |  V
-
-Spec
-==
-I used these two resources as the spec for my vm:
-* [Cowgod's Chip-8 Technical Reference v1.0](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM)
-* [Mastering Chip-8 By Matthew Mikolay](http://mattmik.com/chip8.html)
-They were both incredibly helpful so thanks to the authors!
 
 Licence
 ==
