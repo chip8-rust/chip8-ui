@@ -2,7 +2,7 @@ Chip-8 emulator in Rust
 ==
 This is an emulator with a GUI Built on top of the `chip8_vm` library.
 
-See the [chip8_vm](https://github.com/jakerr/chip8-rust/tree/master/chip8_vm) directory for instructions on including the VM in your own project.
+See the [chip8_vm](https://github.com/chip8-rust/chip8-rust/tree/master/chip8_vm) directory for instructions on including the VM in your own project.
 
 ![screen shot - pong2](https://cloud.githubusercontent.com/assets/322861/6091672/b7db0636-aefa-11e4-84f3-24d66e06dbba.png)
 *Running [PONG2](http://www.chip8.com/?page=109) from chip8.com program pack*
