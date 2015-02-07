@@ -2,9 +2,11 @@
 
 // TODO revisit these after 1.0.0beta
 #![feature(core)]
+#![feature(env)]
 #![feature(io)]
-#![feature(os)]
 #![feature(path)]
+// For OsString.into_string()
+#![feature(os)]
 
 extern crate shader_version;
 extern crate input;
@@ -24,7 +26,7 @@ use opengl_graphics::{
     Gl,
 };
 
-use std::os;
+use std::env;
 use std::old_io::File;
 use std::old_io::BufReader;
 // use std::time::duration::Duration;
@@ -44,11 +46,12 @@ fn main() {
 
     let mut rom: Option<File> = None;
 
-    if os::args().len() > 1 {
-        if let Ok(f) = File::open(&Path::new(os::args()[1].clone())) {
+    if let Some(rom_path) = env::args().skip(1).next() {
+        let rom_path = rom_path.into_string().unwrap();
+        if let Ok(f) = File::open(&Path::new(&rom_path)) {
             rom = Some(f);
         } else {
-            println!("Could not open rom {}", os::args()[1]);
+            println!("Could not open rom {}", rom_path);
         }
     }
 
