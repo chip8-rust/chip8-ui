@@ -1,8 +1,17 @@
 [package]
 
-name = "chip8"
+name = "chip8_ui"
+description = "Graphical user interface for the CHIP-8 VM, made with Piston"
+readme = "README.md"
+license = "MIT"
+keywords = ["chip-8", "piston"]
+homepage = "https://github.com/jakerr/chip8-rust"
+repository = "https://github.com/jakerr/chip8-rust.git"
 version = "0.0.1"
-authors = ["Jake Kerr <kodafox@gmail.com>"]
+authors = [
+    "Jake Kerr <kodafox@gmail.com>",
+    "robo9k <robo@9k.lv>",
+]
 
 [dependencies.pistoncore-sdl2_window]
 git = "https://github.com/pistondevelopers/sdl2_window"
@@ -27,4 +36,7 @@ git = "https://github.com/pistondevelopers/window"
 
 [dependencies.quack]
 git = "https://github.com/pistondevelopers/quack"
+
+[dependencies.chip8_vm]
+path = "chip8_vm"
 

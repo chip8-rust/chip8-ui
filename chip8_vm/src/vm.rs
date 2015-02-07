@@ -1,11 +1,12 @@
+extern crate rand;
+
 use std::old_io::{BufWriter, Reader};
 // use std::num::Float;
 use error::Ch8Error;
 use ops::{Op, Instruction};
 use std::slice::Chunks;
 
-use std::rand::Rng;
-use std::rand;
+use rand::Rng;
 
 use std::num::Float;
 
@@ -35,6 +36,7 @@ const FONT: [u8; FONT_BYTES] = [
 	0xF0, 0x80, 0xF0, 0x80, 0x80, // F
 ];
 
+#[derive(Copy)]
 pub struct Vm {
     reg: [u8; 16],
     i: usize,

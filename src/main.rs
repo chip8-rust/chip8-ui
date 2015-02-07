@@ -5,7 +5,6 @@
 #![feature(io)]
 #![feature(os)]
 #![feature(path)]
-#![feature(rand)]
 
 extern crate shader_version;
 extern crate input;
@@ -15,6 +14,8 @@ extern crate sdl2_window;
 extern crate window;
 extern crate opengl_graphics;
 extern crate quack;
+
+extern crate chip8_vm;
 
 use std::cell::RefCell;
 use sdl2_window::Sdl2Window;
@@ -31,11 +32,7 @@ use quack::Set;
 // use input::keyboard::Key;
 use input::Button;
 
-use vm::Vm;
-
-mod error;
-mod ops;
-mod vm;
+use chip8_vm::vm::Vm;
 
 const TITLE: &'static str = "Chip8";
 const BEEP_TITLE: &'static str = "♬ Chip8 ♬";
@@ -132,7 +129,7 @@ fn main() {
         }
         if let Some(args) = e.render_args() {
             use graphics::*;
-            gl.draw([0, 0, args.width as i32, args.height as i32], |&mut: c, gl| {
+            gl.draw([0, 0, args.width as i32, args.height as i32], |c, gl| {
                 graphics::clear([0.0, 0.0, 0.0, 1.0], gl);
                 let r = Rectangle::new([1.0, 1.0, 1.0, 1.0]);
                 let off = Color([0.0, 0.0, 0.0, 1.0]);
