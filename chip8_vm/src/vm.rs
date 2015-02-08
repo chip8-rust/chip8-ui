@@ -36,6 +36,22 @@ const FONT: [u8; FONT_BYTES] = [
 	0xF0, 0x80, 0xF0, 0x80, 0x80, // F
 ];
 
+const PHASE_TICK: f32 = 0.05;
+
+/// Pixel is a pixel
+#[derive(Copy)]
+pub struct Pixel {
+  /// Whether the pixel is in the `lit` state. This updates immediately when
+  /// the emulated ROM draws or erases the pixel.
+  pub lit: bool,
+  /// Phase is used pixel smoothing algorithms. It is a number between 0.0 and
+  /// 1.0 that represents the progress from the opposite to the current `lit`
+  /// state. For example if `lit` is `true` and phase is `0.1` the pixel should
+  /// be treated as `10%` opaque in a smoothing algorithm that uses a fade
+  /// effect. Or as still not lit by an algorithm using a delay.
+  pub phase: f32,
+}
+
 #[derive(Copy)]
 pub struct Vm {
     reg: [u8; 16],
@@ -51,7 +67,7 @@ pub struct Vm {
     sound_timer: u8,
     st_tick: f32,
 
-    screen: [u8; 64 * 32],
+    screen: [Pixel; 64 * 32],
     keys: [u8; 16],
     waiting_on_key: Option<u8>,
 }
@@ -72,7 +88,7 @@ impl Vm {
             sound_timer: 0,
             st_tick: 0.0,
 
-            screen: [0; 64 * 32],
+            screen: [Pixel { lit: false, phase: 1.0 }; 64 * 32],
             keys: [0; 16],
             waiting_on_key: None,
         };
@@ -121,7 +137,8 @@ impl Vm {
             // Sys(addr) intentionally left unimplemented.
             Clear => {
                 for b in self.screen.iter_mut() {
-                    *b = 0;
+                    b.lit = false;
+                    b.phase = 0.0;
                 }
             },
             Return => {
@@ -240,10 +257,21 @@ impl Vm {
                         let px = (*byte >> (7 - sx)) & 0b00000001;
                         let dx = (x + sx) % 64;
                         let idx = dy * 64 + dx;
-                        self.screen[idx] ^= px;
+
+                        let pixel = &mut self.screen[idx];
+                        let was_lit = pixel.lit;
+
+                        pixel.lit = (was_lit as u8 ^ px) != 0;
+
+                        if pixel.lit {
+                          pixel.phase = 1.0;
+                        } else if was_lit {
+                          pixel.phase = 0.0;// - pixel.phase;
+                          // TODO experiment with phase = 1 - oldphase
+                        }
 
                         // Vf is if there was a collision
-                        self.reg[15] |= (self.screen[idx] == 0 && px == 1) as u8;
+                        self.reg[15] |= (!pixel.lit && px == 1) as u8;
                     }
                 }
             },
@@ -334,6 +362,16 @@ impl Vm {
                 self.st_tick = 1.0 / 60.0;
             }
         }
+
+        for pix in self.screen.iter_mut() {
+          pix.phase += PHASE_TICK;
+          if pix.phase >= 1.0 {
+            pix.phase = 1.0;
+          }
+          if pix.phase <= 0.0 {
+            pix.phase = 0.0;
+          }
+        }
     }
 
     // dt: Time in seconds since last step
@@ -358,18 +396,19 @@ impl Vm {
         }
     }
 
-    pub fn screen_rows<'a>(&'a self) -> Chunks<'a, u8> {
+    pub fn screen_rows<'a>(&'a mut self) -> Chunks<'a, Pixel> {
         self.screen.chunks(64)
     }
 
     #[allow(dead_code)]
-    pub fn print_screen(&self) {
-        for row in self.screen.chunks(64) {
+    pub fn print_screen(&mut self) {
+        for row in self.screen_rows() {
             println!("");
-            for byte in row.iter() {
-                match *byte {
-                    0x0 => print!("░"),
-                    _ => print!("▓")
+            for pixel in row.iter() {
+                if pixel.lit {
+                    print!("░");
+                } else {
+                    print!("▓");
                 }
             }
         }

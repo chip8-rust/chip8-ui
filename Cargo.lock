@@ -80,7 +80,7 @@ dependencies = [
 [[package]]
 name = "image"
 version = "0.2.0-alpha.9"
-source = "git+https://github.com/pistondevelopers/image#b7aff0a1ad2b6b0bdc04c1a7731d502606cbafb3"
+source = "git+https://github.com/pistondevelopers/image#e1f0fec8e83aade072ce6f8dfd905043a4c2fc2d"
 dependencies = [
  "num 0.1.12 (git+https://github.com/rust-lang/num)",
 ]
@@ -88,7 +88,7 @@ dependencies = [
 [[package]]
 name = "interpolation"
 version = "0.0.1"
-source = "git+https://github.com/PistonDevelopers/interpolation#056dfca4c3ca0b477eba7efb038ee03c5515b28e"
+source = "git+https://github.com/PistonDevelopers/interpolation#1be832facef9c28baefbbc40d7a163661f733567"
 
 [[package]]
 name = "khronos_api"
@@ -130,7 +130,7 @@ dependencies = [
 [[package]]
 name = "piston-texture"
 version = "0.0.1"
-source = "git+https://github.com/pistondevelopers/texture#0380876cec71e384841d5a06ad32cb462c97be20"
+source = "git+https://github.com/PistonDevelopers/texture#0380876cec71e384841d5a06ad32cb462c97be20"
 
 [[package]]
 name = "piston2d-graphics"
@@ -138,7 +138,7 @@ version = "0.0.13"
 source = "git+https://github.com/pistondevelopers/graphics#743619ae1b068a3570b37673e4645c3bf4a2a136"
 dependencies = [
  "interpolation 0.0.1 (git+https://github.com/PistonDevelopers/interpolation)",
- "piston-texture 0.0.1 (git+https://github.com/pistondevelopers/texture)",
+ "piston-texture 0.0.1 (git+https://github.com/PistonDevelopers/texture)",
  "quack 0.0.10 (git+https://github.com/pistondevelopers/quack)",
  "read_color 0.0.2 (git+https://github.com/PistonDevelopers/read_color)",
  "vecmath 0.0.3 (git+https://github.com/PistonDevelopers/vecmath)",
@@ -154,7 +154,7 @@ dependencies = [
  "image 0.2.0-alpha.9 (git+https://github.com/pistondevelopers/image)",
  "khronos_api 0.0.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "libc 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "piston-texture 0.0.1 (git+https://github.com/pistondevelopers/texture)",
+ "piston-texture 0.0.1 (git+https://github.com/PistonDevelopers/texture)",
  "piston2d-graphics 0.0.13 (git+https://github.com/pistondevelopers/graphics)",
  "shader_version 0.0.1 (git+https://github.com/pistondevelopers/shader_version)",
 ]

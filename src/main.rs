@@ -142,11 +142,17 @@ fn main() {
                 let h = args.height as f64 / 32.0;
 
                 for (y,row) in vm.screen_rows().enumerate() {
-                    for (x,byte) in row.iter().enumerate() {
+                    for (x,pixel) in row.iter().enumerate() {
                         let x = x as f64 * w;
                         let y = y as f64 * h;
-                        r.set(match *byte { 0 => off, _ => on })
-                        .draw([x, y, w, h], &c, gl);
+                        let (rgb, alpha) = if pixel.lit {
+                            (1.0, 1.0)
+                        } else {
+                            (1.0, if pixel.phase >= 1.0 { 0.0 } else { 1.0})
+                        };
+                        let color = Color([alpha, rgb, rgb, alpha]);
+                        r.set(color)
+                         .draw([x, y, w, h], &c, gl);
                     }
                 }
             });
