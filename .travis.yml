@@ -1,6 +1,21 @@
 language: rust
+env:
+    global:
+        secure: XUEuNCeOK0zMazSlY5ZbPeBH5RCvOX+xOGL6g96A3EAZJjGxBNe6j/7eYd8pKUebZt5c0lNYQ2oGwe754Zh8Y9F6JRhEkHWQGp9+SHmKKY7KpTcQGT6wAv5E0yJHyu4I+JX2lIbQDE623ti6r2PMV5XRnjyQ93wWdQVAijzTnaM=
 before_install:
     - sudo apt-get install build-essential xorg-dev libudev-dev libts-dev libgl1-mesa-dev libglu1-mesa-dev libasound2-dev libpulse-dev libopenal-dev libogg-dev libvorbis-dev libaudiofile-dev libpng12-dev libfreetype6-dev libusb-dev libdbus-1-dev zlib1g-dev libdirectfb-dev
     - wget http://www.libsdl.org/release/SDL2-2.0.3.tar.gz
     - tar -xvzf SDL2-2.0.3.tar.gz
     - cd SDL2-2.0.3/ && ./configure && make && sudo make install && sudo ldconfig
+script:
+    - cargo build --verbose
+    - cargo test --verbose
+    - cargo doc --verbose
+after_success: |
+    [ $TRAVIS_BRANCH = master ] &&
+    [ $TRAVIS_PULL_REQUEST = false ] &&
+    echo '<meta http-equiv=refresh content=0;url=chip8_vm/index.html>' > target/doc/index.html &&
+    sudo -H pip install --upgrade pip &&
+    sudo -H pip install ghp-import &&
+    ghp-import -n target/doc &&
+    git push -fq https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git gh-pages
