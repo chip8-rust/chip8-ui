@@ -9,6 +9,7 @@ See the [chip8_vm](https://github.com/chip8-rust/chip8-rust/tree/master/chip8_vm
 
 Status
 ==
+[![Build Status](https://travis-ci.org/chip8-rust/chip8-rust.svg?branch=master)](https://travis-ci.org/chip8-rust/chip8-rust)
 * Graphics are implemented with [Piston](http://www.piston.rs/).
 * Sound is not supported but is faked by updating the title bar with a note
 symbol when sound should be playing.
