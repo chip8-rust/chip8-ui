@@ -1,12 +1,9 @@
 #![cfg_attr(test, allow(dead_code))]
 
 // TODO revisit these after 1.0.0beta
-#![feature(core)]
 #![feature(env)]
 #![feature(io)]
 #![feature(path)]
-// For OsString.into_string()
-#![feature(os)]
 
 extern crate shader_version;
 extern crate input;
@@ -47,7 +44,6 @@ fn main() {
     let mut rom: Option<File> = None;
 
     if let Some(rom_path) = env::args().skip(1).next() {
-        let rom_path = rom_path.into_string().unwrap();
         if let Ok(f) = File::open(&Path::new(&rom_path)) {
             rom = Some(f);
         } else {
