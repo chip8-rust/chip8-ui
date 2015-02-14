@@ -37,6 +37,5 @@ git = "https://github.com/pistondevelopers/window"
 [dependencies.quack]
 git = "https://github.com/pistondevelopers/quack"
 
-[dependencies.chip8_vm]
-path = "chip8_vm"
-
+[dependencies]
+chip8_vm = "0.*"
