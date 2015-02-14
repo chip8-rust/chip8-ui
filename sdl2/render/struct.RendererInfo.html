@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `RendererInfo` struct in crate `sdl2`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, RendererInfo">
+
+    <title>sdl2::render::RendererInfo - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>render</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.RenderDrawer.html' title='Drawing functionality for the render context.'>RenderDrawer</a><a class='struct ' href='struct.RenderTarget.html' title='A handle for getting/setting the render target of the render context.'>RenderTarget</a><a class='struct ' href='struct.Renderer.html' title='2D rendering context'>Renderer</a><a class='struct ' href='struct.RendererFlags.html' title=''>RendererFlags</a><a class='struct current' href='struct.RendererInfo.html' title='A structure that contains information on the capabilities of a render driver or the current render context.'>RendererInfo</a><a class='struct ' href='struct.Texture.html' title='A texture for a rendering context.'>Texture</a><a class='struct ' href='struct.TextureQuery.html' title=''>TextureQuery</a></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.BlendMode.html' title=''>BlendMode</a><a class='enum ' href='enum.RenderDriverIndex.html' title=''>RenderDriverIndex</a><a class='enum ' href='enum.RendererParent.html' title=''>RendererParent</a><a class='enum ' href='enum.TextureAccess.html' title=''>TextureAccess</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.get_num_render_drivers.html' title=''>get_num_render_drivers</a><a class='fn ' href='fn.get_render_driver_info.html' title=''>get_render_driver_info</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>render</a>::<wbr><a class='struct' href=''>RendererInfo</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-61344' href='../../src/sdl2/render.rs.html#87-93'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct RendererInfo {
+    pub name: <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
+    pub flags: <a class='struct' href='../../sdl2/render/struct.RendererFlags.html' title='sdl2::render::RendererFlags'>RendererFlags</a>,
+    pub texture_formats: <a class='struct' href='http://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='enum' href='../../sdl2/pixels/enum.PixelFormatEnum.html' title='sdl2::pixels::PixelFormatEnum'>PixelFormatEnum</a>&gt;,
+    pub max_texture_width: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    pub max_texture_height: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+}</pre><div class='docblock'><p>A structure that contains information on the capabilities of a render driver
+or the current render context.</p>
+</div><h2 class='fields'>Fields</h2>
+<table><tr><td id='structfield.name'><a class='stability Unmarked' title='No stability level'></a><code>name</code></td><td></td></tr><tr><td id='structfield.flags'><a class='stability Unmarked' title='No stability level'></a><code>flags</code></td><td></td></tr><tr><td id='structfield.texture_formats'><a class='stability Unmarked' title='No stability level'></a><code>texture_formats</code></td><td></td></tr><tr><td id='structfield.max_texture_width'><a class='stability Unmarked' title='No stability level'></a><code>max_texture_width</code></td><td></td></tr><tr><td id='structfield.max_texture_height'><a class='stability Unmarked' title='No stability level'></a><code>max_texture_height</code></td><td></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl <a class='struct' href='../../sdl2/render/struct.RendererInfo.html' title='sdl2::render::RendererInfo'>RendererInfo</a></code></h3><div class='impl-items'><h4 id='method.from_ll' class='method'><a class='stability Unmarked' title='No stability level'></a><code>unsafe fn <a href='#method.from_ll' class='fnname'>from_ll</a>(info: &amp;<a class='struct' href='../../sdl2-sys/render/struct.SDL_RendererInfo.html' title='sdl2-sys::render::SDL_RendererInfo'>SDL_RendererInfo</a>) -&gt; <a class='struct' href='../../sdl2/render/struct.RendererInfo.html' title='sdl2::render::RendererInfo'>RendererInfo</a></code></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='struct' href='../../sdl2/render/struct.RendererInfo.html' title='sdl2::render::RendererInfo'>RendererInfo</a></code></h3><div class='impl-items'><h4 id='method.eq' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../../sdl2/render/struct.RendererInfo.html' title='sdl2::render::RendererInfo'>RendererInfo</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../../sdl2/render/struct.RendererInfo.html' title='sdl2::render::RendererInfo'>RendererInfo</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

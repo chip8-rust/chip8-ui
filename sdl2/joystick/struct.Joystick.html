@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Joystick` struct in crate `sdl2`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Joystick">
+
+    <title>sdl2::joystick::Joystick - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>joystick</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.Guid.html' title='Wrapper around a SDL_JoystickGUID, a globally unique identifier for a joystick.'>Guid</a><a class='struct current' href='struct.Joystick.html' title='Wrapper around the SDL_Joystick object'>Joystick</a></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.HatState.html' title='This is represented in SDL2 as a bitfield but obviously not all combinations make sense: 5 for instance would mean up and down at the same time... To simplify things I turn it into an enum which is how the SDL2 docs present it anyway (using macros).'>HatState</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.get_device_guid.html' title='Get the GUID for the joystick number `id`'>get_device_guid</a><a class='fn ' href='fn.get_event_state.html' title='Return `true` if joystick events are processed.'>get_event_state</a><a class='fn ' href='fn.name_for_index.html' title='Return the name of the joystick at index `id`'>name_for_index</a><a class='fn ' href='fn.num_joysticks.html' title='Retreive the total number of attached joysticks *and* controllers identified by SDL.'>num_joysticks</a><a class='fn ' href='fn.set_event_state.html' title='If state is `true` joystick events are processed, otherwise they&#39;re ignored.'>set_event_state</a><a class='fn ' href='fn.update.html' title='Force joystick update when not using the event loop'>update</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>joystick</a>::<wbr><a class='struct' href=''>Joystick</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-42064' href='../../src/sdl2/joystick.rs.html#61-63'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Joystick {
+    // some fields omitted
+}</pre><div class='docblock'><p>Wrapper around the SDL_Joystick object</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl <a class='struct' href='../../sdl2/joystick/struct.Joystick.html' title='sdl2::joystick::Joystick'>Joystick</a></code></h3><div class='impl-items'><h4 id='method.open' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.open' class='fnname'>open</a>(id: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a class='struct' href='../../sdl2/joystick/struct.Joystick.html' title='sdl2::joystick::Joystick'>Joystick</a>&gt;</code></h4>
+<div class='docblock'><p>Attempt to open the joystick at number <code>id</code> and return it.</p>
+</div><h4 id='method.name' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.name' class='fnname'>name</a>(&amp;self) -&gt; <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h4>
+<div class='docblock'><p>Return the name of the joystick or an empty string if no name
+is found.</p>
+</div><h4 id='method.get_attached' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_attached' class='fnname'>get_attached</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Return true if the joystick has been opened and currently
+connected.</p>
+</div><h4 id='method.get_instance_id' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_instance_id' class='fnname'>get_instance_id</a>(&amp;self) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>&gt;</code></h4>
+<h4 id='method.get_guid' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_guid' class='fnname'>get_guid</a>(&amp;self) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a class='struct' href='../../sdl2/joystick/struct.Guid.html' title='sdl2::joystick::Guid'>Guid</a>&gt;</code></h4>
+<div class='docblock'><p>Retreive the joystick&#39;s GUID</p>
+</div><h4 id='method.get_num_axis' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_num_axis' class='fnname'>get_num_axis</a>(&amp;self) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>&gt;</code></h4>
+<div class='docblock'><p>Retreive the number of axes for this joystick</p>
+</div><h4 id='method.get_axis' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_axis' class='fnname'>get_axis</a>(&amp;self, axis: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.i16.html'>i16</a>&gt;</code></h4>
+<div class='docblock'><p>Get the position of the given <code>axis</code></p>
+</div><h4 id='method.get_num_buttons' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_num_buttons' class='fnname'>get_num_buttons</a>(&amp;self) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>&gt;</code></h4>
+<div class='docblock'><p>Retreive the number of buttons for this joystick</p>
+</div><h4 id='method.get_button' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_button' class='fnname'>get_button</a>(&amp;self, button: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></h4>
+<div class='docblock'><p>Return <code>Ok(true)</code> if <code>button</code> is pressed.</p>
+</div><h4 id='method.get_num_balls' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_num_balls' class='fnname'>get_num_balls</a>(&amp;self) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>&gt;</code></h4>
+<div class='docblock'><p>Retreive the number of balls for this joystick</p>
+</div><h4 id='method.get_ball' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_ball' class='fnname'>get_ball</a>(&amp;self, ball: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>)</a>&gt;</code></h4>
+<div class='docblock'><p>Return a pair <code>(dx, dy)</code> containing the difference in axis
+position since the last poll</p>
+</div><h4 id='method.get_num_hats' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_num_hats' class='fnname'>get_num_hats</a>(&amp;self) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>&gt;</code></h4>
+<div class='docblock'><p>Retreive the number of balls for this joystick</p>
+</div><h4 id='method.get_hat' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_hat' class='fnname'>get_hat</a>(&amp;self, hat: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a class='enum' href='../../sdl2/joystick/enum.HatState.html' title='sdl2::joystick::HatState'>HatState</a>&gt;</code></h4>
+<div class='docblock'><p>Return the position of <code>hat</code> for this joystick</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../sdl2/joystick/struct.Joystick.html' title='sdl2::joystick::Joystick'>Joystick</a></code></h3><div class='impl-items'><h4 id='method.drop' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

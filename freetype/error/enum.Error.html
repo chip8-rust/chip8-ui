@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Error` enum in crate `freetype`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Error">
+
+    <title>freetype::error::Error - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>freetype</a>::<wbr><a href='index.html'>error</a></p><div class='block enum'><h2>Enums</h2><a class='enum current' href='enum.Error.html' title=''>Error</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>freetype</a>::<wbr><a href='index.html'>error</a>::<wbr><a class='enum' href=''>Error</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-549' href='../../src/freetype/error.rs.html#10-103'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum Error {
+    Ok,
+    CannotOpenResource,
+    UnknownFileFormat,
+    InvalidFileFormat,
+    InvalidVersion,
+    LowerModuleVersion,
+    InvalidArgument,
+    UnimplementedFeature,
+    InvalidTable,
+    InvalidOffset,
+    ArrayTooLarge,
+    MissingModule,
+    MissingProperty,
+    InvalidGlyphIndex,
+    InvalidCharacterCode,
+    InvalidGlyphFormat,
+    CannotRenderGlyph,
+    InvalidOutline,
+    InvalidComposite,
+    TooManyHints,
+    InvalidPixelSize,
+    InvalidHandle,
+    InvalidLibraryHandle,
+    InvalidDriverHandle,
+    InvalidFaceHandle,
+    InvalidSizeHandle,
+    InvalidSlotHandle,
+    InvalidCharMapHandle,
+    InvalidCacheHandle,
+    InvalidStreamHandle,
+    TooManyDrivers,
+    TooManyExtensions,
+    OutOfMemory,
+    UnlistedObject,
+    CannotOpenStream,
+    InvalidStreamSeek,
+    InvalidStreamSkip,
+    InvalidStreamRead,
+    InvalidStreamOperation,
+    InvalidFrameOperation,
+    NestedFrameAccess,
+    InvalidFrameRead,
+    RasterUninitialized,
+    RasterCorrupted,
+    RasterOverflow,
+    RasterNegativeHeight,
+    TooManyCaches,
+    InvalidOpcode,
+    TooFewArguments,
+    StackOverflow,
+    CodeOverflow,
+    BadArgument,
+    DivideByZero,
+    InvalidReference,
+    DebugOpCode,
+    ENDFInExecStream,
+    NestedDEFS,
+    InvalidCodeRange,
+    ExecutionTooLong,
+    TooManyFunctionDefs,
+    TooManyInstructionDefs,
+    TableMissing,
+    HorizHeaderMissing,
+    LocationsMissing,
+    NameTableMissing,
+    CMapTableMissing,
+    HmtxTableMissing,
+    PostTableMissing,
+    InvalidHorizMetrics,
+    InvalidCharMapFormat,
+    InvalidPPem,
+    InvalidVertMetrics,
+    CouldNotFindContext,
+    InvalidPostTableFormat,
+    InvalidPostTable,
+    SyntaxError,
+    StackUnderflow,
+    Ignore,
+    NoUnicodeGlyphName,
+    MissingStartfontField,
+    MissingFontField,
+    MissingSizeField,
+    MissingFontboundingboxField,
+    MissingCharsField,
+    MissingStartcharField,
+    MissingEncodingField,
+    MissingBbxField,
+    BbxTooBig,
+    CorruptedFontHeader,
+    CorruptedFontGlyphs,
+    Max,
+    UnknownError,
+}</pre><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.Ok'><a class='stability Unmarked' title='No stability level'></a><code>Ok</code></td><td></td></tr><tr><td id='variant.CannotOpenResource'><a class='stability Unmarked' title='No stability level'></a><code>CannotOpenResource</code></td><td></td></tr><tr><td id='variant.UnknownFileFormat'><a class='stability Unmarked' title='No stability level'></a><code>UnknownFileFormat</code></td><td></td></tr><tr><td id='variant.InvalidFileFormat'><a class='stability Unmarked' title='No stability level'></a><code>InvalidFileFormat</code></td><td></td></tr><tr><td id='variant.InvalidVersion'><a class='stability Unmarked' title='No stability level'></a><code>InvalidVersion</code></td><td></td></tr><tr><td id='variant.LowerModuleVersion'><a class='stability Unmarked' title='No stability level'></a><code>LowerModuleVersion</code></td><td></td></tr><tr><td id='variant.InvalidArgument'><a class='stability Unmarked' title='No stability level'></a><code>InvalidArgument</code></td><td></td></tr><tr><td id='variant.UnimplementedFeature'><a class='stability Unmarked' title='No stability level'></a><code>UnimplementedFeature</code></td><td></td></tr><tr><td id='variant.InvalidTable'><a class='stability Unmarked' title='No stability level'></a><code>InvalidTable</code></td><td></td></tr><tr><td id='variant.InvalidOffset'><a class='stability Unmarked' title='No stability level'></a><code>InvalidOffset</code></td><td></td></tr><tr><td id='variant.ArrayTooLarge'><a class='stability Unmarked' title='No stability level'></a><code>ArrayTooLarge</code></td><td></td></tr><tr><td id='variant.MissingModule'><a class='stability Unmarked' title='No stability level'></a><code>MissingModule</code></td><td></td></tr><tr><td id='variant.MissingProperty'><a class='stability Unmarked' title='No stability level'></a><code>MissingProperty</code></td><td></td></tr><tr><td id='variant.InvalidGlyphIndex'><a class='stability Unmarked' title='No stability level'></a><code>InvalidGlyphIndex</code></td><td></td></tr><tr><td id='variant.InvalidCharacterCode'><a class='stability Unmarked' title='No stability level'></a><code>InvalidCharacterCode</code></td><td></td></tr><tr><td id='variant.InvalidGlyphFormat'><a class='stability Unmarked' title='No stability level'></a><code>InvalidGlyphFormat</code></td><td></td></tr><tr><td id='variant.CannotRenderGlyph'><a class='stability Unmarked' title='No stability level'></a><code>CannotRenderGlyph</code></td><td></td></tr><tr><td id='variant.InvalidOutline'><a class='stability Unmarked' title='No stability level'></a><code>InvalidOutline</code></td><td></td></tr><tr><td id='variant.InvalidComposite'><a class='stability Unmarked' title='No stability level'></a><code>InvalidComposite</code></td><td></td></tr><tr><td id='variant.TooManyHints'><a class='stability Unmarked' title='No stability level'></a><code>TooManyHints</code></td><td></td></tr><tr><td id='variant.InvalidPixelSize'><a class='stability Unmarked' title='No stability level'></a><code>InvalidPixelSize</code></td><td></td></tr><tr><td id='variant.InvalidHandle'><a class='stability Unmarked' title='No stability level'></a><code>InvalidHandle</code></td><td></td></tr><tr><td id='variant.InvalidLibraryHandle'><a class='stability Unmarked' title='No stability level'></a><code>InvalidLibraryHandle</code></td><td></td></tr><tr><td id='variant.InvalidDriverHandle'><a class='stability Unmarked' title='No stability level'></a><code>InvalidDriverHandle</code></td><td></td></tr><tr><td id='variant.InvalidFaceHandle'><a class='stability Unmarked' title='No stability level'></a><code>InvalidFaceHandle</code></td><td></td></tr><tr><td id='variant.InvalidSizeHandle'><a class='stability Unmarked' title='No stability level'></a><code>InvalidSizeHandle</code></td><td></td></tr><tr><td id='variant.InvalidSlotHandle'><a class='stability Unmarked' title='No stability level'></a><code>InvalidSlotHandle</code></td><td></td></tr><tr><td id='variant.InvalidCharMapHandle'><a class='stability Unmarked' title='No stability level'></a><code>InvalidCharMapHandle</code></td><td></td></tr><tr><td id='variant.InvalidCacheHandle'><a class='stability Unmarked' title='No stability level'></a><code>InvalidCacheHandle</code></td><td></td></tr><tr><td id='variant.InvalidStreamHandle'><a class='stability Unmarked' title='No stability level'></a><code>InvalidStreamHandle</code></td><td></td></tr><tr><td id='variant.TooManyDrivers'><a class='stability Unmarked' title='No stability level'></a><code>TooManyDrivers</code></td><td></td></tr><tr><td id='variant.TooManyExtensions'><a class='stability Unmarked' title='No stability level'></a><code>TooManyExtensions</code></td><td></td></tr><tr><td id='variant.OutOfMemory'><a class='stability Unmarked' title='No stability level'></a><code>OutOfMemory</code></td><td></td></tr><tr><td id='variant.UnlistedObject'><a class='stability Unmarked' title='No stability level'></a><code>UnlistedObject</code></td><td></td></tr><tr><td id='variant.CannotOpenStream'><a class='stability Unmarked' title='No stability level'></a><code>CannotOpenStream</code></td><td></td></tr><tr><td id='variant.InvalidStreamSeek'><a class='stability Unmarked' title='No stability level'></a><code>InvalidStreamSeek</code></td><td></td></tr><tr><td id='variant.InvalidStreamSkip'><a class='stability Unmarked' title='No stability level'></a><code>InvalidStreamSkip</code></td><td></td></tr><tr><td id='variant.InvalidStreamRead'><a class='stability Unmarked' title='No stability level'></a><code>InvalidStreamRead</code></td><td></td></tr><tr><td id='variant.InvalidStreamOperation'><a class='stability Unmarked' title='No stability level'></a><code>InvalidStreamOperation</code></td><td></td></tr><tr><td id='variant.InvalidFrameOperation'><a class='stability Unmarked' title='No stability level'></a><code>InvalidFrameOperation</code></td><td></td></tr><tr><td id='variant.NestedFrameAccess'><a class='stability Unmarked' title='No stability level'></a><code>NestedFrameAccess</code></td><td></td></tr><tr><td id='variant.InvalidFrameRead'><a class='stability Unmarked' title='No stability level'></a><code>InvalidFrameRead</code></td><td></td></tr><tr><td id='variant.RasterUninitialized'><a class='stability Unmarked' title='No stability level'></a><code>RasterUninitialized</code></td><td></td></tr><tr><td id='variant.RasterCorrupted'><a class='stability Unmarked' title='No stability level'></a><code>RasterCorrupted</code></td><td></td></tr><tr><td id='variant.RasterOverflow'><a class='stability Unmarked' title='No stability level'></a><code>RasterOverflow</code></td><td></td></tr><tr><td id='variant.RasterNegativeHeight'><a class='stability Unmarked' title='No stability level'></a><code>RasterNegativeHeight</code></td><td></td></tr><tr><td id='variant.TooManyCaches'><a class='stability Unmarked' title='No stability level'></a><code>TooManyCaches</code></td><td></td></tr><tr><td id='variant.InvalidOpcode'><a class='stability Unmarked' title='No stability level'></a><code>InvalidOpcode</code></td><td></td></tr><tr><td id='variant.TooFewArguments'><a class='stability Unmarked' title='No stability level'></a><code>TooFewArguments</code></td><td></td></tr><tr><td id='variant.StackOverflow'><a class='stability Unmarked' title='No stability level'></a><code>StackOverflow</code></td><td></td></tr><tr><td id='variant.CodeOverflow'><a class='stability Unmarked' title='No stability level'></a><code>CodeOverflow</code></td><td></td></tr><tr><td id='variant.BadArgument'><a class='stability Unmarked' title='No stability level'></a><code>BadArgument</code></td><td></td></tr><tr><td id='variant.DivideByZero'><a class='stability Unmarked' title='No stability level'></a><code>DivideByZero</code></td><td></td></tr><tr><td id='variant.InvalidReference'><a class='stability Unmarked' title='No stability level'></a><code>InvalidReference</code></td><td></td></tr><tr><td id='variant.DebugOpCode'><a class='stability Unmarked' title='No stability level'></a><code>DebugOpCode</code></td><td></td></tr><tr><td id='variant.ENDFInExecStream'><a class='stability Unmarked' title='No stability level'></a><code>ENDFInExecStream</code></td><td></td></tr><tr><td id='variant.NestedDEFS'><a class='stability Unmarked' title='No stability level'></a><code>NestedDEFS</code></td><td></td></tr><tr><td id='variant.InvalidCodeRange'><a class='stability Unmarked' title='No stability level'></a><code>InvalidCodeRange</code></td><td></td></tr><tr><td id='variant.ExecutionTooLong'><a class='stability Unmarked' title='No stability level'></a><code>ExecutionTooLong</code></td><td></td></tr><tr><td id='variant.TooManyFunctionDefs'><a class='stability Unmarked' title='No stability level'></a><code>TooManyFunctionDefs</code></td><td></td></tr><tr><td id='variant.TooManyInstructionDefs'><a class='stability Unmarked' title='No stability level'></a><code>TooManyInstructionDefs</code></td><td></td></tr><tr><td id='variant.TableMissing'><a class='stability Unmarked' title='No stability level'></a><code>TableMissing</code></td><td></td></tr><tr><td id='variant.HorizHeaderMissing'><a class='stability Unmarked' title='No stability level'></a><code>HorizHeaderMissing</code></td><td></td></tr><tr><td id='variant.LocationsMissing'><a class='stability Unmarked' title='No stability level'></a><code>LocationsMissing</code></td><td></td></tr><tr><td id='variant.NameTableMissing'><a class='stability Unmarked' title='No stability level'></a><code>NameTableMissing</code></td><td></td></tr><tr><td id='variant.CMapTableMissing'><a class='stability Unmarked' title='No stability level'></a><code>CMapTableMissing</code></td><td></td></tr><tr><td id='variant.HmtxTableMissing'><a class='stability Unmarked' title='No stability level'></a><code>HmtxTableMissing</code></td><td></td></tr><tr><td id='variant.PostTableMissing'><a class='stability Unmarked' title='No stability level'></a><code>PostTableMissing</code></td><td></td></tr><tr><td id='variant.InvalidHorizMetrics'><a class='stability Unmarked' title='No stability level'></a><code>InvalidHorizMetrics</code></td><td></td></tr><tr><td id='variant.InvalidCharMapFormat'><a class='stability Unmarked' title='No stability level'></a><code>InvalidCharMapFormat</code></td><td></td></tr><tr><td id='variant.InvalidPPem'><a class='stability Unmarked' title='No stability level'></a><code>InvalidPPem</code></td><td></td></tr><tr><td id='variant.InvalidVertMetrics'><a class='stability Unmarked' title='No stability level'></a><code>InvalidVertMetrics</code></td><td></td></tr><tr><td id='variant.CouldNotFindContext'><a class='stability Unmarked' title='No stability level'></a><code>CouldNotFindContext</code></td><td></td></tr><tr><td id='variant.InvalidPostTableFormat'><a class='stability Unmarked' title='No stability level'></a><code>InvalidPostTableFormat</code></td><td></td></tr><tr><td id='variant.InvalidPostTable'><a class='stability Unmarked' title='No stability level'></a><code>InvalidPostTable</code></td><td></td></tr><tr><td id='variant.SyntaxError'><a class='stability Unmarked' title='No stability level'></a><code>SyntaxError</code></td><td></td></tr><tr><td id='variant.StackUnderflow'><a class='stability Unmarked' title='No stability level'></a><code>StackUnderflow</code></td><td></td></tr><tr><td id='variant.Ignore'><a class='stability Unmarked' title='No stability level'></a><code>Ignore</code></td><td></td></tr><tr><td id='variant.NoUnicodeGlyphName'><a class='stability Unmarked' title='No stability level'></a><code>NoUnicodeGlyphName</code></td><td></td></tr><tr><td id='variant.MissingStartfontField'><a class='stability Unmarked' title='No stability level'></a><code>MissingStartfontField</code></td><td></td></tr><tr><td id='variant.MissingFontField'><a class='stability Unmarked' title='No stability level'></a><code>MissingFontField</code></td><td></td></tr><tr><td id='variant.MissingSizeField'><a class='stability Unmarked' title='No stability level'></a><code>MissingSizeField</code></td><td></td></tr><tr><td id='variant.MissingFontboundingboxField'><a class='stability Unmarked' title='No stability level'></a><code>MissingFontboundingboxField</code></td><td></td></tr><tr><td id='variant.MissingCharsField'><a class='stability Unmarked' title='No stability level'></a><code>MissingCharsField</code></td><td></td></tr><tr><td id='variant.MissingStartcharField'><a class='stability Unmarked' title='No stability level'></a><code>MissingStartcharField</code></td><td></td></tr><tr><td id='variant.MissingEncodingField'><a class='stability Unmarked' title='No stability level'></a><code>MissingEncodingField</code></td><td></td></tr><tr><td id='variant.MissingBbxField'><a class='stability Unmarked' title='No stability level'></a><code>MissingBbxField</code></td><td></td></tr><tr><td id='variant.BbxTooBig'><a class='stability Unmarked' title='No stability level'></a><code>BbxTooBig</code></td><td></td></tr><tr><td id='variant.CorruptedFontHeader'><a class='stability Unmarked' title='No stability level'></a><code>CorruptedFontHeader</code></td><td></td></tr><tr><td id='variant.CorruptedFontGlyphs'><a class='stability Unmarked' title='No stability level'></a><code>CorruptedFontGlyphs</code></td><td></td></tr><tr><td id='variant.Max'><a class='stability Unmarked' title='No stability level'></a><code>Max</code></td><td></td></tr><tr><td id='variant.UnknownError'><a class='stability Unmarked' title='No stability level'></a><code>UnknownError</code></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/num/trait.FromPrimitive.html' title='core::num::FromPrimitive'>FromPrimitive</a> for <a class='enum' href='../../freetype/error/enum.Error.html' title='freetype::error::Error'>Error</a></code></h3><div class='impl-items'><h4 id='method.from_i64' class='method'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#method.from_i64' class='fnname'>from_i64</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='../../freetype/error/enum.Error.html' title='freetype::error::Error'>Error</a>&gt;</code></h4>
+<h4 id='method.from_u64' class='method'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#method.from_u64' class='fnname'>from_u64</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='../../freetype/error/enum.Error.html' title='freetype::error::Error'>Error</a>&gt;</code></h4>
+<h4 id='method.from_i32' class='method'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#method.from_i32' class='fnname'>from_i32</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='../../freetype/error/enum.Error.html' title='freetype::error::Error'>Error</a>&gt;</code></h4>
+<h4 id='method.from_int' class='tymethod'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#tymethod.from_int' class='fnname'>from_int</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.isize.html'>isize</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h4>
+<h4 id='method.from_i8' class='tymethod'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#tymethod.from_i8' class='fnname'>from_i8</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.i8.html'>i8</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h4>
+<h4 id='method.from_i16' class='tymethod'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#tymethod.from_i16' class='fnname'>from_i16</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.i16.html'>i16</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h4>
+<h4 id='method.from_uint' class='tymethod'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#tymethod.from_uint' class='fnname'>from_uint</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h4>
+<h4 id='method.from_u8' class='tymethod'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#tymethod.from_u8' class='fnname'>from_u8</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h4>
+<h4 id='method.from_u16' class='tymethod'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#tymethod.from_u16' class='fnname'>from_u16</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h4>
+<h4 id='method.from_u32' class='tymethod'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#tymethod.from_u32' class='fnname'>from_u32</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h4>
+<h4 id='method.from_f32' class='tymethod'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#tymethod.from_f32' class='fnname'>from_f32</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h4>
+<h4 id='method.from_f64' class='tymethod'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#tymethod.from_f64' class='fnname'>from_f64</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/fmt/trait.Display.html' title='core::fmt::Display'>Display</a> for <a class='enum' href='../../freetype/error/enum.Error.html' title='freetype::error::Error'>Error</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class='struct' href='http://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../freetype/error/enum.Error.html' title='freetype::error::Error'>Error</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='http://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../../freetype/error/enum.Error.html' title='freetype::error::Error'>Error</a></code></h3><div class='impl-items'><h4 id='method.assert_receiver_is_total_eq' class='tymethod'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#tymethod.assert_receiver_is_total_eq' class='fnname'>assert_receiver_is_total_eq</a>(&amp;self)</code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../../freetype/error/enum.Error.html' title='freetype::error::Error'>Error</a></code></h3><div class='impl-items'><h4 id='method.eq' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../freetype/error/enum.Error.html' title='freetype::error::Error'>Error</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../freetype/error/enum.Error.html' title='freetype::error::Error'>Error</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../freetype/error/enum.Error.html' title='freetype::error::Error'>Error</a></code></h3><div class='impl-items'><h4 id='method.clone' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../freetype/error/enum.Error.html' title='freetype::error::Error'>Error</a></code></h4>
+<h4 id='method.clone_from' class='tymethod'><a class='stability Unstable' title='Unstable: this function is rarely used'></a><code>fn <a href='#tymethod.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../../freetype/error/enum.Error.html' title='freetype::error::Error'>Error</a></code></h3><div class='impl-items'></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "freetype";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

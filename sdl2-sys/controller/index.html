@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `controller` mod in crate `sdl2-sys`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, controller">
+
+    <title>sdl2-sys::controller - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>sdl2-sys</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='../audio/index.html' title=''>audio</a><a class='mod ' href='../clipboard/index.html' title=''>clipboard</a><a class='mod current' href='../controller/index.html' title=''>controller</a><a class='mod ' href='../cpuinfo/index.html' title=''>cpuinfo</a><a class='mod ' href='../filesystem/index.html' title=''>filesystem</a><a class='mod ' href='../gesture/index.html' title=''>gesture</a><a class='mod ' href='../haptic/index.html' title=''>haptic</a><a class='mod ' href='../joystick/index.html' title=''>joystick</a><a class='mod ' href='../keyboard/index.html' title=''>keyboard</a><a class='mod ' href='../keycode/index.html' title=''>keycode</a><a class='mod ' href='../messagebox/index.html' title=''>messagebox</a><a class='mod ' href='../mouse/index.html' title=''>mouse</a><a class='mod ' href='../pixels/index.html' title=''>pixels</a><a class='mod ' href='../rect/index.html' title='Rectangle Functions'>rect</a><a class='mod ' href='../render/index.html' title=''>render</a><a class='mod ' href='../rwops/index.html' title=''>rwops</a><a class='mod ' href='../scancode/index.html' title=''>scancode</a><a class='mod ' href='../sdl/index.html' title=''>sdl</a><a class='mod ' href='../surface/index.html' title=''>surface</a><a class='mod ' href='../timer/index.html' title=''>timer</a><a class='mod ' href='../touch/index.html' title=''>touch</a><a class='mod ' href='../video/index.html' title=''>video</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>sdl2-sys</a>::<wbr><a class='mod' href=''>controller</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-2497' href='../../src/sdl2-sys/controller.rs.html#1-125'>[src]</a></span></h1>
+<h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.SDL_GameControllerButtonBind.html'
+                               title='sdl2-sys::controller::SDL_GameControllerButtonBind'>SDL_GameControllerButtonBind</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.SDL_GameControllerButtonBindData.html'
+                               title='sdl2-sys::controller::SDL_GameControllerButtonBindData'>SDL_GameControllerButtonBindData</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.SDL_GameControllerButtonBindDataHat.html'
+                               title='sdl2-sys::controller::SDL_GameControllerButtonBindDataHat'>SDL_GameControllerButtonBindDataHat</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_AXIS_INVALID.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_AXIS_INVALID'>SDL_CONTROLLER_AXIS_INVALID</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_AXIS_LEFTX.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_AXIS_LEFTX'>SDL_CONTROLLER_AXIS_LEFTX</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_AXIS_LEFTY.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_AXIS_LEFTY'>SDL_CONTROLLER_AXIS_LEFTY</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_AXIS_MAX.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_AXIS_MAX'>SDL_CONTROLLER_AXIS_MAX</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_AXIS_RIGHTX.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_AXIS_RIGHTX'>SDL_CONTROLLER_AXIS_RIGHTX</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_AXIS_RIGHTY.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_AXIS_RIGHTY'>SDL_CONTROLLER_AXIS_RIGHTY</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_AXIS_TRIGGERLEFT.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_AXIS_TRIGGERLEFT'>SDL_CONTROLLER_AXIS_TRIGGERLEFT</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_AXIS_TRIGGERRIGHT.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_AXIS_TRIGGERRIGHT'>SDL_CONTROLLER_AXIS_TRIGGERRIGHT</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BINDTYPE_AXIS.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BINDTYPE_AXIS'>SDL_CONTROLLER_BINDTYPE_AXIS</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BINDTYPE_BUTTON.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BINDTYPE_BUTTON'>SDL_CONTROLLER_BINDTYPE_BUTTON</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BINDTYPE_HAT.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BINDTYPE_HAT'>SDL_CONTROLLER_BINDTYPE_HAT</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BINDTYPE_NONE.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BINDTYPE_NONE'>SDL_CONTROLLER_BINDTYPE_NONE</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BUTTON_A.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BUTTON_A'>SDL_CONTROLLER_BUTTON_A</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BUTTON_B.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BUTTON_B'>SDL_CONTROLLER_BUTTON_B</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BUTTON_BACK.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BUTTON_BACK'>SDL_CONTROLLER_BUTTON_BACK</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BUTTON_DPAD_DOWN.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BUTTON_DPAD_DOWN'>SDL_CONTROLLER_BUTTON_DPAD_DOWN</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BUTTON_DPAD_LEFT.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BUTTON_DPAD_LEFT'>SDL_CONTROLLER_BUTTON_DPAD_LEFT</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BUTTON_DPAD_RIGHT.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BUTTON_DPAD_RIGHT'>SDL_CONTROLLER_BUTTON_DPAD_RIGHT</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BUTTON_DPAD_UP.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BUTTON_DPAD_UP'>SDL_CONTROLLER_BUTTON_DPAD_UP</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BUTTON_GUIDE.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BUTTON_GUIDE'>SDL_CONTROLLER_BUTTON_GUIDE</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BUTTON_INVALID.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BUTTON_INVALID'>SDL_CONTROLLER_BUTTON_INVALID</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BUTTON_LEFTSHOULDER.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BUTTON_LEFTSHOULDER'>SDL_CONTROLLER_BUTTON_LEFTSHOULDER</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BUTTON_LEFTSTICK.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BUTTON_LEFTSTICK'>SDL_CONTROLLER_BUTTON_LEFTSTICK</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BUTTON_MAX.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BUTTON_MAX'>SDL_CONTROLLER_BUTTON_MAX</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BUTTON_RIGHTSHOULDER.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BUTTON_RIGHTSHOULDER'>SDL_CONTROLLER_BUTTON_RIGHTSHOULDER</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BUTTON_RIGHTSTICK.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BUTTON_RIGHTSTICK'>SDL_CONTROLLER_BUTTON_RIGHTSTICK</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BUTTON_START.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BUTTON_START'>SDL_CONTROLLER_BUTTON_START</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BUTTON_X.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BUTTON_X'>SDL_CONTROLLER_BUTTON_X</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_CONTROLLER_BUTTON_Y.html'
+                               title='sdl2-sys::controller::SDL_CONTROLLER_BUTTON_Y'>SDL_CONTROLLER_BUTTON_Y</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GameControllerAddMapping.html'
+                               title='sdl2-sys::controller::SDL_GameControllerAddMapping'>SDL_GameControllerAddMapping</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GameControllerClose.html'
+                               title='sdl2-sys::controller::SDL_GameControllerClose'>SDL_GameControllerClose</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GameControllerEventState.html'
+                               title='sdl2-sys::controller::SDL_GameControllerEventState'>SDL_GameControllerEventState</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GameControllerGetAttached.html'
+                               title='sdl2-sys::controller::SDL_GameControllerGetAttached'>SDL_GameControllerGetAttached</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GameControllerGetAxis.html'
+                               title='sdl2-sys::controller::SDL_GameControllerGetAxis'>SDL_GameControllerGetAxis</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GameControllerGetAxisFromString.html'
+                               title='sdl2-sys::controller::SDL_GameControllerGetAxisFromString'>SDL_GameControllerGetAxisFromString</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GameControllerGetBindForAxis.html'
+                               title='sdl2-sys::controller::SDL_GameControllerGetBindForAxis'>SDL_GameControllerGetBindForAxis</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GameControllerGetBindForButton.html'
+                               title='sdl2-sys::controller::SDL_GameControllerGetBindForButton'>SDL_GameControllerGetBindForButton</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GameControllerGetButton.html'
+                               title='sdl2-sys::controller::SDL_GameControllerGetButton'>SDL_GameControllerGetButton</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GameControllerGetButtonFromString.html'
+                               title='sdl2-sys::controller::SDL_GameControllerGetButtonFromString'>SDL_GameControllerGetButtonFromString</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GameControllerGetJoystick.html'
+                               title='sdl2-sys::controller::SDL_GameControllerGetJoystick'>SDL_GameControllerGetJoystick</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GameControllerGetStringForAxis.html'
+                               title='sdl2-sys::controller::SDL_GameControllerGetStringForAxis'>SDL_GameControllerGetStringForAxis</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GameControllerGetStringForButton.html'
+                               title='sdl2-sys::controller::SDL_GameControllerGetStringForButton'>SDL_GameControllerGetStringForButton</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GameControllerMapping.html'
+                               title='sdl2-sys::controller::SDL_GameControllerMapping'>SDL_GameControllerMapping</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GameControllerMappingForGUID.html'
+                               title='sdl2-sys::controller::SDL_GameControllerMappingForGUID'>SDL_GameControllerMappingForGUID</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GameControllerName.html'
+                               title='sdl2-sys::controller::SDL_GameControllerName'>SDL_GameControllerName</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GameControllerNameForIndex.html'
+                               title='sdl2-sys::controller::SDL_GameControllerNameForIndex'>SDL_GameControllerNameForIndex</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GameControllerOpen.html'
+                               title='sdl2-sys::controller::SDL_GameControllerOpen'>SDL_GameControllerOpen</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GameControllerUpdate.html'
+                               title='sdl2-sys::controller::SDL_GameControllerUpdate'>SDL_GameControllerUpdate</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_IsGameController.html'
+                               title='sdl2-sys::controller::SDL_IsGameController'>SDL_IsGameController</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.SDL_GameController.html'
+                               title='sdl2-sys::controller::SDL_GameController'>SDL_GameController</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.SDL_GameControllerAxis.html'
+                               title='sdl2-sys::controller::SDL_GameControllerAxis'>SDL_GameControllerAxis</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.SDL_GameControllerBindType.html'
+                               title='sdl2-sys::controller::SDL_GameControllerBindType'>SDL_GameControllerBindType</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.SDL_GameControllerButton.html'
+                               title='sdl2-sys::controller::SDL_GameControllerButton'>SDL_GameControllerButton</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.SDL_bool.html'
+                               title='sdl2-sys::controller::SDL_bool'>SDL_bool</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2-sys";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

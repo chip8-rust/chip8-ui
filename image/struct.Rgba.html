@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Rgba` struct in crate `image`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Rgba">
+
+    <title>image::Rgba - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>image</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='gif/index.html' title='Decoding of GIF Images'>gif</a><a class='mod ' href='imageops/index.html' title='Image Processing Functions'>imageops</a><a class='mod ' href='jpeg/index.html' title='Decoding and Encoding of JPEG Images'>jpeg</a><a class='mod ' href='math/index.html' title='Mathematical helper functions and types.'>math</a><a class='mod ' href='png/index.html' title='Decoding and Encoding of PNG Images'>png</a><a class='mod ' href='ppm/index.html' title='Encoding of portable pixmap Images'>ppm</a><a class='mod ' href='tga/index.html' title='Decoding of TGA Images'>tga</a><a class='mod ' href='tiff/index.html' title='Decoding and Encoding of TIFF Images'>tiff</a><a class='mod ' href='webp/index.html' title='Decoding of Webp Images'>webp</a></div><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.Frame.html' title='A single animation frame'>Frame</a><a class='struct ' href='struct.Frames.html' title='Hold the frames of the animated image'>Frames</a><a class='struct ' href='struct.ImageBuffer.html' title='Generic image buffer'>ImageBuffer</a><a class='struct ' href='struct.Luma.html' title='Grayscale colors'>Luma</a><a class='struct ' href='struct.LumaA.html' title='Grayscale colors + alpha channel'>LumaA</a><a class='struct ' href='struct.MutPixels.html' title='Mutable pixel iterator'>MutPixels</a><a class='struct ' href='struct.Pixels.html' title='Immutable pixel iterator'>Pixels</a><a class='struct ' href='struct.Rgb.html' title='RGB colors'>Rgb</a><a class='struct current' href='struct.Rgba.html' title='RGB colors + alpha channel'>Rgba</a><a class='struct ' href='struct.SubImage.html' title='A View into another image'>SubImage</a></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.ColorType.html' title='An enumeration over supported color types and their bit depths'>ColorType</a><a class='enum ' href='enum.DynamicImage.html' title='A Dynamic Image'>DynamicImage</a><a class='enum ' href='enum.FilterType.html' title='Available Sampling Filters'>FilterType</a><a class='enum ' href='enum.ImageError.html' title='An enumeration of Image Errors'>ImageError</a><a class='enum ' href='enum.ImageFormat.html' title='An enumeration of supported image formats. Not all formats support both encoding and decoding.'>ImageFormat</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.GenericImage.html' title='A trait for manipulating images.'>GenericImage</a><a class='trait ' href='trait.ImageDecoder.html' title='The trait that all decoders implement'>ImageDecoder</a><a class='trait ' href='trait.Pixel.html' title='A generalized pixel.'>Pixel</a><a class='trait ' href='trait.Primitive.html' title='Primitive trait from old stdlib, added max_value'>Primitive</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.load.html' title='Create a new image from a Reader'>load</a><a class='fn ' href='fn.load_from_memory.html' title='Create a new image from a byte slice Makes an educated guess about the image format. TGA is not supported by this function.'>load_from_memory</a><a class='fn ' href='fn.load_from_memory_with_format.html' title='Create a new image from a byte slice'>load_from_memory_with_format</a><a class='fn ' href='fn.open.html' title='Open the image located at the path specified. The image&#39;s format is determined from the path&#39;s file extension.'>open</a><a class='fn ' href='fn.save_buffer.html' title='Saves the supplied buffer to a file at the path specified.'>save_buffer</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>image</a>::<wbr><a class='struct' href=''>Rgba</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-71261' href='../src/image/color.rs.html#64'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Rgba&lt;T: <a class='trait' href='../image/trait.Primitive.html' title='image::Primitive'>Primitive</a>&gt;(pub <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[T; 4]</a>);</pre><div class='docblock'><p>RGB colors + alpha channel</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;T: <a class='trait' href='../image/trait.Primitive.html' title='image::Primitive'>Primitive</a> + 'static&gt; <a class='trait' href='../image/trait.Pixel.html' title='image::Pixel'>Pixel</a> for <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;</code></h3><div class='impl-items'><h4 id='assoc_type.Subpixel' class='type'><a class='stability Unmarked' title='No stability level'></a><code>type Subpixel = T</code></h4>
+<h4 id='method.channel_count' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.channel_count' class='fnname'>channel_count</a>() -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code></h4>
+<h4 id='method.color_model' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.color_model' class='fnname'>color_model</a>() -&gt; &amp;'static <a href='http://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a></code></h4>
+<h4 id='method.color_type' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.color_type' class='fnname'>color_type</a>() -&gt; <a class='enum' href='../image/enum.ColorType.html' title='image::ColorType'>ColorType</a></code></h4>
+<h4 id='method.channels' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.channels' class='fnname'>channels</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[T]</a></code></h4>
+<h4 id='method.channels_mut' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.channels_mut' class='fnname'>channels_mut</a>(&amp;mut self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;mut [T]</a></code></h4>
+<h4 id='method.channels4' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.channels4' class='fnname'>channels4</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(T, T, T, T)</a></code></h4>
+<h4 id='method.from_channels' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.from_channels' class='fnname'>from_channels</a>(a: T, b: T, c: T, d: T) -&gt; <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;</code></h4>
+<h4 id='method.from_slice' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.from_slice' class='fnname'>from_slice</a>&lt;'a&gt;(slice: <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;'a [T]</a>) -&gt; &amp;'a <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;</code></h4>
+<h4 id='method.from_slice_mut' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.from_slice_mut' class='fnname'>from_slice_mut</a>&lt;'a&gt;(slice: <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;'a mut [T]</a>) -&gt; &amp;'a mut <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;</code></h4>
+<h4 id='method.to_rgb' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.to_rgb' class='fnname'>to_rgb</a>(&amp;self) -&gt; <a class='struct' href='../image/struct.Rgb.html' title='image::Rgb'>Rgb</a>&lt;T&gt;</code></h4>
+<h4 id='method.to_rgba' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.to_rgba' class='fnname'>to_rgba</a>(&amp;self) -&gt; <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;</code></h4>
+<h4 id='method.to_luma' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.to_luma' class='fnname'>to_luma</a>(&amp;self) -&gt; <a class='struct' href='../image/struct.Luma.html' title='image::Luma'>Luma</a>&lt;T&gt;</code></h4>
+<h4 id='method.to_luma_alpha' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.to_luma_alpha' class='fnname'>to_luma_alpha</a>(&amp;self) -&gt; <a class='struct' href='../image/struct.LumaA.html' title='image::LumaA'>LumaA</a>&lt;T&gt;</code></h4>
+<h4 id='method.map' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.map' class='fnname'>map</a>&lt;F&gt;(&amp;self, f: F) -&gt; <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt; <span class='where'>where F: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(T) -&gt; T</span></code></h4>
+<h4 id='method.apply' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.apply' class='fnname'>apply</a>&lt;F&gt;(&amp;mut self, f: F) <span class='where'>where F: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(T) -&gt; T</span></code></h4>
+<h4 id='method.map_with_alpha' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.map_with_alpha' class='fnname'>map_with_alpha</a>&lt;F, G&gt;(&amp;self, f: F, g: G) -&gt; <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt; <span class='where'>where F: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(T) -&gt; T, G: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(T) -&gt; T</span></code></h4>
+<h4 id='method.apply_with_alpha' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.apply_with_alpha' class='fnname'>apply_with_alpha</a>&lt;F, G&gt;(&amp;mut self, f: F, g: G) <span class='where'>where F: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(T) -&gt; T, G: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(T) -&gt; T</span></code></h4>
+<h4 id='method.map2' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.map2' class='fnname'>map2</a>&lt;F&gt;(&amp;self, other: &amp;<a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;, f: F) -&gt; <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt; <span class='where'>where F: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(T, T) -&gt; T</span></code></h4>
+<h4 id='method.apply2' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.apply2' class='fnname'>apply2</a>&lt;F&gt;(&amp;mut self, other: &amp;<a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;, f: F) <span class='where'>where F: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(T, T) -&gt; T</span></code></h4>
+<h4 id='method.invert' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.invert' class='fnname'>invert</a>(&amp;mut self)</code></h4>
+<h4 id='method.blend' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.blend' class='fnname'>blend</a>(&amp;mut self, other: &amp;<a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;)</code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl&lt;T: <a class='trait' href='../image/trait.Primitive.html' title='image::Primitive'>Primitive</a>&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Index.html' title='core::ops::Index'>Index</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>&gt; for <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;</code></h3><div class='impl-items'><h4 id='assoc_type.Output' class='type'><a class='stability Unmarked' title='No stability level'></a><code>type Output = T</code></h4>
+<h4 id='method.index' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.index' class='fnname'>index</a>&lt;'a&gt;(&amp;'a self, _index: &amp;<a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>) -&gt; &amp;'a T</code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl&lt;T: <a class='trait' href='../image/trait.Primitive.html' title='image::Primitive'>Primitive</a>&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.IndexMut.html' title='core::ops::IndexMut'>IndexMut</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>&gt; for <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;</code></h3><div class='impl-items'><h4 id='method.index_mut' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.index_mut' class='fnname'>index_mut</a>&lt;'a&gt;(&amp;'a mut self, _index: &amp;<a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>) -&gt; &amp;'a mut T</code></h4>
+</div><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;T: <a class='trait' href='../image/trait.Primitive.html' title='image::Primitive'>Primitive</a> + 'static&gt; FromColor&lt;<a class='struct' href='../image/struct.Rgb.html' title='image::Rgb'>Rgb</a>&lt;T&gt;&gt; for <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;</code></h3><div class='docblock'><p>FromColor for RGBA</p>
+</div><div class='impl-items'><h4 id='method.from_color' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.from_color' class='fnname'>from_color</a>(&amp;mut self, other: &amp;<a class='struct' href='../image/struct.Rgb.html' title='image::Rgb'>Rgb</a>&lt;T&gt;)</code></h4>
+</div><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;T: <a class='trait' href='../image/trait.Primitive.html' title='image::Primitive'>Primitive</a> + 'static&gt; FromColor&lt;<a class='struct' href='../image/struct.LumaA.html' title='image::LumaA'>LumaA</a>&lt;T&gt;&gt; for <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;</code></h3><div class='impl-items'><h4 id='method.from_color' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.from_color' class='fnname'>from_color</a>(&amp;mut self, other: &amp;<a class='struct' href='../image/struct.LumaA.html' title='image::LumaA'>LumaA</a>&lt;T&gt;)</code></h4>
+</div><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;T: <a class='trait' href='../image/trait.Primitive.html' title='image::Primitive'>Primitive</a> + 'static&gt; FromColor&lt;<a class='struct' href='../image/struct.Luma.html' title='image::Luma'>Luma</a>&lt;T&gt;&gt; for <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;</code></h3><div class='impl-items'><h4 id='method.from_color' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.from_color' class='fnname'>from_color</a>(&amp;mut self, gray: &amp;<a class='struct' href='../image/struct.Luma.html' title='image::Luma'>Luma</a>&lt;T&gt;)</code></h4>
+</div><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;T: <a class='trait' href='../image/trait.Primitive.html' title='image::Primitive'>Primitive</a>&gt; Blend&lt;<a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;&gt; for <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;</code></h3><div class='impl-items'><h4 id='method.blend' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.blend' class='fnname'>blend</a>(&amp;mut self, other: &amp;<a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;)</code></h4>
+</div><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;T: <a class='trait' href='../image/trait.Primitive.html' title='image::Primitive'>Primitive</a>&gt; Invert&lt;<a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;&gt; for <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;</code></h3><div class='impl-items'><h4 id='method.invert' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.invert' class='fnname'>invert</a>(&amp;mut self)</code></h4>
+</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><a class='stability Unstable' title='Unstable: module was recently redesigned'></a><code>impl&lt;__S: <a class='trait' href='http://doc.rust-lang.org/nightly/core/hash/trait.Writer.html' title='core::hash::Writer'>Writer</a> + <a class='trait' href='http://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a>, T: <a class='trait' href='http://doc.rust-lang.org/nightly/core/hash/trait.Hash.html' title='core::hash::Hash'>Hash</a>&lt;__S&gt; + <a class='trait' href='../image/trait.Primitive.html' title='image::Primitive'>Primitive</a>&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/hash/trait.Hash.html' title='core::hash::Hash'>Hash</a>&lt;__S&gt; for <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;</code></h3><div class='impl-items'><h4 id='method.hash' class='method'><a class='stability Unstable' title='Unstable: module was recently redesigned'></a><code>fn <a href='#method.hash' class='fnname'>hash</a>(&amp;self, __arg_0: &amp;mut __S)</code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl&lt;T: <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> + <a class='trait' href='../image/trait.Primitive.html' title='image::Primitive'>Primitive</a>&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;</code></h3><div class='impl-items'></div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl&lt;T: <a class='trait' href='http://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> + <a class='trait' href='../image/trait.Primitive.html' title='image::Primitive'>Primitive</a>&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;</code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='http://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl&lt;T: <a class='trait' href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> + <a class='trait' href='../image/trait.Primitive.html' title='image::Primitive'>Primitive</a>&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;</code></h3><div class='impl-items'><h4 id='method.clone' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;</code></h4>
+<h4 id='method.clone_from' class='tymethod'><a class='stability Unstable' title='Unstable: this function is rarely used'></a><code>fn <a href='#tymethod.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl&lt;T: <a class='trait' href='http://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> + <a class='trait' href='../image/trait.Primitive.html' title='image::Primitive'>Primitive</a>&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;</code></h3><div class='impl-items'><h4 id='method.assert_receiver_is_total_eq' class='tymethod'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#tymethod.assert_receiver_is_total_eq' class='fnname'>assert_receiver_is_total_eq</a>(&amp;self)</code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl&lt;T: <a class='trait' href='http://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> + <a class='trait' href='../image/trait.Primitive.html' title='image::Primitive'>Primitive</a>&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;</code></h3><div class='impl-items'><h4 id='method.eq' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;T&gt;) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "image";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>

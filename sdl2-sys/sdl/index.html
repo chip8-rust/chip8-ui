@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `sdl` mod in crate `sdl2-sys`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, sdl">
+
+    <title>sdl2-sys::sdl - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>sdl2-sys</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='../audio/index.html' title=''>audio</a><a class='mod ' href='../clipboard/index.html' title=''>clipboard</a><a class='mod ' href='../controller/index.html' title=''>controller</a><a class='mod ' href='../cpuinfo/index.html' title=''>cpuinfo</a><a class='mod ' href='../filesystem/index.html' title=''>filesystem</a><a class='mod ' href='../gesture/index.html' title=''>gesture</a><a class='mod ' href='../haptic/index.html' title=''>haptic</a><a class='mod ' href='../joystick/index.html' title=''>joystick</a><a class='mod ' href='../keyboard/index.html' title=''>keyboard</a><a class='mod ' href='../keycode/index.html' title=''>keycode</a><a class='mod ' href='../messagebox/index.html' title=''>messagebox</a><a class='mod ' href='../mouse/index.html' title=''>mouse</a><a class='mod ' href='../pixels/index.html' title=''>pixels</a><a class='mod ' href='../rect/index.html' title='Rectangle Functions'>rect</a><a class='mod ' href='../render/index.html' title=''>render</a><a class='mod ' href='../rwops/index.html' title=''>rwops</a><a class='mod ' href='../scancode/index.html' title=''>scancode</a><a class='mod current' href='../sdl/index.html' title=''>sdl</a><a class='mod ' href='../surface/index.html' title=''>surface</a><a class='mod ' href='../timer/index.html' title=''>timer</a><a class='mod ' href='../touch/index.html' title=''>touch</a><a class='mod ' href='../video/index.html' title=''>video</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>sdl2-sys</a>::<wbr><a class='mod' href=''>sdl</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-13059' href='../../src/sdl2-sys/sdl.rs.html#1-56'>[src]</a></span></h1>
+<h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_EFREAD.html'
+                               title='sdl2-sys::sdl::SDL_EFREAD'>SDL_EFREAD</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_EFSEEK.html'
+                               title='sdl2-sys::sdl::SDL_EFSEEK'>SDL_EFSEEK</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_EFWRITE.html'
+                               title='sdl2-sys::sdl::SDL_EFWRITE'>SDL_EFWRITE</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_ENOMEM.html'
+                               title='sdl2-sys::sdl::SDL_ENOMEM'>SDL_ENOMEM</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_INIT_AUDIO.html'
+                               title='sdl2-sys::sdl::SDL_INIT_AUDIO'>SDL_INIT_AUDIO</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_INIT_EVENTS.html'
+                               title='sdl2-sys::sdl::SDL_INIT_EVENTS'>SDL_INIT_EVENTS</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_INIT_EVERYTHING.html'
+                               title='sdl2-sys::sdl::SDL_INIT_EVERYTHING'>SDL_INIT_EVERYTHING</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_INIT_GAMECONTROLLER.html'
+                               title='sdl2-sys::sdl::SDL_INIT_GAMECONTROLLER'>SDL_INIT_GAMECONTROLLER</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_INIT_HAPTIC.html'
+                               title='sdl2-sys::sdl::SDL_INIT_HAPTIC'>SDL_INIT_HAPTIC</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_INIT_JOYSTICK.html'
+                               title='sdl2-sys::sdl::SDL_INIT_JOYSTICK'>SDL_INIT_JOYSTICK</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_INIT_NOPARACHUTE.html'
+                               title='sdl2-sys::sdl::SDL_INIT_NOPARACHUTE'>SDL_INIT_NOPARACHUTE</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_INIT_TIMER.html'
+                               title='sdl2-sys::sdl::SDL_INIT_TIMER'>SDL_INIT_TIMER</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_INIT_VIDEO.html'
+                               title='sdl2-sys::sdl::SDL_INIT_VIDEO'>SDL_INIT_VIDEO</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_LASTERROR.html'
+                               title='sdl2-sys::sdl::SDL_LASTERROR'>SDL_LASTERROR</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SDL_UNSUPPORTED.html'
+                               title='sdl2-sys::sdl::SDL_UNSUPPORTED'>SDL_UNSUPPORTED</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_ClearError.html'
+                               title='sdl2-sys::sdl::SDL_ClearError'>SDL_ClearError</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_Error.html'
+                               title='sdl2-sys::sdl::SDL_Error'>SDL_Error</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GetError.html'
+                               title='sdl2-sys::sdl::SDL_GetError'>SDL_GetError</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_GetTicks.html'
+                               title='sdl2-sys::sdl::SDL_GetTicks'>SDL_GetTicks</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_Init.html'
+                               title='sdl2-sys::sdl::SDL_Init'>SDL_Init</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_InitSubSystem.html'
+                               title='sdl2-sys::sdl::SDL_InitSubSystem'>SDL_InitSubSystem</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_Quit.html'
+                               title='sdl2-sys::sdl::SDL_Quit'>SDL_Quit</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_QuitSubSystem.html'
+                               title='sdl2-sys::sdl::SDL_QuitSubSystem'>SDL_QuitSubSystem</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_SetError.html'
+                               title='sdl2-sys::sdl::SDL_SetError'>SDL_SetError</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.SDL_WasInit.html'
+                               title='sdl2-sys::sdl::SDL_WasInit'>SDL_WasInit</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.SDL_InitFlag.html'
+                               title='sdl2-sys::sdl::SDL_InitFlag'>SDL_InitFlag</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.SDL_errorcode.html'
+                               title='sdl2-sys::sdl::SDL_errorcode'>SDL_errorcode</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2-sys";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

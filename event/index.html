@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `event` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, event">
+
+    <title>event - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'></p>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>event</a><wbr></span><span class='out-of-band'><a href='stability.html'>[stability]</a> <span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-0' href='../src/event/lib.rs.html#1-51'>[src]</a></span></h1>
+<div class='docblock'><p>A library for event threading</p>
+</div><h2 id='reexports' class='section-header'><a href="#reexports">Reexports</a></h2>
+<table><tr><td><code>pub use generic_event::<a class='trait' href='../event/generic_event/trait.GenericEvent.html' title='event::generic_event::GenericEvent'>GenericEvent</a>;</code></td></tr></table><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='mod' href='events/index.html'
+                               title='event::events'>events</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='mod' href='generic_event/index.html'
+                               title='event::generic_event'>generic_event</a></td>
+                        <td class='docblock short'><p>Trait for generic events</p>
+</td>
+                    </tr>
+                </table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.Events.html'
+                               title='event::Events'>Events</a></td>
+                        <td class='docblock short'><p>An event loop iterator</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.IdleArgs.html'
+                               title='event::IdleArgs'>IdleArgs</a></td>
+                        <td class='docblock short'><p>Idle arguments, such as expected idle time in seconds.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.MaxFps.html'
+                               title='event::MaxFps'>MaxFps</a></td>
+                        <td class='docblock short'><p>The maximum number of frames per second</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.RenderArgs.html'
+                               title='event::RenderArgs'>RenderArgs</a></td>
+                        <td class='docblock short'><p>Render arguments</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.UpdateArgs.html'
+                               title='event::UpdateArgs'>UpdateArgs</a></td>
+                        <td class='docblock short'><p>Update arguments, such as delta time in seconds</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.Ups.html'
+                               title='event::Ups'>Ups</a></td>
+                        <td class='docblock short'><p>The number of updates per second</p>
+</td>
+                    </tr>
+                </table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='enum' href='enum.Event.html'
+                               title='event::Event'>Event</a></td>
+                        <td class='docblock short'><p>Adds render and update events to input events</p>
+</td>
+                    </tr>
+                </table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='trait' href='trait.FocusEvent.html'
+                               title='event::FocusEvent'>FocusEvent</a></td>
+                        <td class='docblock short'><p>When window gets or looses focus</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='trait' href='trait.IdleEvent.html'
+                               title='event::IdleEvent'>IdleEvent</a></td>
+                        <td class='docblock short'><p>When background tasks should be performed</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='trait' href='trait.MouseCursorEvent.html'
+                               title='event::MouseCursorEvent'>MouseCursorEvent</a></td>
+                        <td class='docblock short'><p>The position of the mouse cursor</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='trait' href='trait.MouseRelativeEvent.html'
+                               title='event::MouseRelativeEvent'>MouseRelativeEvent</a></td>
+                        <td class='docblock short'><p>The relative movement of mouse cursor</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='trait' href='trait.MouseScrollEvent.html'
+                               title='event::MouseScrollEvent'>MouseScrollEvent</a></td>
+                        <td class='docblock short'><p>The scroll of the mouse wheel</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='trait' href='trait.PressEvent.html'
+                               title='event::PressEvent'>PressEvent</a></td>
+                        <td class='docblock short'><p>The press of a button</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='trait' href='trait.ReleaseEvent.html'
+                               title='event::ReleaseEvent'>ReleaseEvent</a></td>
+                        <td class='docblock short'><p>The release of a button</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='trait' href='trait.RenderEvent.html'
+                               title='event::RenderEvent'>RenderEvent</a></td>
+                        <td class='docblock short'><p>When the next frame should be rendered</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='trait' href='trait.ResizeEvent.html'
+                               title='event::ResizeEvent'>ResizeEvent</a></td>
+                        <td class='docblock short'><p>When the window is resized</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='trait' href='trait.TextEvent.html'
+                               title='event::TextEvent'>TextEvent</a></td>
+                        <td class='docblock short'><p>When receiving text from user, such as typing a character</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='trait' href='trait.UpdateEvent.html'
+                               title='event::UpdateEvent'>UpdateEvent</a></td>
+                        <td class='docblock short'><p>When the application state should be updated</p>
+</td>
+                    </tr>
+                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.events.html'
+                               title='event::events'>events</a></td>
+                        <td class='docblock short'><p>Creates event iterator from window.</p>
+</td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "event";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>

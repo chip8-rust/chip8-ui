@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `vp8` mod in crate `image`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, vp8">
+
+    <title>image::webp::vp8 - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../../index.html'>image</a>::<wbr><a href='../index.html'>webp</a></p><div class='block mod'><h2>Modules</h2><a class='mod current' href='../vp8/index.html' title='An implementation of the VP8 Video Codec'>vp8</a></div><div class='block struct'><h2>Structs</h2><a class='struct ' href='../struct.WebpDecoder.html' title='A Representation of a Webp Image format decoder.'>WebpDecoder</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../../index.html'>image</a>::<wbr><a href='../index.html'>webp</a>::<wbr><a class='mod' href=''>vp8</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-8098' href='../../../src/image/webp/vp8.rs.html#1-1837'>[src]</a></span></h1>
+<div class='docblock'><p>An implementation of the VP8 Video Codec</p>
+
+<p>This module contains a partial implementation of the
+VP8 video format as defined in RFC-6386.</p>
+
+<p>It decodes Keyframes only sans Loop Filtering.
+VP8 is the underpinning of the Webp image format</p>
+
+<h1 id="related-links" class='section-header'><a
+                           href="#related-links">Related Links</a></h1>
+<ul>
+<li><a href="http://tools.ietf.org/html/rfc6386">rfc-6386</a> - The VP8 Data Format and Decoding Guide</li>
+<li><a href="http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/37073.pdf">VP8.pdf</a> - An overview of
+of the VP8 format</li>
+</ul>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.Frame.html'
+                               title='image::webp::vp8::Frame'>Frame</a></td>
+                        <td class='docblock short'><p>A Representation of the last decoded video frame</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.VP8Decoder.html'
+                               title='image::webp::vp8::VP8Decoder'>VP8Decoder</a></td>
+                        <td class='docblock short'><p>VP8 Decoder
+Only decodes keyframes</p>
+</td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "image";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../jquery.js"></script>
+    <script src="../../../main.js"></script>
+    
+    <script async src="../../../search-index.js"></script>
+</body>
+</html>

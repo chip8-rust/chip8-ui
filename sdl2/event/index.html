@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `event` mod in crate `sdl2`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, event">
+
+    <title>sdl2::event - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>sdl2</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='../audio/index.html' title='Audio Functions'>audio</a><a class='mod ' href='../clipboard/index.html' title=''>clipboard</a><a class='mod ' href='../controller/index.html' title=''>controller</a><a class='mod ' href='../cpuinfo/index.html' title=''>cpuinfo</a><a class='mod current' href='../event/index.html' title='Event Handling'>event</a><a class='mod ' href='../filesystem/index.html' title=''>filesystem</a><a class='mod ' href='../haptic/index.html' title='Haptic Functions'>haptic</a><a class='mod ' href='../joystick/index.html' title=''>joystick</a><a class='mod ' href='../keyboard/index.html' title=''>keyboard</a><a class='mod ' href='../keycode/index.html' title=''>keycode</a><a class='mod ' href='../messagebox/index.html' title=''>messagebox</a><a class='mod ' href='../mouse/index.html' title=''>mouse</a><a class='mod ' href='../pixels/index.html' title=''>pixels</a><a class='mod ' href='../rect/index.html' title=''>rect</a><a class='mod ' href='../render/index.html' title='2D accelerated rendering'>render</a><a class='mod ' href='../rwops/index.html' title=''>rwops</a><a class='mod ' href='../scancode/index.html' title=''>scancode</a><a class='mod ' href='../sdl/index.html' title=''>sdl</a><a class='mod ' href='../surface/index.html' title=''>surface</a><a class='mod ' href='../timer/index.html' title=''>timer</a><a class='mod ' href='../touch/index.html' title=''>touch</a><a class='mod ' href='../version/index.html' title='Querying SDL Version'>version</a><a class='mod ' href='../video/index.html' title=''>video</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>sdl2</a>::<wbr><a class='mod' href=''>event</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-37569' href='../../src/sdl2/event.rs.html#1-959'>[src]</a></span></h1>
+<div class='docblock'><p>Event Handling</p>
+</div><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='enum' href='enum.Event.html'
+                               title='sdl2::event::Event'>Event</a></td>
+                        <td class='docblock short'><p>Different event types.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='enum' href='enum.EventType.html'
+                               title='sdl2::event::EventType'>EventType</a></td>
+                        <td class='docblock short'><p>Types of events that can be delivered.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='enum' href='enum.WindowEventId.html'
+                               title='sdl2::event::WindowEventId'>WindowEventId</a></td>
+                        <td class='docblock short'><p>An enum of window events.</p>
+</td>
+                    </tr>
+                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.add_event_watch.html'
+                               title='sdl2::event::add_event_watch'>add_event_watch</a></td>
+                        <td class='docblock short'><p>Add a callback to be triggered when an event is added to the event queue.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.delete_event_watch.html'
+                               title='sdl2::event::delete_event_watch'>delete_event_watch</a></td>
+                        <td class='docblock short'><p>Remove an event watch callback added.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.filter_events.html'
+                               title='sdl2::event::filter_events'>filter_events</a></td>
+                        <td class='docblock short'><p>Run a specific filter function on the current event queue, removing any events for which the filter returns 0.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.flush_event.html'
+                               title='sdl2::event::flush_event'>flush_event</a></td>
+                        <td class='docblock short'><p>Clear events from the event queue.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.flush_events.html'
+                               title='sdl2::event::flush_events'>flush_events</a></td>
+                        <td class='docblock short'><p>Clear events from the event queue of a range of event types.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.get_event_state.html'
+                               title='sdl2::event::get_event_state'>get_event_state</a></td>
+                        <td class='docblock short'><p>Get the state of processing events.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.has_event.html'
+                               title='sdl2::event::has_event'>has_event</a></td>
+                        <td class='docblock short'><p>Check for the existence of certain event types in the event queue.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.has_events.html'
+                               title='sdl2::event::has_events'>has_events</a></td>
+                        <td class='docblock short'><p>Check for the existence of a range of event types in the event queue.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.poll_event.html'
+                               title='sdl2::event::poll_event'>poll_event</a></td>
+                        <td class='docblock short'><p>Poll for currently pending events.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.pump_events.html'
+                               title='sdl2::event::pump_events'>pump_events</a></td>
+                        <td class='docblock short'><p>Pump the event loop, gathering events from the input devices.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.push_event.html'
+                               title='sdl2::event::push_event'>push_event</a></td>
+                        <td class='docblock short'><p>add an event to the event queue</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.register_events.html'
+                               title='sdl2::event::register_events'>register_events</a></td>
+                        <td class='docblock short'><p>allocate a set of user-defined events, and return the beginning event number for that set of events</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.set_event_filter.html'
+                               title='sdl2::event::set_event_filter'>set_event_filter</a></td>
+                        <td class='docblock short'><p>Set up a filter to process all events before they change internal state and are posted to the internal event queue.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.set_event_state.html'
+                               title='sdl2::event::set_event_state'>set_event_state</a></td>
+                        <td class='docblock short'><p>Set the state of processing events.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.wait_event.html'
+                               title='sdl2::event::wait_event'>wait_event</a></td>
+                        <td class='docblock short'><p>Wait indefinitely for the next available event.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.wait_event_timeout.html'
+                               title='sdl2::event::wait_event_timeout'>wait_event_timeout</a></td>
+                        <td class='docblock short'><p>Wait until the specified timeout (in milliseconds) for the next available event.</p>
+</td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

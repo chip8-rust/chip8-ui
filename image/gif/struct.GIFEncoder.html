@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `GIFEncoder` struct in crate `image`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, GIFEncoder">
+
+    <title>image::gif::GIFEncoder - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>image</a>::<wbr><a href='index.html'>gif</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.GIFDecoder.html' title='A gif decoder'>GIFDecoder</a><a class='struct current' href='struct.GIFEncoder.html' title='A GIF encoder.'>GIFEncoder</a></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.ColorMode.html' title='The color mode the encoder will use to encode the image.'>ColorMode</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>image</a>::<wbr><a href='index.html'>gif</a>::<wbr><a class='struct' href=''>GIFEncoder</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-45622' href='../../src/image/gif/encoder.rs.html#36-40'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct GIFEncoder&lt;Image&gt; {
+    // some fields omitted
+}</pre><div class='docblock'><p>A GIF encoder.</p>
+
+<p>Encodes the image either in true color using indexed colors.
+If the mode is set to TrueColor the image is split into multiple frames 
+when the number of colors including transparent color exceeds 256.
+Pixels with an alpha value != 1.0 will be set to alpha = 0.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;Container&gt; <a class='struct' href='../../image/gif/struct.GIFEncoder.html' title='image::gif::GIFEncoder'>Encoder</a>&lt;<a class='struct' href='../../image/struct.ImageBuffer.html' title='image::ImageBuffer'>ImageBuffer</a>&lt;<a class='struct' href='../../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;, Container&gt;&gt; <span class='where'>where Container: ArrayLike&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;</span></code></h3><div class='impl-items'><h4 id='method.new' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.new' class='fnname'>new</a>(image: <a class='struct' href='../../image/struct.ImageBuffer.html' title='image::ImageBuffer'>ImageBuffer</a>&lt;<a class='struct' href='../../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;, Container&gt;, bg_color: <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../image/struct.Rgb.html' title='image::Rgb'>Rgb</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;, color_mode: <a class='enum' href='../../image/gif/enum.ColorMode.html' title='image::gif::ColorMode'>ColorMode</a>) -&gt; <a class='struct' href='../../image/gif/struct.GIFEncoder.html' title='image::gif::GIFEncoder'>Encoder</a>&lt;<a class='struct' href='../../image/struct.ImageBuffer.html' title='image::ImageBuffer'>ImageBuffer</a>&lt;<a class='struct' href='../../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;, Container&gt;&gt;</code></h4>
+<div class='docblock'><p>Creates a new GIF encoder</p>
+</div><h4 id='method.encode' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.encode' class='fnname'>encode</a>&lt;W: <a class='trait' href='http://doc.rust-lang.org/nightly/std/old_io/trait.Writer.html' title='std::old_io::Writer'>Writer</a>&gt;(&amp;mut self, w: &amp;mut W) -&gt; <a class='type' href='http://doc.rust-lang.org/nightly/std/old_io/type.IoResult.html' title='std::old_io::IoResult'>IoResult</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<div class='docblock'><p>Encodes the image</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "image";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

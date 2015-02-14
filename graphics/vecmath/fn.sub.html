@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `sub` fn in crate `graphics`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, sub">
+
+    <title>graphics::vecmath::sub - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>graphics</a>::<wbr><a href='index.html'>vecmath</a></p><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.add.html' title='Adds two vectors.'>add</a><a class='fn ' href='fn.area.html' title='Computes area of a simple polygon.'>area</a><a class='fn ' href='fn.area_centroid.html' title='Computes the area and centroid of a simple polygon.'>area_centroid</a><a class='fn ' href='fn.cast.html' title='Converts to another vector type.'>cast</a><a class='fn ' href='fn.centroid.html' title='Computes centroid of a simple polygon.'>centroid</a><a class='fn ' href='fn.cross.html' title='Computes the cross product.'>cross</a><a class='fn ' href='fn.dot.html' title='Computes the dot product.'>dot</a><a class='fn ' href='fn.from_barycentric.html' title='Transforms from barycentric coordinates to cartesian.'>from_barycentric</a><a class='fn ' href='fn.get_scale.html' title='Extract scale information from matrix.'>get_scale</a><a class='fn ' href='fn.hsv.html' title='Transform color with hue, saturation and value.'>hsv</a><a class='fn ' href='fn.identity.html' title='Create an identity matrix.'>identity</a><a class='fn ' href='fn.inside_triangle.html' title='Returns true if point is inside triangle.'>inside_triangle</a><a class='fn ' href='fn.least_separation_4.html' title='Returns the least separation out of four. Each seperation can be computed using `separation` function. The separation returned can be used to solve collision of rectangles.'>least_separation_4</a><a class='fn ' href='fn.line_side.html' title='Returns a number that tells which side it is relative to a line.'>line_side</a><a class='fn ' href='fn.margin_rectangle.html' title='Shrinks a rectangle by a factor on all sides.'>margin_rectangle</a><a class='fn ' href='fn.modular_offset.html' title='Computes modular offset safely for numbers.'>modular_offset</a><a class='fn ' href='fn.mul.html' title='Multiplies two vectors component wise.'>mul</a><a class='fn ' href='fn.mul_scalar.html' title='Multiplies the vector with a scalar.'>mul_scalar</a><a class='fn ' href='fn.multiply.html' title='Multiplies two matrices.'>multiply</a><a class='fn ' href='fn.orient.html' title='Orients x axis to look at point.'>orient</a><a class='fn ' href='fn.perp.html' title='Creates a perpendicular vector.'>perp</a><a class='fn ' href='fn.relative_rectangle.html' title='Computes a relative rectangle using the rectangle as a tile.'>relative_rectangle</a><a class='fn ' href='fn.relative_source_rectangle.html' title='Computes a relative source rectangle using the source rectangle as a tile.'>relative_source_rectangle</a><a class='fn ' href='fn.rotate_radians.html' title='Creates a rotation matrix.'>rotate_radians</a><a class='fn ' href='fn.scale.html' title='Create a scale matrix.'>scale</a><a class='fn ' href='fn.separation.html' title='Compute the shortest vector from point to ray. A ray stores starting point and directional vector.'>separation</a><a class='fn ' href='fn.shear.html' title='Create a shear matrix.'>shear</a><a class='fn ' href='fn.square_len.html' title='Computes the square length of a vector.'>square_len</a><a class='fn current' href='fn.sub.html' title='Subtracts &#39;b&#39; from &#39;a&#39;.'>sub</a><a class='fn ' href='fn.to_barycentric.html' title='Transforms from cartesian coordinates to barycentric.'>to_barycentric</a><a class='fn ' href='fn.translate.html' title='Creates a translation matrix.'>translate</a><a class='fn ' href='fn.triangle_face.html' title='Returns true if triangle is clockwise.'>triangle_face</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content fn">
+<h1 class='fqn'><span class='in-band'>Function <a href='../index.html'>graphics</a>::<wbr><a href='index.html'>vecmath</a>::<wbr><a class='fn' href=''>sub</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-1474' href='../../vecmath/fn.sub.html?gotosrc=1474'>[src]</a></span></h1>
+<pre class='rust fn'>pub fn sub&lt;T&gt;(a: <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[T; 2]</a>, b: <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[T; 2]</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[T; 2]</a> <span class='where'>where T: <a class='trait' href='http://doc.rust-lang.org/nightly/std/num/trait.Float.html' title='std::num::Float'>Float</a></span></pre><div class='docblock'><p>Subtracts &#39;b&#39; from &#39;a&#39;.</p>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "graphics";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

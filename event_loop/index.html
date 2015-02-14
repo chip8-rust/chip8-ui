@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `event_loop` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, event_loop">
+
+    <title>event_loop - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'></p>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>event_loop</a><wbr></span><span class='out-of-band'><a href='stability.html'>[stability]</a> <span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-0' href='../src/event_loop/lib.rs.html#1-290'>[src]</a></span></h1>
+<div class='docblock'><p>A generic event loop for games and interactive applications</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.Events.html'
+                               title='event_loop::Events'>Events</a></td>
+                        <td class='docblock short'><p>An event loop iterator</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.IdleArgs.html'
+                               title='event_loop::IdleArgs'>IdleArgs</a></td>
+                        <td class='docblock short'><p>Idle arguments, such as expected idle time in seconds.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.MaxFps.html'
+                               title='event_loop::MaxFps'>MaxFps</a></td>
+                        <td class='docblock short'><p>The maximum number of frames per second</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.PollEvent.html'
+                               title='event_loop::PollEvent'>PollEvent</a></td>
+                        <td class='docblock short'><p>Polls event from window.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.RenderArgs.html'
+                               title='event_loop::RenderArgs'>RenderArgs</a></td>
+                        <td class='docblock short'><p>Render arguments</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.ShouldClose.html'
+                               title='event_loop::ShouldClose'>ShouldClose</a></td>
+                        <td class='docblock short'><p>Whether window should close or not.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.Size.html'
+                               title='event_loop::Size'>Size</a></td>
+                        <td class='docblock short'><p>The size of the window.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.SwapBuffers.html'
+                               title='event_loop::SwapBuffers'>SwapBuffers</a></td>
+                        <td class='docblock short'><p>Tells window to swap buffers.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.UpdateArgs.html'
+                               title='event_loop::UpdateArgs'>UpdateArgs</a></td>
+                        <td class='docblock short'><p>Update arguments, such as delta time in seconds</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.Ups.html'
+                               title='event_loop::Ups'>Ups</a></td>
+                        <td class='docblock short'><p>The number of updates per second</p>
+</td>
+                    </tr>
+                </table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.DEFAULT_MAX_FPS.html'
+                               title='event_loop::DEFAULT_MAX_FPS'>DEFAULT_MAX_FPS</a></td>
+                        <td class='docblock short'><p>The default maximum frames per second.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.DEFAULT_UPS.html'
+                               title='event_loop::DEFAULT_UPS'>DEFAULT_UPS</a></td>
+                        <td class='docblock short'><p>The default updates per second.</p>
+</td>
+                    </tr>
+                </table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='trait' href='trait.EventMap.html'
+                               title='event_loop::EventMap'>EventMap</a></td>
+                        <td class='docblock short'><p>Methods required to map from consumed event to emitted event.</p>
+</td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "event_loop";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>

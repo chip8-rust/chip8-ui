@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `row_mat4_mul` fn in crate `vecmath`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, row_mat4_mul">
+
+    <title>vecmath::row_mat4_mul - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>vecmath</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='consts/index.html' title='Various useful constants'>consts</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.col_mat2x3_row.html' title='Returns a row vector of a column matrix.'>col_mat2x3_row</a><a class='fn ' href='fn.col_mat3_mul.html' title='Multiplies two matrices.'>col_mat3_mul</a><a class='fn ' href='fn.col_mat3_mul_col.html' title='Computes column vector in column matrix product.'>col_mat3_mul_col</a><a class='fn ' href='fn.col_mat3_row.html' title='Returns a row vector of a column matrix.'>col_mat3_row</a><a class='fn ' href='fn.col_mat3_transform.html' title='Transforms a 3D vector through a matrix.'>col_mat3_transform</a><a class='fn ' href='fn.col_mat3_transform_pos2.html' title='Transforms a 2D position through column matrix.'>col_mat3_transform_pos2</a><a class='fn ' href='fn.col_mat3_transform_vec2.html' title='Transforms a 2D vector through column matrix.'>col_mat3_transform_vec2</a><a class='fn ' href='fn.col_mat3x2_mul.html' title='Multiplies two matrices.'>col_mat3x2_mul</a><a class='fn ' href='fn.col_mat3x2_mul_col.html' title='Computes column vector in column matrix product.'>col_mat3x2_mul_col</a><a class='fn ' href='fn.col_mat3x2_row.html' title='Returns a row vector of a column matrix.'>col_mat3x2_row</a><a class='fn ' href='fn.col_mat3x2_transform_pos2.html' title='Transforms a 2D position through matrix.'>col_mat3x2_transform_pos2</a><a class='fn ' href='fn.col_mat3x2_transform_vec2.html' title='Transforms a 2D vector through matrix.'>col_mat3x2_transform_vec2</a><a class='fn ' href='fn.col_mat3x4_row.html' title='Returns a row vector of a column matrix.'>col_mat3x4_row</a><a class='fn ' href='fn.col_mat4_mul.html' title='Multiplies two matrices.'>col_mat4_mul</a><a class='fn ' href='fn.col_mat4_mul_col.html' title='Computes column vector in column matrix product.'>col_mat4_mul_col</a><a class='fn ' href='fn.col_mat4_row.html' title='Returns a row vector of a column matrix.'>col_mat4_row</a><a class='fn ' href='fn.col_mat4_transform.html' title='Transforms a 4D vector through a matrix.'>col_mat4_transform</a><a class='fn ' href='fn.col_mat4x3_mul.html' title='Multiplies two matrices.'>col_mat4x3_mul</a><a class='fn ' href='fn.col_mat4x3_mul_col.html' title='Computes column vector in column matrix product.'>col_mat4x3_mul_col</a><a class='fn ' href='fn.col_mat4x3_row.html' title='Returns a column vector of a row matrix.'>col_mat4x3_row</a><a class='fn ' href='fn.col_mat4x3_transform_pos3.html' title='Transforms a 3D position through matrix.'>col_mat4x3_transform_pos3</a><a class='fn ' href='fn.col_mat4x3_transform_vec3.html' title='Transforms a 3D vector through matrix.'>col_mat4x3_transform_vec3</a><a class='fn ' href='fn.mat2x3_add.html' title='Adds two matrices.'>mat2x3_add</a><a class='fn ' href='fn.mat2x3_cast.html' title='Converts to another matrix type.'>mat2x3_cast</a><a class='fn ' href='fn.mat2x3_det.html' title='Computes the determinant of a matrix.'>mat2x3_det</a><a class='fn ' href='fn.mat2x3_id.html' title='Constructs identity matrix.'>mat2x3_id</a><a class='fn ' href='fn.mat2x3_inv.html' title='Computes the inverse of a 2x3 matrix.'>mat2x3_inv</a><a class='fn ' href='fn.mat2x3_inv_det.html' title='Computes inverse determinant of a 2x3 matrix.'>mat2x3_inv_det</a><a class='fn ' href='fn.mat2x3_sub.html' title='Subtracts &#39;b&#39; from &#39;a&#39;.'>mat2x3_sub</a><a class='fn ' href='fn.mat2x3_transposed.html' title='Constructs the transpose of a matrix.'>mat2x3_transposed</a><a class='fn ' href='fn.mat3_add.html' title='Adds two matrices.'>mat3_add</a><a class='fn ' href='fn.mat3_cast.html' title='Converts to another matrix type.'>mat3_cast</a><a class='fn ' href='fn.mat3_det.html' title='Computes the determinant of a matrix.'>mat3_det</a><a class='fn ' href='fn.mat3_id.html' title='Constructs identity matrix.'>mat3_id</a><a class='fn ' href='fn.mat3_inv.html' title='Computes the inverse of a 3x3 matrix.'>mat3_inv</a><a class='fn ' href='fn.mat3_inv_det.html' title='Computes inverse determinant of a 3x3 matrix.'>mat3_inv_det</a><a class='fn ' href='fn.mat3_sub.html' title='Subtracts &#39;b&#39; from &#39;a&#39;.'>mat3_sub</a><a class='fn ' href='fn.mat3_transposed.html' title='Constructs the transpose of a matrix.'>mat3_transposed</a><a class='fn ' href='fn.mat3x2_add.html' title='Adds two matrices.'>mat3x2_add</a><a class='fn ' href='fn.mat3x2_cast.html' title='Converts to another matrix type.'>mat3x2_cast</a><a class='fn ' href='fn.mat3x2_det.html' title='Computes the determinant of a matrix.'>mat3x2_det</a><a class='fn ' href='fn.mat3x2_id.html' title='Constructs identity matrix.'>mat3x2_id</a><a class='fn ' href='fn.mat3x2_inv.html' title='Computes the inverse of a 3x2 matrix.'>mat3x2_inv</a><a class='fn ' href='fn.mat3x2_inv_det.html' title='Computes inverse determinant of a 3x2 matrix.'>mat3x2_inv_det</a><a class='fn ' href='fn.mat3x2_sub.html' title='Subtracts &#39;b&#39; from &#39;a&#39;.'>mat3x2_sub</a><a class='fn ' href='fn.mat3x2_transposed.html' title='Constructs the transpose of a matrix.'>mat3x2_transposed</a><a class='fn ' href='fn.mat3x4_add.html' title='Adds two matrices.'>mat3x4_add</a><a class='fn ' href='fn.mat3x4_cast.html' title='Converts to another matrix type.'>mat3x4_cast</a><a class='fn ' href='fn.mat3x4_det.html' title='Computes the determinant of a matrix.'>mat3x4_det</a><a class='fn ' href='fn.mat3x4_id.html' title='Constructs identity matrix.'>mat3x4_id</a><a class='fn ' href='fn.mat3x4_inv.html' title='Computes the inverse of a 3x4 matrix.'>mat3x4_inv</a><a class='fn ' href='fn.mat3x4_inv_det.html' title='Computes inverse determinant of a 3x4 matrix.'>mat3x4_inv_det</a><a class='fn ' href='fn.mat3x4_sub.html' title='Subtracts &#39;b&#39; from &#39;a&#39;.'>mat3x4_sub</a><a class='fn ' href='fn.mat3x4_transposed.html' title='Constructs the transpose of a matrix.'>mat3x4_transposed</a><a class='fn ' href='fn.mat4_add.html' title='Adds two matrices.'>mat4_add</a><a class='fn ' href='fn.mat4_cast.html' title='Converts to another matrix type.'>mat4_cast</a><a class='fn ' href='fn.mat4_det.html' title='Computes the determinant of a 4x4 matrix.'>mat4_det</a><a class='fn ' href='fn.mat4_id.html' title='Constructs identity matrix.'>mat4_id</a><a class='fn ' href='fn.mat4_inv.html' title='Computes the inverse of a 4x4 matrix.'>mat4_inv</a><a class='fn ' href='fn.mat4_inv_det.html' title='Computes the inverse determinant of a 4x4 matrix.'>mat4_inv_det</a><a class='fn ' href='fn.mat4_sub.html' title='Subtracts &#39;b&#39; from &#39;a&#39;.'>mat4_sub</a><a class='fn ' href='fn.mat4_transposed.html' title='Constructs the transpose of a matrix.'>mat4_transposed</a><a class='fn ' href='fn.mat4x3_add.html' title='Adds two matrices.'>mat4x3_add</a><a class='fn ' href='fn.mat4x3_cast.html' title='Converts to another matrix type.'>mat4x3_cast</a><a class='fn ' href='fn.mat4x3_det.html' title='Computes the determinant of a matrix.'>mat4x3_det</a><a class='fn ' href='fn.mat4x3_id.html' title='Constructs identity matrix.'>mat4x3_id</a><a class='fn ' href='fn.mat4x3_inv.html' title='Computes the inverse of a 4x3 matrix.'>mat4x3_inv</a><a class='fn ' href='fn.mat4x3_inv_det.html' title='Computes inverse determinant of a 4x3 matrix.'>mat4x3_inv_det</a><a class='fn ' href='fn.mat4x3_sub.html' title='Subtracts &#39;b&#39; from &#39;a&#39;.'>mat4x3_sub</a><a class='fn ' href='fn.mat4x3_transposed.html' title='Constructs the transpose of a matrix.'>mat4x3_transposed</a><a class='fn ' href='fn.row_mat2x3_col.html' title='Returns a column vector of a row matrix.'>row_mat2x3_col</a><a class='fn ' href='fn.row_mat2x3_mul.html' title='Multiplies two matrices.'>row_mat2x3_mul</a><a class='fn ' href='fn.row_mat2x3_mul_row.html' title='Computes row vector in row matrix product.'>row_mat2x3_mul_row</a><a class='fn ' href='fn.row_mat2x3_transform_pos2.html' title='Transforms a 2D position through matrix.'>row_mat2x3_transform_pos2</a><a class='fn ' href='fn.row_mat2x3_transform_vec2.html' title='Transforms a 2D vector through matrix.'>row_mat2x3_transform_vec2</a><a class='fn ' href='fn.row_mat3_col.html' title='Returns a column vector of a row matrix.'>row_mat3_col</a><a class='fn ' href='fn.row_mat3_mul.html' title='Multiplies two matrices.'>row_mat3_mul</a><a class='fn ' href='fn.row_mat3_mul_row.html' title='Computes row vector in row matrix product.'>row_mat3_mul_row</a><a class='fn ' href='fn.row_mat3_transform.html' title='Transforms a 3D vector through a matrix.'>row_mat3_transform</a><a class='fn ' href='fn.row_mat3_transform_pos2.html' title='Transforms a 2D position through row matrix.'>row_mat3_transform_pos2</a><a class='fn ' href='fn.row_mat3_transform_vec2.html' title='Transforms a 2D vector through row matrix.'>row_mat3_transform_vec2</a><a class='fn ' href='fn.row_mat3x2_col.html' title='Returns a column vector of a row matrix.'>row_mat3x2_col</a><a class='fn ' href='fn.row_mat3x4_col.html' title='Returns a column vector of a row matrix.'>row_mat3x4_col</a><a class='fn ' href='fn.row_mat3x4_mul.html' title='Multiplies two matrices.'>row_mat3x4_mul</a><a class='fn ' href='fn.row_mat3x4_mul_row.html' title='Computes row vector in row matrix product.'>row_mat3x4_mul_row</a><a class='fn ' href='fn.row_mat3x4_transform_pos3.html' title='Transforms a 3D position through matrix.'>row_mat3x4_transform_pos3</a><a class='fn ' href='fn.row_mat3x4_transform_vec3.html' title='Transforms a 3D vector through matrix.'>row_mat3x4_transform_vec3</a><a class='fn ' href='fn.row_mat4_col.html' title='Returns a column vector of a row matrix.'>row_mat4_col</a><a class='fn current' href='fn.row_mat4_mul.html' title='Multiplies two matrices.'>row_mat4_mul</a><a class='fn ' href='fn.row_mat4_mul_row.html' title='Computes row vector in row matrix product.'>row_mat4_mul_row</a><a class='fn ' href='fn.row_mat4_transform.html' title='Transforms a 4D vector through a matrix.'>row_mat4_transform</a><a class='fn ' href='fn.row_mat4x3_col.html' title='Returns a column vector of a row matrix.'>row_mat4x3_col</a><a class='fn ' href='fn.vec2_add.html' title='Adds two vectors.'>vec2_add</a><a class='fn ' href='fn.vec2_cast.html' title='Converts to another vector type.'>vec2_cast</a><a class='fn ' href='fn.vec2_cross.html' title='Computes the cross product.'>vec2_cross</a><a class='fn ' href='fn.vec2_dot.html' title='Computes the dot product.'>vec2_dot</a><a class='fn ' href='fn.vec2_inv_len.html' title='Computes the inverse length of a vector.'>vec2_inv_len</a><a class='fn ' href='fn.vec2_len.html' title='Computes the length of vector.'>vec2_len</a><a class='fn ' href='fn.vec2_mul.html' title='Multiplies two vectors component wise.'>vec2_mul</a><a class='fn ' href='fn.vec2_normalized.html' title='Computes the normalized.'>vec2_normalized</a><a class='fn ' href='fn.vec2_normalized_sub.html' title='Computes the normalized difference between two vectors.'>vec2_normalized_sub</a><a class='fn ' href='fn.vec2_scale.html' title='Multiplies the vector with a scalar.'>vec2_scale</a><a class='fn ' href='fn.vec2_square_len.html' title='Computes the square length of a vector.'>vec2_square_len</a><a class='fn ' href='fn.vec2_sub.html' title='Subtracts &#39;b&#39; from &#39;a&#39;.'>vec2_sub</a><a class='fn ' href='fn.vec3_add.html' title='Adds two vectors.'>vec3_add</a><a class='fn ' href='fn.vec3_cast.html' title='Converts to another vector type.'>vec3_cast</a><a class='fn ' href='fn.vec3_cross.html' title='Computes the cross product.'>vec3_cross</a><a class='fn ' href='fn.vec3_dot.html' title='Computes the dot product.'>vec3_dot</a><a class='fn ' href='fn.vec3_dot_pos2.html' title='Computes transformed position component.'>vec3_dot_pos2</a><a class='fn ' href='fn.vec3_dot_vec2.html' title='Computes transformed vector component.'>vec3_dot_vec2</a><a class='fn ' href='fn.vec3_inv_len.html' title='Computes the inverse length of a vector.'>vec3_inv_len</a><a class='fn ' href='fn.vec3_len.html' title='Computes the length of vector.'>vec3_len</a><a class='fn ' href='fn.vec3_mul.html' title='Multiplies two vectors component wise.'>vec3_mul</a><a class='fn ' href='fn.vec3_normalized.html' title='Computes the normalized.'>vec3_normalized</a><a class='fn ' href='fn.vec3_normalized_sub.html' title='Computes the normalized difference between two vectors.'>vec3_normalized_sub</a><a class='fn ' href='fn.vec3_scale.html' title='Multiplies the vector with a scalar.'>vec3_scale</a><a class='fn ' href='fn.vec3_square_len.html' title='Computes the square length of a vector.'>vec3_square_len</a><a class='fn ' href='fn.vec3_sub.html' title='Subtracts &#39;b&#39; from &#39;a&#39;.'>vec3_sub</a><a class='fn ' href='fn.vec4_add.html' title='Adds two vectors.'>vec4_add</a><a class='fn ' href='fn.vec4_cast.html' title='Converts to another vector type.'>vec4_cast</a><a class='fn ' href='fn.vec4_dot.html' title='Computes the dot product.'>vec4_dot</a><a class='fn ' href='fn.vec4_dot_pos3.html' title='Computes transformed position component.'>vec4_dot_pos3</a><a class='fn ' href='fn.vec4_dot_vec3.html' title='Computes transformed vector component.'>vec4_dot_vec3</a><a class='fn ' href='fn.vec4_inv_len.html' title='Computes the inverse length of a vector.'>vec4_inv_len</a><a class='fn ' href='fn.vec4_len.html' title='Computes the length of vector.'>vec4_len</a><a class='fn ' href='fn.vec4_mul.html' title='Multiplies two vectors component wise.'>vec4_mul</a><a class='fn ' href='fn.vec4_normalized.html' title='Computes the normalized.'>vec4_normalized</a><a class='fn ' href='fn.vec4_normalized_sub.html' title='Computes the normalized difference between two vectors.'>vec4_normalized_sub</a><a class='fn ' href='fn.vec4_scale.html' title='Multiplies the vector with a scalar.'>vec4_scale</a><a class='fn ' href='fn.vec4_square_len.html' title='Computes the square length of a vector.'>vec4_square_len</a><a class='fn ' href='fn.vec4_sub.html' title='Subtracts &#39;b&#39; from &#39;a&#39;.'>vec4_sub</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content fn">
+<h1 class='fqn'><span class='in-band'>Function <a href='index.html'>vecmath</a>::<wbr><a class='fn' href=''>row_mat4_mul</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-905' href='../src/vecmath/lib.rs.html#283-293'>[src]</a></span></h1>
+<pre class='rust fn'>pub fn row_mat4_mul&lt;T: <a class='trait' href='http://doc.rust-lang.org/nightly/std/num/trait.Float.html' title='std::num::Float'>Float</a> + <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a>&gt;(a: <a class='type' href='../vecmath/type.Matrix4.html' title='vecmath::Matrix4'>Matrix4</a>&lt;T&gt;, b: <a class='type' href='../vecmath/type.Matrix4.html' title='vecmath::Matrix4'>Matrix4</a>&lt;T&gt;) -&gt; <a class='type' href='../vecmath/type.Matrix4.html' title='vecmath::Matrix4'>Matrix4</a>&lt;T&gt;</pre><div class='docblock'><p>Multiplies two matrices.</p>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "vecmath";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `EventType` enum in crate `sdl2`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, EventType">
+
+    <title>sdl2::event::EventType - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>event</a></p><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.Event.html' title='Different event types.'>Event</a><a class='enum current' href='enum.EventType.html' title='Types of events that can be delivered.'>EventType</a><a class='enum ' href='enum.WindowEventId.html' title='An enum of window events.'>WindowEventId</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.add_event_watch.html' title='Add a callback to be triggered when an event is added to the event queue.'>add_event_watch</a><a class='fn ' href='fn.delete_event_watch.html' title='Remove an event watch callback added.'>delete_event_watch</a><a class='fn ' href='fn.filter_events.html' title='Run a specific filter function on the current event queue, removing any events for which the filter returns 0.'>filter_events</a><a class='fn ' href='fn.flush_event.html' title='Clear events from the event queue.'>flush_event</a><a class='fn ' href='fn.flush_events.html' title='Clear events from the event queue of a range of event types.'>flush_events</a><a class='fn ' href='fn.get_event_state.html' title='Get the state of processing events.'>get_event_state</a><a class='fn ' href='fn.has_event.html' title='Check for the existence of certain event types in the event queue.'>has_event</a><a class='fn ' href='fn.has_events.html' title='Check for the existence of a range of event types in the event queue.'>has_events</a><a class='fn ' href='fn.poll_event.html' title='Poll for currently pending events.'>poll_event</a><a class='fn ' href='fn.pump_events.html' title='Pump the event loop, gathering events from the input devices.'>pump_events</a><a class='fn ' href='fn.push_event.html' title='add an event to the event queue'>push_event</a><a class='fn ' href='fn.register_events.html' title='allocate a set of user-defined events, and return the beginning event number for that set of events'>register_events</a><a class='fn ' href='fn.set_event_filter.html' title='Set up a filter to process all events before they change internal state and are posted to the internal event queue.'>set_event_filter</a><a class='fn ' href='fn.set_event_state.html' title='Set the state of processing events.'>set_event_state</a><a class='fn ' href='fn.wait_event.html' title='Wait indefinitely for the next available event.'>wait_event</a><a class='fn ' href='fn.wait_event_timeout.html' title='Wait until the specified timeout (in milliseconds) for the next available event.'>wait_event_timeout</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>event</a>::<wbr><a class='enum' href=''>EventType</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-37599' href='../../src/sdl2/event.rs.html#31-82'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum EventType {
+    First,
+    Quit,
+    AppTerminating,
+    AppLowMemory,
+    AppWillEnterBackground,
+    AppDidEnterBackground,
+    AppWillEnterForeground,
+    AppDidEnterForeground,
+    Window,
+    KeyDown,
+    KeyUp,
+    TextEditing,
+    TextInput,
+    MouseMotion,
+    MouseButtonDown,
+    MouseButtonUp,
+    MouseWheel,
+    JoyAxisMotion,
+    JoyBallMotion,
+    JoyHatMotion,
+    JoyButtonDown,
+    JoyButtonUp,
+    JoyDeviceAdded,
+    JoyDeviceRemoved,
+    ControllerAxisMotion,
+    ControllerButtonDown,
+    ControllerButtonUp,
+    ControllerDeviceAdded,
+    ControllerDeviceRemoved,
+    ControllerDeviceRemapped,
+    FingerDown,
+    FingerUp,
+    FingerMotion,
+    DollarGesture,
+    DollarRecord,
+    MultiGesture,
+    ClipboardUpdate,
+    DropFile,
+    User,
+    Last,
+}</pre><div class='docblock'><p>Types of events that can be delivered.</p>
+</div><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.First'><a class='stability Unmarked' title='No stability level'></a><code>First</code></td><td></td></tr><tr><td id='variant.Quit'><a class='stability Unmarked' title='No stability level'></a><code>Quit</code></td><td></td></tr><tr><td id='variant.AppTerminating'><a class='stability Unmarked' title='No stability level'></a><code>AppTerminating</code></td><td></td></tr><tr><td id='variant.AppLowMemory'><a class='stability Unmarked' title='No stability level'></a><code>AppLowMemory</code></td><td></td></tr><tr><td id='variant.AppWillEnterBackground'><a class='stability Unmarked' title='No stability level'></a><code>AppWillEnterBackground</code></td><td></td></tr><tr><td id='variant.AppDidEnterBackground'><a class='stability Unmarked' title='No stability level'></a><code>AppDidEnterBackground</code></td><td></td></tr><tr><td id='variant.AppWillEnterForeground'><a class='stability Unmarked' title='No stability level'></a><code>AppWillEnterForeground</code></td><td></td></tr><tr><td id='variant.AppDidEnterForeground'><a class='stability Unmarked' title='No stability level'></a><code>AppDidEnterForeground</code></td><td></td></tr><tr><td id='variant.Window'><a class='stability Unmarked' title='No stability level'></a><code>Window</code></td><td></td></tr><tr><td id='variant.KeyDown'><a class='stability Unmarked' title='No stability level'></a><code>KeyDown</code></td><td></td></tr><tr><td id='variant.KeyUp'><a class='stability Unmarked' title='No stability level'></a><code>KeyUp</code></td><td></td></tr><tr><td id='variant.TextEditing'><a class='stability Unmarked' title='No stability level'></a><code>TextEditing</code></td><td></td></tr><tr><td id='variant.TextInput'><a class='stability Unmarked' title='No stability level'></a><code>TextInput</code></td><td></td></tr><tr><td id='variant.MouseMotion'><a class='stability Unmarked' title='No stability level'></a><code>MouseMotion</code></td><td></td></tr><tr><td id='variant.MouseButtonDown'><a class='stability Unmarked' title='No stability level'></a><code>MouseButtonDown</code></td><td></td></tr><tr><td id='variant.MouseButtonUp'><a class='stability Unmarked' title='No stability level'></a><code>MouseButtonUp</code></td><td></td></tr><tr><td id='variant.MouseWheel'><a class='stability Unmarked' title='No stability level'></a><code>MouseWheel</code></td><td></td></tr><tr><td id='variant.JoyAxisMotion'><a class='stability Unmarked' title='No stability level'></a><code>JoyAxisMotion</code></td><td></td></tr><tr><td id='variant.JoyBallMotion'><a class='stability Unmarked' title='No stability level'></a><code>JoyBallMotion</code></td><td></td></tr><tr><td id='variant.JoyHatMotion'><a class='stability Unmarked' title='No stability level'></a><code>JoyHatMotion</code></td><td></td></tr><tr><td id='variant.JoyButtonDown'><a class='stability Unmarked' title='No stability level'></a><code>JoyButtonDown</code></td><td></td></tr><tr><td id='variant.JoyButtonUp'><a class='stability Unmarked' title='No stability level'></a><code>JoyButtonUp</code></td><td></td></tr><tr><td id='variant.JoyDeviceAdded'><a class='stability Unmarked' title='No stability level'></a><code>JoyDeviceAdded</code></td><td></td></tr><tr><td id='variant.JoyDeviceRemoved'><a class='stability Unmarked' title='No stability level'></a><code>JoyDeviceRemoved</code></td><td></td></tr><tr><td id='variant.ControllerAxisMotion'><a class='stability Unmarked' title='No stability level'></a><code>ControllerAxisMotion</code></td><td></td></tr><tr><td id='variant.ControllerButtonDown'><a class='stability Unmarked' title='No stability level'></a><code>ControllerButtonDown</code></td><td></td></tr><tr><td id='variant.ControllerButtonUp'><a class='stability Unmarked' title='No stability level'></a><code>ControllerButtonUp</code></td><td></td></tr><tr><td id='variant.ControllerDeviceAdded'><a class='stability Unmarked' title='No stability level'></a><code>ControllerDeviceAdded</code></td><td></td></tr><tr><td id='variant.ControllerDeviceRemoved'><a class='stability Unmarked' title='No stability level'></a><code>ControllerDeviceRemoved</code></td><td></td></tr><tr><td id='variant.ControllerDeviceRemapped'><a class='stability Unmarked' title='No stability level'></a><code>ControllerDeviceRemapped</code></td><td></td></tr><tr><td id='variant.FingerDown'><a class='stability Unmarked' title='No stability level'></a><code>FingerDown</code></td><td></td></tr><tr><td id='variant.FingerUp'><a class='stability Unmarked' title='No stability level'></a><code>FingerUp</code></td><td></td></tr><tr><td id='variant.FingerMotion'><a class='stability Unmarked' title='No stability level'></a><code>FingerMotion</code></td><td></td></tr><tr><td id='variant.DollarGesture'><a class='stability Unmarked' title='No stability level'></a><code>DollarGesture</code></td><td></td></tr><tr><td id='variant.DollarRecord'><a class='stability Unmarked' title='No stability level'></a><code>DollarRecord</code></td><td></td></tr><tr><td id='variant.MultiGesture'><a class='stability Unmarked' title='No stability level'></a><code>MultiGesture</code></td><td></td></tr><tr><td id='variant.ClipboardUpdate'><a class='stability Unmarked' title='No stability level'></a><code>ClipboardUpdate</code></td><td></td></tr><tr><td id='variant.DropFile'><a class='stability Unmarked' title='No stability level'></a><code>DropFile</code></td><td></td></tr><tr><td id='variant.User'><a class='stability Unmarked' title='No stability level'></a><code>User</code></td><td></td></tr><tr><td id='variant.Last'><a class='stability Unmarked' title='No stability level'></a><code>Last</code></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/num/trait.FromPrimitive.html' title='core::num::FromPrimitive'>FromPrimitive</a> for <a class='enum' href='../../sdl2/event/enum.EventType.html' title='sdl2::event::EventType'>EventType</a></code></h3><div class='impl-items'><h4 id='method.from_i64' class='method'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#method.from_i64' class='fnname'>from_i64</a>(__arg_0: <a href='http://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='../../sdl2/event/enum.EventType.html' title='sdl2::event::EventType'>EventType</a>&gt;</code></h4>
+<h4 id='method.from_u64' class='method'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#method.from_u64' class='fnname'>from_u64</a>(__arg_0: <a href='http://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='../../sdl2/event/enum.EventType.html' title='sdl2::event::EventType'>EventType</a>&gt;</code></h4>
+<h4 id='method.from_int' class='tymethod'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#tymethod.from_int' class='fnname'>from_int</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.isize.html'>isize</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h4>
+<h4 id='method.from_i8' class='tymethod'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#tymethod.from_i8' class='fnname'>from_i8</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.i8.html'>i8</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h4>
+<h4 id='method.from_i16' class='tymethod'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#tymethod.from_i16' class='fnname'>from_i16</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.i16.html'>i16</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h4>
+<h4 id='method.from_i32' class='tymethod'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#tymethod.from_i32' class='fnname'>from_i32</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h4>
+<h4 id='method.from_uint' class='tymethod'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#tymethod.from_uint' class='fnname'>from_uint</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h4>
+<h4 id='method.from_u8' class='tymethod'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#tymethod.from_u8' class='fnname'>from_u8</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h4>
+<h4 id='method.from_u16' class='tymethod'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#tymethod.from_u16' class='fnname'>from_u16</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h4>
+<h4 id='method.from_u32' class='tymethod'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#tymethod.from_u32' class='fnname'>from_u32</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h4>
+<h4 id='method.from_f32' class='tymethod'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#tymethod.from_f32' class='fnname'>from_f32</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h4>
+<h4 id='method.from_f64' class='tymethod'><a class='stability Unstable' title='Unstable: trait is likely to be removed'></a><code>fn <a href='#tymethod.from_f64' class='fnname'>from_f64</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../sdl2/event/enum.EventType.html' title='sdl2::event::EventType'>EventType</a></code></h3><div class='impl-items'><h4 id='method.clone' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../sdl2/event/enum.EventType.html' title='sdl2::event::EventType'>EventType</a></code></h4>
+<h4 id='method.clone_from' class='tymethod'><a class='stability Unstable' title='Unstable: this function is rarely used'></a><code>fn <a href='#tymethod.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../../sdl2/event/enum.EventType.html' title='sdl2::event::EventType'>EventType</a></code></h3><div class='impl-items'></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

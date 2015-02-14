@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Event` enum in crate `sdl2`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Event">
+
+    <title>sdl2::event::Event - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>event</a></p><div class='block enum'><h2>Enums</h2><a class='enum current' href='enum.Event.html' title='Different event types.'>Event</a><a class='enum ' href='enum.EventType.html' title='Types of events that can be delivered.'>EventType</a><a class='enum ' href='enum.WindowEventId.html' title='An enum of window events.'>WindowEventId</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.add_event_watch.html' title='Add a callback to be triggered when an event is added to the event queue.'>add_event_watch</a><a class='fn ' href='fn.delete_event_watch.html' title='Remove an event watch callback added.'>delete_event_watch</a><a class='fn ' href='fn.filter_events.html' title='Run a specific filter function on the current event queue, removing any events for which the filter returns 0.'>filter_events</a><a class='fn ' href='fn.flush_event.html' title='Clear events from the event queue.'>flush_event</a><a class='fn ' href='fn.flush_events.html' title='Clear events from the event queue of a range of event types.'>flush_events</a><a class='fn ' href='fn.get_event_state.html' title='Get the state of processing events.'>get_event_state</a><a class='fn ' href='fn.has_event.html' title='Check for the existence of certain event types in the event queue.'>has_event</a><a class='fn ' href='fn.has_events.html' title='Check for the existence of a range of event types in the event queue.'>has_events</a><a class='fn ' href='fn.poll_event.html' title='Poll for currently pending events.'>poll_event</a><a class='fn ' href='fn.pump_events.html' title='Pump the event loop, gathering events from the input devices.'>pump_events</a><a class='fn ' href='fn.push_event.html' title='add an event to the event queue'>push_event</a><a class='fn ' href='fn.register_events.html' title='allocate a set of user-defined events, and return the beginning event number for that set of events'>register_events</a><a class='fn ' href='fn.set_event_filter.html' title='Set up a filter to process all events before they change internal state and are posted to the internal event queue.'>set_event_filter</a><a class='fn ' href='fn.set_event_state.html' title='Set the state of processing events.'>set_event_state</a><a class='fn ' href='fn.wait_event.html' title='Wait indefinitely for the next available event.'>wait_event</a><a class='fn ' href='fn.wait_event_timeout.html' title='Wait until the specified timeout (in milliseconds) for the next available event.'>wait_event_timeout</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>event</a>::<wbr><a class='enum' href=''>Event</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-39665' href='../../src/sdl2/event.rs.html#127-364'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum Event {
+    None,
+    Quit {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    },
+    AppTerminating {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    },
+    AppLowMemory {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    },
+    AppWillEnterBackground {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    },
+    AppDidEnterBackground {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    },
+    AppWillEnterForeground {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    },
+    AppDidEnterForeground {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    },
+    Window {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        window_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        win_event_id: <a class='enum' href='../../sdl2/event/enum.WindowEventId.html' title='sdl2::event::WindowEventId'>WindowEventId</a>,
+        data1: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+        data2: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    },
+    KeyDown {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        window_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        keycode: <a class='enum' href='../../sdl2/keycode/enum.KeyCode.html' title='sdl2::keycode::KeyCode'>KeyCode</a>,
+        scancode: <a class='enum' href='../../sdl2/scancode/enum.ScanCode.html' title='sdl2::scancode::ScanCode'>ScanCode</a>,
+        keymod: <a class='struct' href='../../sdl2/keyboard/struct.Mod.html' title='sdl2::keyboard::Mod'>Mod</a>,
+        repeat: <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    },
+    KeyUp {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        window_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        keycode: <a class='enum' href='../../sdl2/keycode/enum.KeyCode.html' title='sdl2::keycode::KeyCode'>KeyCode</a>,
+        scancode: <a class='enum' href='../../sdl2/scancode/enum.ScanCode.html' title='sdl2::scancode::ScanCode'>ScanCode</a>,
+        keymod: <a class='struct' href='../../sdl2/keyboard/struct.Mod.html' title='sdl2::keyboard::Mod'>Mod</a>,
+        repeat: <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    },
+    TextEditing {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        window_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        text: <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
+        start: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+        length: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    },
+    TextInput {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        window_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        text: <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
+    },
+    MouseMotion {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        window_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        which: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        mousestate: <a class='struct' href='../../sdl2/mouse/struct.MouseState.html' title='sdl2::mouse::MouseState'>MouseState</a>,
+        x: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+        y: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+        xrel: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+        yrel: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    },
+    MouseButtonDown {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        window_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        which: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        mouse_btn: <a class='enum' href='../../sdl2/mouse/enum.Mouse.html' title='sdl2::mouse::Mouse'>Mouse</a>,
+        x: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+        y: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    },
+    MouseButtonUp {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        window_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        which: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        mouse_btn: <a class='enum' href='../../sdl2/mouse/enum.Mouse.html' title='sdl2::mouse::Mouse'>Mouse</a>,
+        x: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+        y: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    },
+    MouseWheel {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        window_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        which: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        x: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+        y: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    },
+    JoyAxisMotion {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        which: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+        axis_idx: <a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+        value: <a href='http://doc.rust-lang.org/nightly/std/primitive.i16.html'>i16</a>,
+    },
+    JoyBallMotion {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        which: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+        ball_idx: <a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+        xrel: <a href='http://doc.rust-lang.org/nightly/std/primitive.i16.html'>i16</a>,
+        yrel: <a href='http://doc.rust-lang.org/nightly/std/primitive.i16.html'>i16</a>,
+    },
+    JoyHatMotion {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        which: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+        hat_idx: <a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+        state: <a class='enum' href='../../sdl2/joystick/enum.HatState.html' title='sdl2::joystick::HatState'>HatState</a>,
+    },
+    JoyButtonDown {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        which: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+        button_idx: <a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    },
+    JoyButtonUp {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        which: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+        button_idx: <a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    },
+    JoyDeviceAdded {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        which: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    },
+    JoyDeviceRemoved {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        which: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    },
+    ControllerAxisMotion {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        which: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+        axis: <a class='enum' href='../../sdl2/controller/enum.Axis.html' title='sdl2::controller::Axis'>Axis</a>,
+        value: <a href='http://doc.rust-lang.org/nightly/std/primitive.i16.html'>i16</a>,
+    },
+    ControllerButtonDown {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        which: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+        button: <a class='enum' href='../../sdl2/controller/enum.Button.html' title='sdl2::controller::Button'>Button</a>,
+    },
+    ControllerButtonUp {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        which: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+        button: <a class='enum' href='../../sdl2/controller/enum.Button.html' title='sdl2::controller::Button'>Button</a>,
+    },
+    ControllerDeviceAdded {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        which: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    },
+    ControllerDeviceRemoved {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        which: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    },
+    ControllerDeviceRemapped {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        which: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    },
+    FingerDown {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        touch_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>,
+        finger_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>,
+        x: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        y: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        dx: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        dy: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        pressure: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+    },
+    FingerUp {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        touch_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>,
+        finger_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>,
+        x: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        y: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        dx: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        dy: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        pressure: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+    },
+    FingerMotion {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        touch_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>,
+        finger_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>,
+        x: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        y: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        dx: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        dy: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        pressure: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+    },
+    DollarGesture {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        touch_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>,
+        gesture_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>,
+        num_fingers: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        error: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        x: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        y: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+    },
+    DollarRecord {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        touch_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>,
+        gesture_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>,
+        num_fingers: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        error: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        x: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        y: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+    },
+    MultiGesture {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        touch_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>,
+        d_theta: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        d_dist: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        x: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        y: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+        num_fingers: <a href='http://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a>,
+    },
+    ClipboardUpdate {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    },
+    DropFile {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        filename: <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
+    },
+    User {
+        timestamp: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        window_id: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        _type: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+        code: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    },
+}</pre><div class='docblock'><p>Different event types.</p>
+</div><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.None'><a class='stability Unmarked' title='No stability level'></a><code>None</code></td><td></td></tr><tr><td id='variant.Quit'><a class='stability Unmarked' title='No stability level'></a><code>Quit</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.Quit.field.timestamp'><code>timestamp</code></td><td></td></tr></table></td></tr><tr><td id='variant.AppTerminating'><a class='stability Unmarked' title='No stability level'></a><code>AppTerminating</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.AppTerminating.field.timestamp'><code>timestamp</code></td><td></td></tr></table></td></tr><tr><td id='variant.AppLowMemory'><a class='stability Unmarked' title='No stability level'></a><code>AppLowMemory</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.AppLowMemory.field.timestamp'><code>timestamp</code></td><td></td></tr></table></td></tr><tr><td id='variant.AppWillEnterBackground'><a class='stability Unmarked' title='No stability level'></a><code>AppWillEnterBackground</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.AppWillEnterBackground.field.timestamp'><code>timestamp</code></td><td></td></tr></table></td></tr><tr><td id='variant.AppDidEnterBackground'><a class='stability Unmarked' title='No stability level'></a><code>AppDidEnterBackground</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.AppDidEnterBackground.field.timestamp'><code>timestamp</code></td><td></td></tr></table></td></tr><tr><td id='variant.AppWillEnterForeground'><a class='stability Unmarked' title='No stability level'></a><code>AppWillEnterForeground</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.AppWillEnterForeground.field.timestamp'><code>timestamp</code></td><td></td></tr></table></td></tr><tr><td id='variant.AppDidEnterForeground'><a class='stability Unmarked' title='No stability level'></a><code>AppDidEnterForeground</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.AppDidEnterForeground.field.timestamp'><code>timestamp</code></td><td></td></tr></table></td></tr><tr><td id='variant.Window'><a class='stability Unmarked' title='No stability level'></a><code>Window</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.Window.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.Window.field.window_id'><code>window_id</code></td><td></td></tr><tr><td id='variant.Window.field.win_event_id'><code>win_event_id</code></td><td></td></tr><tr><td id='variant.Window.field.data1'><code>data1</code></td><td></td></tr><tr><td id='variant.Window.field.data2'><code>data2</code></td><td></td></tr></table></td></tr><tr><td id='variant.KeyDown'><a class='stability Unmarked' title='No stability level'></a><code>KeyDown</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.KeyDown.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.KeyDown.field.window_id'><code>window_id</code></td><td></td></tr><tr><td id='variant.KeyDown.field.keycode'><code>keycode</code></td><td></td></tr><tr><td id='variant.KeyDown.field.scancode'><code>scancode</code></td><td></td></tr><tr><td id='variant.KeyDown.field.keymod'><code>keymod</code></td><td></td></tr><tr><td id='variant.KeyDown.field.repeat'><code>repeat</code></td><td></td></tr></table></td></tr><tr><td id='variant.KeyUp'><a class='stability Unmarked' title='No stability level'></a><code>KeyUp</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.KeyUp.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.KeyUp.field.window_id'><code>window_id</code></td><td></td></tr><tr><td id='variant.KeyUp.field.keycode'><code>keycode</code></td><td></td></tr><tr><td id='variant.KeyUp.field.scancode'><code>scancode</code></td><td></td></tr><tr><td id='variant.KeyUp.field.keymod'><code>keymod</code></td><td></td></tr><tr><td id='variant.KeyUp.field.repeat'><code>repeat</code></td><td></td></tr></table></td></tr><tr><td id='variant.TextEditing'><a class='stability Unmarked' title='No stability level'></a><code>TextEditing</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.TextEditing.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.TextEditing.field.window_id'><code>window_id</code></td><td></td></tr><tr><td id='variant.TextEditing.field.text'><code>text</code></td><td></td></tr><tr><td id='variant.TextEditing.field.start'><code>start</code></td><td></td></tr><tr><td id='variant.TextEditing.field.length'><code>length</code></td><td></td></tr></table></td></tr><tr><td id='variant.TextInput'><a class='stability Unmarked' title='No stability level'></a><code>TextInput</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.TextInput.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.TextInput.field.window_id'><code>window_id</code></td><td></td></tr><tr><td id='variant.TextInput.field.text'><code>text</code></td><td></td></tr></table></td></tr><tr><td id='variant.MouseMotion'><a class='stability Unmarked' title='No stability level'></a><code>MouseMotion</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.MouseMotion.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.MouseMotion.field.window_id'><code>window_id</code></td><td></td></tr><tr><td id='variant.MouseMotion.field.which'><code>which</code></td><td></td></tr><tr><td id='variant.MouseMotion.field.mousestate'><code>mousestate</code></td><td></td></tr><tr><td id='variant.MouseMotion.field.x'><code>x</code></td><td></td></tr><tr><td id='variant.MouseMotion.field.y'><code>y</code></td><td></td></tr><tr><td id='variant.MouseMotion.field.xrel'><code>xrel</code></td><td></td></tr><tr><td id='variant.MouseMotion.field.yrel'><code>yrel</code></td><td></td></tr></table></td></tr><tr><td id='variant.MouseButtonDown'><a class='stability Unmarked' title='No stability level'></a><code>MouseButtonDown</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.MouseButtonDown.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.MouseButtonDown.field.window_id'><code>window_id</code></td><td></td></tr><tr><td id='variant.MouseButtonDown.field.which'><code>which</code></td><td></td></tr><tr><td id='variant.MouseButtonDown.field.mouse_btn'><code>mouse_btn</code></td><td></td></tr><tr><td id='variant.MouseButtonDown.field.x'><code>x</code></td><td></td></tr><tr><td id='variant.MouseButtonDown.field.y'><code>y</code></td><td></td></tr></table></td></tr><tr><td id='variant.MouseButtonUp'><a class='stability Unmarked' title='No stability level'></a><code>MouseButtonUp</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.MouseButtonUp.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.MouseButtonUp.field.window_id'><code>window_id</code></td><td></td></tr><tr><td id='variant.MouseButtonUp.field.which'><code>which</code></td><td></td></tr><tr><td id='variant.MouseButtonUp.field.mouse_btn'><code>mouse_btn</code></td><td></td></tr><tr><td id='variant.MouseButtonUp.field.x'><code>x</code></td><td></td></tr><tr><td id='variant.MouseButtonUp.field.y'><code>y</code></td><td></td></tr></table></td></tr><tr><td id='variant.MouseWheel'><a class='stability Unmarked' title='No stability level'></a><code>MouseWheel</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.MouseWheel.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.MouseWheel.field.window_id'><code>window_id</code></td><td></td></tr><tr><td id='variant.MouseWheel.field.which'><code>which</code></td><td></td></tr><tr><td id='variant.MouseWheel.field.x'><code>x</code></td><td></td></tr><tr><td id='variant.MouseWheel.field.y'><code>y</code></td><td></td></tr></table></td></tr><tr><td id='variant.JoyAxisMotion'><a class='stability Unmarked' title='No stability level'></a><code>JoyAxisMotion</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.JoyAxisMotion.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.JoyAxisMotion.field.which'><code>which</code></td><td></td></tr><tr><td id='variant.JoyAxisMotion.field.axis_idx'><code>axis_idx</code></td><td></td></tr><tr><td id='variant.JoyAxisMotion.field.value'><code>value</code></td><td></td></tr></table></td></tr><tr><td id='variant.JoyBallMotion'><a class='stability Unmarked' title='No stability level'></a><code>JoyBallMotion</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.JoyBallMotion.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.JoyBallMotion.field.which'><code>which</code></td><td></td></tr><tr><td id='variant.JoyBallMotion.field.ball_idx'><code>ball_idx</code></td><td></td></tr><tr><td id='variant.JoyBallMotion.field.xrel'><code>xrel</code></td><td></td></tr><tr><td id='variant.JoyBallMotion.field.yrel'><code>yrel</code></td><td></td></tr></table></td></tr><tr><td id='variant.JoyHatMotion'><a class='stability Unmarked' title='No stability level'></a><code>JoyHatMotion</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.JoyHatMotion.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.JoyHatMotion.field.which'><code>which</code></td><td></td></tr><tr><td id='variant.JoyHatMotion.field.hat_idx'><code>hat_idx</code></td><td></td></tr><tr><td id='variant.JoyHatMotion.field.state'><code>state</code></td><td></td></tr></table></td></tr><tr><td id='variant.JoyButtonDown'><a class='stability Unmarked' title='No stability level'></a><code>JoyButtonDown</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.JoyButtonDown.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.JoyButtonDown.field.which'><code>which</code></td><td></td></tr><tr><td id='variant.JoyButtonDown.field.button_idx'><code>button_idx</code></td><td></td></tr></table></td></tr><tr><td id='variant.JoyButtonUp'><a class='stability Unmarked' title='No stability level'></a><code>JoyButtonUp</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.JoyButtonUp.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.JoyButtonUp.field.which'><code>which</code></td><td></td></tr><tr><td id='variant.JoyButtonUp.field.button_idx'><code>button_idx</code></td><td></td></tr></table></td></tr><tr><td id='variant.JoyDeviceAdded'><a class='stability Unmarked' title='No stability level'></a><code>JoyDeviceAdded</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.JoyDeviceAdded.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.JoyDeviceAdded.field.which'><code>which</code></td><td></td></tr></table></td></tr><tr><td id='variant.JoyDeviceRemoved'><a class='stability Unmarked' title='No stability level'></a><code>JoyDeviceRemoved</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.JoyDeviceRemoved.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.JoyDeviceRemoved.field.which'><code>which</code></td><td></td></tr></table></td></tr><tr><td id='variant.ControllerAxisMotion'><a class='stability Unmarked' title='No stability level'></a><code>ControllerAxisMotion</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.ControllerAxisMotion.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.ControllerAxisMotion.field.which'><code>which</code></td><td></td></tr><tr><td id='variant.ControllerAxisMotion.field.axis'><code>axis</code></td><td></td></tr><tr><td id='variant.ControllerAxisMotion.field.value'><code>value</code></td><td></td></tr></table></td></tr><tr><td id='variant.ControllerButtonDown'><a class='stability Unmarked' title='No stability level'></a><code>ControllerButtonDown</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.ControllerButtonDown.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.ControllerButtonDown.field.which'><code>which</code></td><td></td></tr><tr><td id='variant.ControllerButtonDown.field.button'><code>button</code></td><td></td></tr></table></td></tr><tr><td id='variant.ControllerButtonUp'><a class='stability Unmarked' title='No stability level'></a><code>ControllerButtonUp</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.ControllerButtonUp.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.ControllerButtonUp.field.which'><code>which</code></td><td></td></tr><tr><td id='variant.ControllerButtonUp.field.button'><code>button</code></td><td></td></tr></table></td></tr><tr><td id='variant.ControllerDeviceAdded'><a class='stability Unmarked' title='No stability level'></a><code>ControllerDeviceAdded</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.ControllerDeviceAdded.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.ControllerDeviceAdded.field.which'><code>which</code></td><td></td></tr></table></td></tr><tr><td id='variant.ControllerDeviceRemoved'><a class='stability Unmarked' title='No stability level'></a><code>ControllerDeviceRemoved</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.ControllerDeviceRemoved.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.ControllerDeviceRemoved.field.which'><code>which</code></td><td></td></tr></table></td></tr><tr><td id='variant.ControllerDeviceRemapped'><a class='stability Unmarked' title='No stability level'></a><code>ControllerDeviceRemapped</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.ControllerDeviceRemapped.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.ControllerDeviceRemapped.field.which'><code>which</code></td><td></td></tr></table></td></tr><tr><td id='variant.FingerDown'><a class='stability Unmarked' title='No stability level'></a><code>FingerDown</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.FingerDown.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.FingerDown.field.touch_id'><code>touch_id</code></td><td></td></tr><tr><td id='variant.FingerDown.field.finger_id'><code>finger_id</code></td><td></td></tr><tr><td id='variant.FingerDown.field.x'><code>x</code></td><td></td></tr><tr><td id='variant.FingerDown.field.y'><code>y</code></td><td></td></tr><tr><td id='variant.FingerDown.field.dx'><code>dx</code></td><td></td></tr><tr><td id='variant.FingerDown.field.dy'><code>dy</code></td><td></td></tr><tr><td id='variant.FingerDown.field.pressure'><code>pressure</code></td><td></td></tr></table></td></tr><tr><td id='variant.FingerUp'><a class='stability Unmarked' title='No stability level'></a><code>FingerUp</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.FingerUp.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.FingerUp.field.touch_id'><code>touch_id</code></td><td></td></tr><tr><td id='variant.FingerUp.field.finger_id'><code>finger_id</code></td><td></td></tr><tr><td id='variant.FingerUp.field.x'><code>x</code></td><td></td></tr><tr><td id='variant.FingerUp.field.y'><code>y</code></td><td></td></tr><tr><td id='variant.FingerUp.field.dx'><code>dx</code></td><td></td></tr><tr><td id='variant.FingerUp.field.dy'><code>dy</code></td><td></td></tr><tr><td id='variant.FingerUp.field.pressure'><code>pressure</code></td><td></td></tr></table></td></tr><tr><td id='variant.FingerMotion'><a class='stability Unmarked' title='No stability level'></a><code>FingerMotion</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.FingerMotion.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.FingerMotion.field.touch_id'><code>touch_id</code></td><td></td></tr><tr><td id='variant.FingerMotion.field.finger_id'><code>finger_id</code></td><td></td></tr><tr><td id='variant.FingerMotion.field.x'><code>x</code></td><td></td></tr><tr><td id='variant.FingerMotion.field.y'><code>y</code></td><td></td></tr><tr><td id='variant.FingerMotion.field.dx'><code>dx</code></td><td></td></tr><tr><td id='variant.FingerMotion.field.dy'><code>dy</code></td><td></td></tr><tr><td id='variant.FingerMotion.field.pressure'><code>pressure</code></td><td></td></tr></table></td></tr><tr><td id='variant.DollarGesture'><a class='stability Unmarked' title='No stability level'></a><code>DollarGesture</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.DollarGesture.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.DollarGesture.field.touch_id'><code>touch_id</code></td><td></td></tr><tr><td id='variant.DollarGesture.field.gesture_id'><code>gesture_id</code></td><td></td></tr><tr><td id='variant.DollarGesture.field.num_fingers'><code>num_fingers</code></td><td></td></tr><tr><td id='variant.DollarGesture.field.error'><code>error</code></td><td></td></tr><tr><td id='variant.DollarGesture.field.x'><code>x</code></td><td></td></tr><tr><td id='variant.DollarGesture.field.y'><code>y</code></td><td></td></tr></table></td></tr><tr><td id='variant.DollarRecord'><a class='stability Unmarked' title='No stability level'></a><code>DollarRecord</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.DollarRecord.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.DollarRecord.field.touch_id'><code>touch_id</code></td><td></td></tr><tr><td id='variant.DollarRecord.field.gesture_id'><code>gesture_id</code></td><td></td></tr><tr><td id='variant.DollarRecord.field.num_fingers'><code>num_fingers</code></td><td></td></tr><tr><td id='variant.DollarRecord.field.error'><code>error</code></td><td></td></tr><tr><td id='variant.DollarRecord.field.x'><code>x</code></td><td></td></tr><tr><td id='variant.DollarRecord.field.y'><code>y</code></td><td></td></tr></table></td></tr><tr><td id='variant.MultiGesture'><a class='stability Unmarked' title='No stability level'></a><code>MultiGesture</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.MultiGesture.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.MultiGesture.field.touch_id'><code>touch_id</code></td><td></td></tr><tr><td id='variant.MultiGesture.field.d_theta'><code>d_theta</code></td><td></td></tr><tr><td id='variant.MultiGesture.field.d_dist'><code>d_dist</code></td><td></td></tr><tr><td id='variant.MultiGesture.field.x'><code>x</code></td><td></td></tr><tr><td id='variant.MultiGesture.field.y'><code>y</code></td><td></td></tr><tr><td id='variant.MultiGesture.field.num_fingers'><code>num_fingers</code></td><td></td></tr></table></td></tr><tr><td id='variant.ClipboardUpdate'><a class='stability Unmarked' title='No stability level'></a><code>ClipboardUpdate</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.ClipboardUpdate.field.timestamp'><code>timestamp</code></td><td></td></tr></table></td></tr><tr><td id='variant.DropFile'><a class='stability Unmarked' title='No stability level'></a><code>DropFile</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.DropFile.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.DropFile.field.filename'><code>filename</code></td><td></td></tr></table></td></tr><tr><td id='variant.User'><a class='stability Unmarked' title='No stability level'></a><code>User</code></td><td><h3 class='fields'>Fields</h3>
+
+                                              <table><tr><td id='variant.User.field.timestamp'><code>timestamp</code></td><td></td></tr><tr><td id='variant.User.field.window_id'><code>window_id</code></td><td></td></tr><tr><td id='variant.User.field._type'><code>_type</code></td><td></td></tr><tr><td id='variant.User.field.code'><code>code</code></td><td></td></tr></table></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../sdl2/event/enum.Event.html' title='sdl2::event::Event'>Event</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.fmt' class='fnname'>fmt</a>(&amp;self, out: &amp;mut <a class='struct' href='http://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

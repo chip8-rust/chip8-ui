@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `IdleEvent` trait in crate `event`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, IdleEvent">
+
+    <title>event::IdleEvent - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>event</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='events/index.html' title=''>events</a><a class='mod ' href='generic_event/index.html' title='Trait for generic events'>generic_event</a></div><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.Events.html' title='An event loop iterator'>Events</a><a class='struct ' href='struct.IdleArgs.html' title='Idle arguments, such as expected idle time in seconds.'>IdleArgs</a><a class='struct ' href='struct.MaxFps.html' title='The maximum number of frames per second'>MaxFps</a><a class='struct ' href='struct.RenderArgs.html' title='Render arguments'>RenderArgs</a><a class='struct ' href='struct.UpdateArgs.html' title='Update arguments, such as delta time in seconds'>UpdateArgs</a><a class='struct ' href='struct.Ups.html' title='The number of updates per second'>Ups</a></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.Event.html' title='Adds render and update events to input events'>Event</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.FocusEvent.html' title='When window gets or looses focus'>FocusEvent</a><a class='trait current' href='trait.IdleEvent.html' title='When background tasks should be performed'>IdleEvent</a><a class='trait ' href='trait.MouseCursorEvent.html' title='The position of the mouse cursor'>MouseCursorEvent</a><a class='trait ' href='trait.MouseRelativeEvent.html' title='The relative movement of mouse cursor'>MouseRelativeEvent</a><a class='trait ' href='trait.MouseScrollEvent.html' title='The scroll of the mouse wheel'>MouseScrollEvent</a><a class='trait ' href='trait.PressEvent.html' title='The press of a button'>PressEvent</a><a class='trait ' href='trait.ReleaseEvent.html' title='The release of a button'>ReleaseEvent</a><a class='trait ' href='trait.RenderEvent.html' title='When the next frame should be rendered'>RenderEvent</a><a class='trait ' href='trait.ResizeEvent.html' title='When the window is resized'>ResizeEvent</a><a class='trait ' href='trait.TextEvent.html' title='When receiving text from user, such as typing a character'>TextEvent</a><a class='trait ' href='trait.UpdateEvent.html' title='When the application state should be updated'>UpdateEvent</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.events.html' title='Creates event iterator from window.'>events</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content trait">
+<h1 class='fqn'><span class='in-band'>Trait <a href='index.html'>event</a>::<wbr><a class='trait' href=''>IdleEvent</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-1584' href='../src/event/idle.rs.html#8-22'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait IdleEvent: <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> {
+    fn <a href='#tymethod.from_idle_args' class='fnname'>from_idle_args</a>(args: &amp;<a class='struct' href='../event/struct.IdleArgs.html' title='event::IdleArgs'>IdleArgs</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;;
+    fn <a href='#tymethod.idle' class='fnname'>idle</a>&lt;U, F&gt;(&amp;self, f: F) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;U&gt; <span class='where'>where F: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(&amp;<a class='struct' href='../event/struct.IdleArgs.html' title='event::IdleArgs'>IdleArgs</a>) -&gt; U</span>;
+
+    fn <a href='#method.from_dt' class='fnname'>from_dt</a>(dt: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt; { ... }
+    fn <a href='#method.idle_args' class='fnname'>idle_args</a>(&amp;self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../event/struct.IdleArgs.html' title='event::IdleArgs'>IdleArgs</a>&gt; { ... }
+}</pre><div class='docblock'><p>When background tasks should be performed</p>
+</div>
+            <h2 id='required-methods'>Required Methods</h2>
+            <div class='methods'>
+        <h3 id='tymethod.from_idle_args' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#tymethod.from_idle_args' class='fnname'>from_idle_args</a>(args: &amp;<a class='struct' href='../event/struct.IdleArgs.html' title='event::IdleArgs'>IdleArgs</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h3><div class='docblock'><p>Creates an idle event.</p>
+</div><h3 id='tymethod.idle' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#tymethod.idle' class='fnname'>idle</a>&lt;U, F&gt;(&amp;self, f: F) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;U&gt; <span class='where'>where F: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(&amp;<a class='struct' href='../event/struct.IdleArgs.html' title='event::IdleArgs'>IdleArgs</a>) -&gt; U</span></code></h3><div class='docblock'><p>Calls closure if this is an idle event.</p>
+</div></div>
+            <h2 id='provided-methods'>Provided Methods</h2>
+            <div class='methods'>
+        <h3 id='method.from_dt' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.from_dt' class='fnname'>from_dt</a>(dt: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></h3><div class='docblock'><p>Creates an update event with delta time.</p>
+</div><h3 id='method.idle_args' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.idle_args' class='fnname'>idle_args</a>(&amp;self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../event/struct.IdleArgs.html' title='event::IdleArgs'>IdleArgs</a>&gt;</code></h3><div class='docblock'><p>Returns idle arguments.</p>
+</div></div>
+        <h2 id='implementors'>Implementors</h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;T: <a class='trait' href='../event/generic_event/trait.GenericEvent.html' title='event::generic_event::GenericEvent'>GenericEvent</a>&gt; <a class='trait' href='../event/trait.IdleEvent.html' title='event::IdleEvent'>IdleEvent</a> for T</code></li>
+</ul><script type="text/javascript" async
+                              src="../implementors/event/trait.IdleEvent.js">
+                      </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "event";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>

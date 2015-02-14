@@ -1,0 +1,1 @@
+{"name":"chip8_vm","counts":{"unstable":3,"stable":12,"unmarked":93},"submodules":[{"name":"error","counts":{"unstable":1,"stable":2,"unmarked":3},"submodules":[]},{"name":"instructions","counts":{"unstable":2,"stable":9,"unmarked":76},"submodules":[]},{"name":"vm","counts":{"unstable":0,"stable":1,"unmarked":13},"submodules":[]}]}

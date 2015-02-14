@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `RenderDrawer` struct in crate `sdl2`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, RenderDrawer">
+
+    <title>sdl2::render::RenderDrawer - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>render</a></p><div class='block struct'><h2>Structs</h2><a class='struct current' href='struct.RenderDrawer.html' title='Drawing functionality for the render context.'>RenderDrawer</a><a class='struct ' href='struct.RenderTarget.html' title='A handle for getting/setting the render target of the render context.'>RenderTarget</a><a class='struct ' href='struct.Renderer.html' title='2D rendering context'>Renderer</a><a class='struct ' href='struct.RendererFlags.html' title=''>RendererFlags</a><a class='struct ' href='struct.RendererInfo.html' title='A structure that contains information on the capabilities of a render driver or the current render context.'>RendererInfo</a><a class='struct ' href='struct.Texture.html' title='A texture for a rendering context.'>Texture</a><a class='struct ' href='struct.TextureQuery.html' title=''>TextureQuery</a></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.BlendMode.html' title=''>BlendMode</a><a class='enum ' href='enum.RenderDriverIndex.html' title=''>RenderDriverIndex</a><a class='enum ' href='enum.RendererParent.html' title=''>RendererParent</a><a class='enum ' href='enum.TextureAccess.html' title=''>TextureAccess</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.get_num_render_drivers.html' title=''>get_num_render_drivers</a><a class='fn ' href='fn.get_render_driver_info.html' title=''>get_render_driver_info</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>render</a>::<wbr><a class='struct' href=''>RenderDrawer</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-62617' href='../../src/sdl2/render.rs.html#333-336'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct RenderDrawer&lt;'renderer&gt; {
+    // some fields omitted
+}</pre><div class='docblock'><p>Drawing functionality for the render context.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;'renderer&gt; <a class='struct' href='../../sdl2/render/struct.RenderDrawer.html' title='sdl2::render::RenderDrawer'>RenderDrawer</a>&lt;'renderer&gt;</code></h3><div class='docblock'><p>Render target methods for the drawer</p>
+</div><div class='impl-items'><h4 id='method.render_target_supported' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.render_target_supported' class='fnname'>render_target_supported</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Determine whether a window supports the use of render targets.</p>
+</div><h4 id='method.render_target' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.render_target' class='fnname'>render_target</a>(&amp;mut self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../sdl2/render/struct.RenderTarget.html' title='sdl2::render::RenderTarget'>RenderTarget</a>&gt;</code></h4>
+<div class='docblock'><p>Gets the render target handle.</p>
+
+<p>Returns <code>None</code> if the window does not support the use of render targets.</p>
+</div></div><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;'renderer&gt; <a class='struct' href='../../sdl2/render/struct.RenderDrawer.html' title='sdl2::render::RenderDrawer'>RenderDrawer</a>&lt;'renderer&gt;</code></h3><div class='docblock'><p>Drawing methods</p>
+</div><div class='impl-items'><h4 id='method.set_draw_color' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.set_draw_color' class='fnname'>set_draw_color</a>(&amp;mut self, color: <a class='enum' href='../../sdl2/pixels/enum.Color.html' title='sdl2::pixels::Color'>Color</a>)</code></h4>
+<div class='docblock'><p>Sets the color used for drawing operations (Rect, Line and Clear).</p>
+</div><h4 id='method.get_draw_color' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_draw_color' class='fnname'>get_draw_color</a>(&amp;self) -&gt; <a class='enum' href='../../sdl2/pixels/enum.Color.html' title='sdl2::pixels::Color'>Color</a></code></h4>
+<div class='docblock'><p>Gets the color used for drawing operations (Rect, Line and Clear).</p>
+</div><h4 id='method.set_blend_mode' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.set_blend_mode' class='fnname'>set_blend_mode</a>(&amp;mut self, blend: <a class='enum' href='../../sdl2/render/enum.BlendMode.html' title='sdl2::render::BlendMode'>BlendMode</a>)</code></h4>
+<div class='docblock'><p>Sets the blend mode used for drawing operations (Fill and Line).</p>
+</div><h4 id='method.get_blend_mode' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_blend_mode' class='fnname'>get_blend_mode</a>(&amp;self) -&gt; <a class='enum' href='../../sdl2/render/enum.BlendMode.html' title='sdl2::render::BlendMode'>BlendMode</a></code></h4>
+<div class='docblock'><p>Gets the blend mode used for drawing operations.</p>
+</div><h4 id='method.clear' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.clear' class='fnname'>clear</a>(&amp;mut self)</code></h4>
+<div class='docblock'><p>Clears the current rendering target with the drawing color.</p>
+</div><h4 id='method.present' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.present' class='fnname'>present</a>(&amp;mut self)</code></h4>
+<div class='docblock'><p>Updates the screen with any rendering performed since the previous call.</p>
+
+<p>SDL&#39;s rendering functions operate on a backbuffer; that is, calling a
+rendering function such as <code>draw_line()</code> does not directly put a line on
+the screen, but rather updates the backbuffer.
+As such, you compose your entire scene and present the composed
+backbuffer to the screen as a complete picture.</p>
+</div><h4 id='method.get_output_size' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_output_size' class='fnname'>get_output_size</a>(&amp;self) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>)</a>&gt;</code></h4>
+<div class='docblock'><p>Gets the output size of a rendering context.</p>
+</div><h4 id='method.set_logical_size' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.set_logical_size' class='fnname'>set_logical_size</a>(&amp;mut self, width: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>, height: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>)</code></h4>
+<div class='docblock'><p>Sets a device independent resolution for rendering.</p>
+</div><h4 id='method.get_logical_size' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_logical_size' class='fnname'>get_logical_size</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>)</a></code></h4>
+<div class='docblock'><p>Gets device independent resolution for rendering.</p>
+</div><h4 id='method.set_viewport' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.set_viewport' class='fnname'>set_viewport</a>(&amp;mut self, rect: <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../sdl2-sys/rect/struct.Rect.html' title='sdl2-sys::rect::Rect'>Rect</a>&gt;)</code></h4>
+<div class='docblock'><p>Sets the drawing area for rendering on the current target.</p>
+</div><h4 id='method.get_viewport' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_viewport' class='fnname'>get_viewport</a>(&amp;self) -&gt; <a class='struct' href='../../sdl2-sys/rect/struct.Rect.html' title='sdl2-sys::rect::Rect'>Rect</a></code></h4>
+<div class='docblock'><p>Gets the drawing area for the current target.</p>
+</div><h4 id='method.set_clip_rect' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.set_clip_rect' class='fnname'>set_clip_rect</a>(&amp;mut self, rect: <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../sdl2-sys/rect/struct.Rect.html' title='sdl2-sys::rect::Rect'>Rect</a>&gt;)</code></h4>
+<div class='docblock'><p>Sets the clip rectangle for rendering on the specified target.</p>
+</div><h4 id='method.get_clip_rect' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_clip_rect' class='fnname'>get_clip_rect</a>(&amp;self) -&gt; <a class='struct' href='../../sdl2-sys/rect/struct.Rect.html' title='sdl2-sys::rect::Rect'>Rect</a></code></h4>
+<div class='docblock'><p>Gets the clip rectangle for the current target.</p>
+</div><h4 id='method.set_scale' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.set_scale' class='fnname'>set_scale</a>(&amp;mut self, scale_x: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>, scale_y: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>)</code></h4>
+<div class='docblock'><p>Sets the drawing scale for rendering on the current target.</p>
+</div><h4 id='method.get_scale' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_scale' class='fnname'>get_scale</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>)</a></code></h4>
+<div class='docblock'><p>Gets the drawing scale for the current target.</p>
+</div><h4 id='method.draw_point' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.draw_point' class='fnname'>draw_point</a>(&amp;mut self, point: <a class='struct' href='../../sdl2-sys/rect/struct.Point.html' title='sdl2-sys::rect::Point'>Point</a>)</code></h4>
+<div class='docblock'><p>Draws a point on the current rendering target.</p>
+
+<h1 id="panics" class='section-header'><a
+                           href="#panics">Panics</a></h1>
+<p>Panics if drawing fails for any reason (e.g. driver failure)</p>
+</div><h4 id='method.draw_points' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.draw_points' class='fnname'>draw_points</a>(&amp;mut self, points: <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a class='struct' href='../../sdl2-sys/rect/struct.Point.html' title='sdl2-sys::rect::Point'>Point</a><a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>)</code></h4>
+<div class='docblock'><p>Draws multiple points on the current rendering target.</p>
+
+<h1 id="panics" class='section-header'><a
+                           href="#panics">Panics</a></h1>
+<p>Panics if drawing fails for any reason (e.g. driver failure)</p>
+</div><h4 id='method.draw_line' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.draw_line' class='fnname'>draw_line</a>(&amp;mut self, start: <a class='struct' href='../../sdl2-sys/rect/struct.Point.html' title='sdl2-sys::rect::Point'>Point</a>, end: <a class='struct' href='../../sdl2-sys/rect/struct.Point.html' title='sdl2-sys::rect::Point'>Point</a>)</code></h4>
+<div class='docblock'>
+<h1 id="panics" class='section-header'><a
+                           href="#panics">Panics</a></h1>
+<p>Panics if drawing fails for any reason (e.g. driver failure)</p>
+</div><h4 id='method.draw_lines' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.draw_lines' class='fnname'>draw_lines</a>(&amp;mut self, points: <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a class='struct' href='../../sdl2-sys/rect/struct.Point.html' title='sdl2-sys::rect::Point'>Point</a><a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>)</code></h4>
+<div class='docblock'><p>Draws a series of connected lines on the current rendering target.</p>
+
+<h1 id="panics" class='section-header'><a
+                           href="#panics">Panics</a></h1>
+<p>Panics if drawing fails for any reason (e.g. driver failure)</p>
+</div><h4 id='method.draw_rect' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.draw_rect' class='fnname'>draw_rect</a>(&amp;mut self, rect: <a class='struct' href='../../sdl2-sys/rect/struct.Rect.html' title='sdl2-sys::rect::Rect'>Rect</a>)</code></h4>
+<div class='docblock'><p>Draws a rectangle on the current rendering target.</p>
+
+<h1 id="panics" class='section-header'><a
+                           href="#panics">Panics</a></h1>
+<p>Panics if drawing fails for any reason (e.g. driver failure)</p>
+</div><h4 id='method.draw_rects' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.draw_rects' class='fnname'>draw_rects</a>(&amp;mut self, rects: <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a class='struct' href='../../sdl2-sys/rect/struct.Rect.html' title='sdl2-sys::rect::Rect'>Rect</a><a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>)</code></h4>
+<div class='docblock'><p>Draws some number of rectangles on the current rendering target.</p>
+
+<h1 id="panics" class='section-header'><a
+                           href="#panics">Panics</a></h1>
+<p>Panics if drawing fails for any reason (e.g. driver failure)</p>
+</div><h4 id='method.fill_rect' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.fill_rect' class='fnname'>fill_rect</a>(&amp;mut self, rect: <a class='struct' href='../../sdl2-sys/rect/struct.Rect.html' title='sdl2-sys::rect::Rect'>Rect</a>)</code></h4>
+<div class='docblock'><p>Fills a rectangle on the current rendering target with the drawing
+color.</p>
+
+<h1 id="panics" class='section-header'><a
+                           href="#panics">Panics</a></h1>
+<p>Panics if drawing fails for any reason (e.g. driver failure)</p>
+</div><h4 id='method.fill_rects' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.fill_rects' class='fnname'>fill_rects</a>(&amp;mut self, rects: <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a class='struct' href='../../sdl2-sys/rect/struct.Rect.html' title='sdl2-sys::rect::Rect'>Rect</a><a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>)</code></h4>
+<div class='docblock'><p>Fills some number of rectangles on the current rendering target with
+the drawing color.</p>
+
+<h1 id="panics" class='section-header'><a
+                           href="#panics">Panics</a></h1>
+<p>Panics if drawing fails for any reason (e.g. driver failure)</p>
+</div><h4 id='method.copy' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.copy' class='fnname'>copy</a>(&amp;mut self, texture: &amp;<a class='struct' href='../../sdl2/render/struct.Texture.html' title='sdl2::render::Texture'>Texture</a>, src: <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../sdl2-sys/rect/struct.Rect.html' title='sdl2-sys::rect::Rect'>Rect</a>&gt;, dst: <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../sdl2-sys/rect/struct.Rect.html' title='sdl2-sys::rect::Rect'>Rect</a>&gt;)</code></h4>
+<div class='docblock'><p>Copies a portion of the texture to the current rendering target.</p>
+
+<ul>
+<li>If <code>src</code> is <code>None</code>, the entire texture is copied.</li>
+<li>If <code>dst</code> is <code>None</code>, the texture will be stretched to fill the given
+rectangle.</li>
+</ul>
+
+<h1 id="panics" class='section-header'><a
+                           href="#panics">Panics</a></h1>
+<p>Panics if drawing fails for any reason (e.g. driver failure),
+or if the provided texture does not belong to the renderer.</p>
+</div><h4 id='method.copy_ex' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.copy_ex' class='fnname'>copy_ex</a>(&amp;mut self, texture: &amp;<a class='struct' href='../../sdl2/render/struct.Texture.html' title='sdl2::render::Texture'>Texture</a>, src: <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../sdl2-sys/rect/struct.Rect.html' title='sdl2-sys::rect::Rect'>Rect</a>&gt;, dst: <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../sdl2-sys/rect/struct.Rect.html' title='sdl2-sys::rect::Rect'>Rect</a>&gt;, angle: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>, center: <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../sdl2-sys/rect/struct.Point.html' title='sdl2-sys::rect::Point'>Point</a>&gt;, (flip_horizontal, flip_vertical): <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</a>)</code></h4>
+<div class='docblock'><p>Copies a portion of the texture to the current rendering target,
+optionally rotating it by angle around the given center and also
+flipping it top-bottom and/or left-right.</p>
+
+<ul>
+<li>If <code>src</code> is <code>None</code>, the entire texture is copied.</li>
+<li>If <code>dst</code> is <code>None</code>, the texture will be stretched to fill the given
+rectangle.</li>
+<li>If <code>center</code> is <code>None</code>, rotation will be done around the center point
+of <code>dst</code>, or <code>src</code> if <code>dst</code> is None.</li>
+</ul>
+
+<h1 id="panics" class='section-header'><a
+                           href="#panics">Panics</a></h1>
+<p>Panics if drawing fails for any reason (e.g. driver failure),
+if the provided texture does not belong to the renderer,
+or if the driver does not support RenderCopyEx.</p>
+</div><h4 id='method.read_pixels' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.read_pixels' class='fnname'>read_pixels</a>(&amp;self, rect: <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../sdl2-sys/rect/struct.Rect.html' title='sdl2-sys::rect::Rect'>Rect</a>&gt;, format: <a class='enum' href='../../sdl2/pixels/enum.PixelFormatEnum.html' title='sdl2::pixels::PixelFormatEnum'>PixelFormatEnum</a>) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;</code></h4>
+<div class='docblock'><p>Reads pixels from the current rendering target.</p>
+
+<h1 id="remarks" class='section-header'><a
+                           href="#remarks">Remarks</a></h1>
+<p>WARNING: This is a very slow operation, and should not be used frequently.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

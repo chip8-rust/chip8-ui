@@ -1,0 +1,13 @@
+(function() {var implementors = {};
+implementors['chip8_vm'] = ["<a class='stability Unstable' title='Unstable: trait is likely to be removed'></a>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/num/trait.ToPrimitive.html' title='core::num::ToPrimitive'>ToPrimitive</a> for <a class='enum' href='chip8_vm/instructions/enum.Register.html' title='chip8_vm::instructions::Register'>Register</a>",];
+implementors['sdl2'] = ["<a class='stability Unstable' title='Unstable: trait is likely to be removed'></a>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/num/trait.ToPrimitive.html' title='core::num::ToPrimitive'>ToPrimitive</a> for <a class='enum' href='sdl2/keycode/enum.KeyCode.html' title='sdl2::keycode::KeyCode'>KeyCode</a>","<a class='stability Unstable' title='Unstable: trait is likely to be removed'></a>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/num/trait.ToPrimitive.html' title='core::num::ToPrimitive'>ToPrimitive</a> for <a class='enum' href='sdl2/scancode/enum.ScanCode.html' title='sdl2::scancode::ScanCode'>ScanCode</a>",];
+implementors['num'] = ["<a class='stability Unstable' title='Unstable: trait is likely to be removed'></a>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/num/trait.ToPrimitive.html' title='core::num::ToPrimitive'>ToPrimitive</a> for <a class='struct' href='num/bigint/struct.BigUint.html' title='num::bigint::BigUint'>BigUint</a>","<a class='stability Unstable' title='Unstable: trait is likely to be removed'></a>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/num/trait.ToPrimitive.html' title='core::num::ToPrimitive'>ToPrimitive</a> for <a class='struct' href='num/bigint/struct.BigInt.html' title='num::bigint::BigInt'>BigInt</a>",];
+implementors['input'] = ["<a class='stability Unstable' title='Unstable: trait is likely to be removed'></a>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/num/trait.ToPrimitive.html' title='core::num::ToPrimitive'>ToPrimitive</a> for <a class='enum' href='input/keyboard/enum.Key.html' title='input::keyboard::Key'>Key</a>","<a class='stability Unstable' title='Unstable: trait is likely to be removed'></a>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/num/trait.ToPrimitive.html' title='core::num::ToPrimitive'>ToPrimitive</a> for <a class='enum' href='input/mouse/enum.MouseButton.html' title='input::mouse::MouseButton'>MouseButton</a>",];
+
+            if (window.register_implementors) {
+                window.register_implementors(implementors);
+            } else {
+                window.pending_implementors = implementors;
+            }
+        
+})()

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `GlyphCache` struct in crate `opengl_graphics`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, GlyphCache">
+
+    <title>opengl_graphics::glyph_cache::GlyphCache - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>opengl_graphics</a>::<wbr><a href='index.html'>glyph_cache</a></p><div class='block struct'><h2>Structs</h2><a class='struct current' href='struct.GlyphCache.html' title='A struct used for caching rendered font.'>GlyphCache</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>opengl_graphics</a>::<wbr><a href='index.html'>glyph_cache</a>::<wbr><a class='struct' href=''>GlyphCache</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-621' href='../../src/opengl_graphics/glyph_cache.rs.html#19-23'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct GlyphCache {
+    pub face: <a class='struct' href='../../freetype/face/struct.Face.html' title='freetype::face::Face'>Face</a>,
+    // some fields omitted
+}</pre><div class='docblock'><p>A struct used for caching rendered font.</p>
+</div><h2 class='fields'>Fields</h2>
+<table><tr><td id='structfield.face'><a class='stability Unmarked' title='No stability level'></a><code>face</code></td><td><div class='docblock'><p>The font face.</p>
+</div></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl <a class='struct' href='../../opengl_graphics/glyph_cache/struct.GlyphCache.html' title='opengl_graphics::glyph_cache::GlyphCache'>GlyphCache</a></code></h3><div class='impl-items'><h4 id='method.new' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.new' class='fnname'>new</a>(font: &amp;<a class='struct' href='http://doc.rust-lang.org/nightly/std/old_path/posix/struct.Path.html' title='std::old_path::posix::Path'>Path</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../opengl_graphics/glyph_cache/struct.GlyphCache.html' title='opengl_graphics::glyph_cache::GlyphCache'>GlyphCache</a>, <a class='enum' href='../../opengl_graphics/error/enum.Error.html' title='opengl_graphics::error::Error'>Error</a>&gt;</code></h4>
+<div class='docblock'><p>Constructor for a GlyphCache.</p>
+</div><h4 id='method.from_bytes' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.from_bytes' class='fnname'>from_bytes</a>(font: <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a><a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../opengl_graphics/glyph_cache/struct.GlyphCache.html' title='opengl_graphics::glyph_cache::GlyphCache'>GlyphCache</a>, <a class='enum' href='../../opengl_graphics/error/enum.Error.html' title='opengl_graphics::error::Error'>Error</a>&gt;</code></h4>
+<div class='docblock'><p>Creates a GlyphCache for a font stored in memory.</p>
+</div><h4 id='method.preload_chars' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.preload_chars' class='fnname'>preload_chars</a>&lt;I&gt;(&amp;mut self, size: <a class='type' href='../../opengl_graphics/glyph_cache/type.FontSize.html' title='opengl_graphics::glyph_cache::FontSize'>FontSize</a>, chars: I) <span class='where'>where I: <a class='trait' href='http://doc.rust-lang.org/nightly/core/iter/trait.Iterator.html' title='core::iter::Iterator'>Iterator</a>&lt;Item=<a href='http://doc.rust-lang.org/nightly/core/primitive.char.html'>char</a>&gt;</span></code></h4>
+<div class='docblock'><p>Load all characters in the <code>chars</code> iterator for <code>size</code></p>
+</div><h4 id='method.preload_printable_ascii' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.preload_printable_ascii' class='fnname'>preload_printable_ascii</a>(&amp;mut self, size: <a class='type' href='../../opengl_graphics/glyph_cache/type.FontSize.html' title='opengl_graphics::glyph_cache::FontSize'>FontSize</a>)</code></h4>
+<div class='docblock'><p>Load all the printable ASCII characters for <code>size</code>. Includes space.</p>
+</div><h4 id='method.opt_character' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.opt_character' class='fnname'>opt_character</a>(&amp;self, size: <a class='type' href='../../opengl_graphics/glyph_cache/type.FontSize.html' title='opengl_graphics::glyph_cache::FontSize'>FontSize</a>, ch: <a href='http://doc.rust-lang.org/nightly/core/primitive.char.html'>char</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='type' href='../../opengl_graphics/glyph_cache/type.Character.html' title='opengl_graphics::glyph_cache::Character'>Character</a>&gt;</code></h4>
+<div class='docblock'><p>Return <code>ch</code> for <code>size</code> if it&#39;s already cached. Don&#39;t load.
+See the <code>preload_*</code> functions.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl <a class='trait' href='../../graphics/character/trait.CharacterCache.html' title='graphics::character::CharacterCache'>CharacterCache</a> for <a class='struct' href='../../opengl_graphics/glyph_cache/struct.GlyphCache.html' title='opengl_graphics::glyph_cache::GlyphCache'>GlyphCache</a></code></h3><div class='impl-items'><h4 id='assoc_type.Texture' class='type'><a class='stability Unmarked' title='No stability level'></a><code>type Texture = <a class='struct' href='../../opengl_graphics/struct.Texture.html' title='opengl_graphics::Texture'>Texture</a></code></h4>
+<h4 id='method.character' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.character' class='fnname'>character</a>(&amp;mut self, size: <a class='type' href='../../opengl_graphics/glyph_cache/type.FontSize.html' title='opengl_graphics::glyph_cache::FontSize'>FontSize</a>, ch: <a href='http://doc.rust-lang.org/nightly/core/primitive.char.html'>char</a>) -&gt; &amp;<a class='type' href='../../opengl_graphics/glyph_cache/type.Character.html' title='opengl_graphics::glyph_cache::Character'>Character</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "opengl_graphics";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Sdl2Window` struct in crate `sdl2_window`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Sdl2Window">
+
+    <title>sdl2_window::Sdl2Window - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>sdl2_window</a></p><div class='block struct'><h2>Structs</h2><a class='struct current' href='struct.Sdl2Window.html' title='A widow implemented by SDL2 back-end.'>Sdl2Window</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.sdl2_map_key.html' title='Maps a SDL2 key to piston-input key.'>sdl2_map_key</a><a class='fn ' href='fn.sdl2_map_mouse.html' title='Maps a SDL2 mouse button to piston-input button.'>sdl2_map_mouse</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>sdl2_window</a>::<wbr><a class='struct' href=''>Sdl2Window</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-30' href='../src/sdl2_window/lib.rs.html#26-36'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Sdl2Window {
+    pub window: <a class='struct' href='../sdl2/video/struct.Window.html' title='sdl2::video::Window'>Window</a>,
+    pub context: <a class='struct' href='../sdl2/video/struct.GLContext.html' title='sdl2::video::GLContext'>GLContext</a>,
+    // some fields omitted
+}</pre><div class='docblock'><p>A widow implemented by SDL2 back-end.</p>
+</div><h2 class='fields'>Fields</h2>
+<table><tr><td id='structfield.window'><a class='stability Unmarked' title='No stability level'></a><code>window</code></td><td><div class='docblock'><p>SDL window handle</p>
+</div></td></tr><tr><td id='structfield.context'><a class='stability Unmarked' title='No stability level'></a><code>context</code></td><td><div class='docblock'><p>Allow dead code because this keeps track of the OpenGL context.
+Will be released on drop.</p>
+</div></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl <a class='struct' href='../sdl2_window/struct.Sdl2Window.html' title='sdl2_window::Sdl2Window'>Sdl2Window</a></code></h3><div class='impl-items'><h4 id='method.new' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.new' class='fnname'>new</a>(opengl: <a class='enum' href='../shader_version/opengl/enum.OpenGL.html' title='shader_version::opengl::OpenGL'>OpenGL</a>, settings: <a class='struct' href='../window/struct.WindowSettings.html' title='window::WindowSettings'>WindowSettings</a>) -&gt; <a class='struct' href='../sdl2_window/struct.Sdl2Window.html' title='sdl2_window::Sdl2Window'>Sdl2Window</a></code></h4>
+<div class='docblock'><p>Creates a new game window for SDL2.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../sdl2_window/struct.Sdl2Window.html' title='sdl2_window::Sdl2Window'>Sdl2Window</a></code></h3><div class='impl-items'><h4 id='method.drop' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "sdl2_window";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>

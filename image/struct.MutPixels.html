@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `MutPixels` struct in crate `image`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, MutPixels">
+
+    <title>image::MutPixels - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>image</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='gif/index.html' title='Decoding of GIF Images'>gif</a><a class='mod ' href='imageops/index.html' title='Image Processing Functions'>imageops</a><a class='mod ' href='jpeg/index.html' title='Decoding and Encoding of JPEG Images'>jpeg</a><a class='mod ' href='math/index.html' title='Mathematical helper functions and types.'>math</a><a class='mod ' href='png/index.html' title='Decoding and Encoding of PNG Images'>png</a><a class='mod ' href='ppm/index.html' title='Encoding of portable pixmap Images'>ppm</a><a class='mod ' href='tga/index.html' title='Decoding of TGA Images'>tga</a><a class='mod ' href='tiff/index.html' title='Decoding and Encoding of TIFF Images'>tiff</a><a class='mod ' href='webp/index.html' title='Decoding of Webp Images'>webp</a></div><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.Frame.html' title='A single animation frame'>Frame</a><a class='struct ' href='struct.Frames.html' title='Hold the frames of the animated image'>Frames</a><a class='struct ' href='struct.ImageBuffer.html' title='Generic image buffer'>ImageBuffer</a><a class='struct ' href='struct.Luma.html' title='Grayscale colors'>Luma</a><a class='struct ' href='struct.LumaA.html' title='Grayscale colors + alpha channel'>LumaA</a><a class='struct current' href='struct.MutPixels.html' title='Mutable pixel iterator'>MutPixels</a><a class='struct ' href='struct.Pixels.html' title='Immutable pixel iterator'>Pixels</a><a class='struct ' href='struct.Rgb.html' title='RGB colors'>Rgb</a><a class='struct ' href='struct.Rgba.html' title='RGB colors + alpha channel'>Rgba</a><a class='struct ' href='struct.SubImage.html' title='A View into another image'>SubImage</a></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.ColorType.html' title='An enumeration over supported color types and their bit depths'>ColorType</a><a class='enum ' href='enum.DynamicImage.html' title='A Dynamic Image'>DynamicImage</a><a class='enum ' href='enum.FilterType.html' title='Available Sampling Filters'>FilterType</a><a class='enum ' href='enum.ImageError.html' title='An enumeration of Image Errors'>ImageError</a><a class='enum ' href='enum.ImageFormat.html' title='An enumeration of supported image formats. Not all formats support both encoding and decoding.'>ImageFormat</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.GenericImage.html' title='A trait for manipulating images.'>GenericImage</a><a class='trait ' href='trait.ImageDecoder.html' title='The trait that all decoders implement'>ImageDecoder</a><a class='trait ' href='trait.Pixel.html' title='A generalized pixel.'>Pixel</a><a class='trait ' href='trait.Primitive.html' title='Primitive trait from old stdlib, added max_value'>Primitive</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.load.html' title='Create a new image from a Reader'>load</a><a class='fn ' href='fn.load_from_memory.html' title='Create a new image from a byte slice Makes an educated guess about the image format. TGA is not supported by this function.'>load_from_memory</a><a class='fn ' href='fn.load_from_memory_with_format.html' title='Create a new image from a byte slice'>load_from_memory_with_format</a><a class='fn ' href='fn.open.html' title='Open the image located at the path specified. The image&#39;s format is determined from the path&#39;s file extension.'>open</a><a class='fn ' href='fn.save_buffer.html' title='Saves the supplied buffer to a file at the path specified.'>save_buffer</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>image</a>::<wbr><a class='struct' href=''>MutPixels</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-61345' href='../src/image/image.rs.html#219-225'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct MutPixels&lt;'a, I: 'a&gt; {
+    // some fields omitted
+}</pre><div class='docblock'><p>Mutable pixel iterator</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl&lt;'a, I: <a class='trait' href='../image/trait.GenericImage.html' title='image::GenericImage'>GenericImage</a> + 'a&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/iter/trait.Iterator.html' title='core::iter::Iterator'>Iterator</a> for <a class='struct' href='../image/struct.MutPixels.html' title='image::MutPixels'>MutPixels</a>&lt;'a, I&gt; <span class='where'>where Pixel: 'a, &lt;Pixel as <a class='trait' href='../image/trait.Pixel.html' title='image::Pixel'>Pixel</a>&gt;::Subpixel: 'a</span></code></h3><div class='impl-items'><h4 id='assoc_type.Item' class='type'><a class='stability Unmarked' title='No stability level'></a><code>type Item = <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, &amp;'a mut Pixel)</a></code></h4>
+<h4 id='method.next' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.next' class='fnname'>next</a>(&amp;mut self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, &amp;'a mut Pixel)</a>&gt;</code></h4>
+<h4 id='method.size_hint' class='tymethod'><a class='stability Stable' title='Stable'></a><code>fn <a href='#tymethod.size_hint' class='fnname'>size_hint</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>&gt;)</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "image";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>

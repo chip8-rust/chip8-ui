@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `SDL_Surface` struct in crate `sdl2-sys`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, SDL_Surface">
+
+    <title>sdl2-sys::surface::SDL_Surface - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>sdl2-sys</a>::<wbr><a href='index.html'>surface</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.SDL_BlitMap.html' title=''>SDL_BlitMap</a><a class='struct current' href='struct.SDL_Surface.html' title=''>SDL_Surface</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>sdl2-sys</a>::<wbr><a href='index.html'>surface</a>::<wbr><a class='struct' href=''>SDL_Surface</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-10213' href='../../src/sdl2-sys/surface.rs.html#25-38'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct SDL_Surface {
+    pub flags: <a class='type' href='../../libc/types/common/c99/type.uint32_t.html' title='libc::types::common::c99::uint32_t'>uint32_t</a>,
+    pub format: *const <a class='struct' href='../../sdl2-sys/pixels/struct.SDL_PixelFormat.html' title='sdl2-sys::pixels::SDL_PixelFormat'>SDL_PixelFormat</a>,
+    pub w: <a class='type' href='../../libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a>,
+    pub h: <a class='type' href='../../libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a>,
+    pub pitch: <a class='type' href='../../libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a>,
+    pub pixels: *const <a class='enum' href='../../libc/types/common/c95/enum.c_void.html' title='libc::types::common::c95::c_void'>c_void</a>,
+    pub userdata: *const <a class='enum' href='../../libc/types/common/c95/enum.c_void.html' title='libc::types::common::c95::c_void'>c_void</a>,
+    pub locked: <a class='type' href='../../libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a>,
+    pub lock_data: *const <a class='enum' href='../../libc/types/common/c95/enum.c_void.html' title='libc::types::common::c95::c_void'>c_void</a>,
+    pub clip_rect: <a class='type' href='../../sdl2-sys/surface/type.SDL_Rect.html' title='sdl2-sys::surface::SDL_Rect'>SDL_Rect</a>,
+    pub map: *const <a class='struct' href='../../sdl2-sys/surface/struct.SDL_BlitMap.html' title='sdl2-sys::surface::SDL_BlitMap'>SDL_BlitMap</a>,
+    pub refcount: <a class='type' href='../../libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a>,
+}</pre><h2 class='fields'>Fields</h2>
+<table><tr><td id='structfield.flags'><a class='stability Unmarked' title='No stability level'></a><code>flags</code></td><td></td></tr><tr><td id='structfield.format'><a class='stability Unmarked' title='No stability level'></a><code>format</code></td><td></td></tr><tr><td id='structfield.w'><a class='stability Unmarked' title='No stability level'></a><code>w</code></td><td></td></tr><tr><td id='structfield.h'><a class='stability Unmarked' title='No stability level'></a><code>h</code></td><td></td></tr><tr><td id='structfield.pitch'><a class='stability Unmarked' title='No stability level'></a><code>pitch</code></td><td></td></tr><tr><td id='structfield.pixels'><a class='stability Unmarked' title='No stability level'></a><code>pixels</code></td><td></td></tr><tr><td id='structfield.userdata'><a class='stability Unmarked' title='No stability level'></a><code>userdata</code></td><td></td></tr><tr><td id='structfield.locked'><a class='stability Unmarked' title='No stability level'></a><code>locked</code></td><td></td></tr><tr><td id='structfield.lock_data'><a class='stability Unmarked' title='No stability level'></a><code>lock_data</code></td><td></td></tr><tr><td id='structfield.clip_rect'><a class='stability Unmarked' title='No stability level'></a><code>clip_rect</code></td><td></td></tr><tr><td id='structfield.map'><a class='stability Unmarked' title='No stability level'></a><code>map</code></td><td></td></tr><tr><td id='structfield.refcount'><a class='stability Unmarked' title='No stability level'></a><code>refcount</code></td><td></td></tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2-sys";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

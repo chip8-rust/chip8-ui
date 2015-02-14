@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `DynamicImage` enum in crate `image`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, DynamicImage">
+
+    <title>image::DynamicImage - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>image</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='gif/index.html' title='Decoding of GIF Images'>gif</a><a class='mod ' href='imageops/index.html' title='Image Processing Functions'>imageops</a><a class='mod ' href='jpeg/index.html' title='Decoding and Encoding of JPEG Images'>jpeg</a><a class='mod ' href='math/index.html' title='Mathematical helper functions and types.'>math</a><a class='mod ' href='png/index.html' title='Decoding and Encoding of PNG Images'>png</a><a class='mod ' href='ppm/index.html' title='Encoding of portable pixmap Images'>ppm</a><a class='mod ' href='tga/index.html' title='Decoding of TGA Images'>tga</a><a class='mod ' href='tiff/index.html' title='Decoding and Encoding of TIFF Images'>tiff</a><a class='mod ' href='webp/index.html' title='Decoding of Webp Images'>webp</a></div><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.Frame.html' title='A single animation frame'>Frame</a><a class='struct ' href='struct.Frames.html' title='Hold the frames of the animated image'>Frames</a><a class='struct ' href='struct.ImageBuffer.html' title='Generic image buffer'>ImageBuffer</a><a class='struct ' href='struct.Luma.html' title='Grayscale colors'>Luma</a><a class='struct ' href='struct.LumaA.html' title='Grayscale colors + alpha channel'>LumaA</a><a class='struct ' href='struct.MutPixels.html' title='Mutable pixel iterator'>MutPixels</a><a class='struct ' href='struct.Pixels.html' title='Immutable pixel iterator'>Pixels</a><a class='struct ' href='struct.Rgb.html' title='RGB colors'>Rgb</a><a class='struct ' href='struct.Rgba.html' title='RGB colors + alpha channel'>Rgba</a><a class='struct ' href='struct.SubImage.html' title='A View into another image'>SubImage</a></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.ColorType.html' title='An enumeration over supported color types and their bit depths'>ColorType</a><a class='enum current' href='enum.DynamicImage.html' title='A Dynamic Image'>DynamicImage</a><a class='enum ' href='enum.FilterType.html' title='Available Sampling Filters'>FilterType</a><a class='enum ' href='enum.ImageError.html' title='An enumeration of Image Errors'>ImageError</a><a class='enum ' href='enum.ImageFormat.html' title='An enumeration of supported image formats. Not all formats support both encoding and decoding.'>ImageFormat</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.GenericImage.html' title='A trait for manipulating images.'>GenericImage</a><a class='trait ' href='trait.ImageDecoder.html' title='The trait that all decoders implement'>ImageDecoder</a><a class='trait ' href='trait.Pixel.html' title='A generalized pixel.'>Pixel</a><a class='trait ' href='trait.Primitive.html' title='Primitive trait from old stdlib, added max_value'>Primitive</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.load.html' title='Create a new image from a Reader'>load</a><a class='fn ' href='fn.load_from_memory.html' title='Create a new image from a byte slice Makes an educated guess about the image format. TGA is not supported by this function.'>load_from_memory</a><a class='fn ' href='fn.load_from_memory_with_format.html' title='Create a new image from a byte slice'>load_from_memory_with_format</a><a class='fn ' href='fn.open.html' title='Open the image located at the path specified. The image&#39;s format is determined from the path&#39;s file extension.'>open</a><a class='fn ' href='fn.save_buffer.html' title='Saves the supplied buffer to a file at the path specified.'>save_buffer</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='index.html'>image</a>::<wbr><a class='enum' href=''>DynamicImage</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-65127' href='../src/image/dynimage.rs.html#27-39'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum DynamicImage {
+    ImageLuma8(<a class='type' href='../image/type.GrayImage.html' title='image::GrayImage'>GrayImage</a>),
+    ImageLumaA8(<a class='type' href='../image/type.GrayAlphaImage.html' title='image::GrayAlphaImage'>GrayAlphaImage</a>),
+    ImageRgb8(<a class='type' href='../image/type.RgbImage.html' title='image::RgbImage'>RgbImage</a>),
+    ImageRgba8(<a class='type' href='../image/type.RgbaImage.html' title='image::RgbaImage'>RgbaImage</a>),
+}</pre><div class='docblock'><p>A Dynamic Image</p>
+</div><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.ImageLuma8'><a class='stability Unmarked' title='No stability level'></a><code>ImageLuma8</code></td><td><div class='docblock'><p>Each pixel in this image is 8-bit Luma</p>
+</div></td></tr><tr><td id='variant.ImageLumaA8'><a class='stability Unmarked' title='No stability level'></a><code>ImageLumaA8</code></td><td><div class='docblock'><p>Each pixel in this image is 8-bit Luma with alpha</p>
+</div></td></tr><tr><td id='variant.ImageRgb8'><a class='stability Unmarked' title='No stability level'></a><code>ImageRgb8</code></td><td><div class='docblock'><p>Each pixel in this image is 8-bit Rgb</p>
+</div></td></tr><tr><td id='variant.ImageRgba8'><a class='stability Unmarked' title='No stability level'></a><code>ImageRgba8</code></td><td><div class='docblock'><p>Each pixel in this image is 8-bit Rgb with alpha</p>
+</div></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h3><div class='impl-items'><h4 id='method.new_luma8' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.new_luma8' class='fnname'>new_luma8</a>(w: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, h: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h4>
+<div class='docblock'><p>Creates a dynamic image backed by a buffer of grey pixels.</p>
+</div><h4 id='method.new_luma_a8' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.new_luma_a8' class='fnname'>new_luma_a8</a>(w: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, h: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h4>
+<div class='docblock'><p>Creates a dynamic image backed by a buffer of grey
+pixels with transparency.</p>
+</div><h4 id='method.new_rgb8' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.new_rgb8' class='fnname'>new_rgb8</a>(w: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, h: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h4>
+<div class='docblock'><p>Creates a dynamic image backed by a buffer of RGB pixels.</p>
+</div><h4 id='method.new_rgba8' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.new_rgba8' class='fnname'>new_rgba8</a>(w: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, h: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h4>
+<div class='docblock'><p>Creates a dynamic image backed by a buffer of RGBA pixels.</p>
+</div><h4 id='method.to_rgb' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.to_rgb' class='fnname'>to_rgb</a>(&amp;self) -&gt; <a class='type' href='../image/type.RgbImage.html' title='image::RgbImage'>RgbImage</a></code></h4>
+<div class='docblock'><p>Returns a copy of this image as an RGB image.</p>
+</div><h4 id='method.to_rgba' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.to_rgba' class='fnname'>to_rgba</a>(&amp;self) -&gt; <a class='type' href='../image/type.RgbaImage.html' title='image::RgbaImage'>RgbaImage</a></code></h4>
+<div class='docblock'><p>Returns a copy of this image as an RGBA image.</p>
+</div><h4 id='method.to_luma' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.to_luma' class='fnname'>to_luma</a>(&amp;self) -&gt; <a class='type' href='../image/type.GrayImage.html' title='image::GrayImage'>GrayImage</a></code></h4>
+<div class='docblock'><p>Returns a copy of this image as a Luma image.</p>
+</div><h4 id='method.to_luma_alpha' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.to_luma_alpha' class='fnname'>to_luma_alpha</a>(&amp;self) -&gt; <a class='type' href='../image/type.GrayAlphaImage.html' title='image::GrayAlphaImage'>GrayAlphaImage</a></code></h4>
+<div class='docblock'><p>Returns a copy of this image as a LumaA image.</p>
+</div><h4 id='method.crop' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.crop' class='fnname'>crop</a>(&amp;mut self, x: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, y: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, width: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, height: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h4>
+<div class='docblock'><p>Return a cut out of this image delimited by the bounding rectangle.</p>
+</div><h4 id='method.as_rgb8' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.as_rgb8' class='fnname'>as_rgb8</a>(&amp;self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='type' href='../image/type.RgbImage.html' title='image::RgbImage'>RgbImage</a>&gt;</code></h4>
+<div class='docblock'><p>Return a reference to an 8bit RGB image</p>
+</div><h4 id='method.as_mut_rgb8' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.as_mut_rgb8' class='fnname'>as_mut_rgb8</a>(&amp;mut self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;mut <a class='type' href='../image/type.RgbImage.html' title='image::RgbImage'>RgbImage</a>&gt;</code></h4>
+<div class='docblock'><p>Return a mutable reference to an 8bit RGB image</p>
+</div><h4 id='method.as_rgba8' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.as_rgba8' class='fnname'>as_rgba8</a>(&amp;self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='type' href='../image/type.RgbaImage.html' title='image::RgbaImage'>RgbaImage</a>&gt;</code></h4>
+<div class='docblock'><p>Return a reference to an 8bit RGBA image</p>
+</div><h4 id='method.as_mut_rgba8' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.as_mut_rgba8' class='fnname'>as_mut_rgba8</a>(&amp;mut self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;mut <a class='type' href='../image/type.RgbaImage.html' title='image::RgbaImage'>RgbaImage</a>&gt;</code></h4>
+<div class='docblock'><p>Return a mutable reference to an 8bit RGBA image</p>
+</div><h4 id='method.as_luma8' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.as_luma8' class='fnname'>as_luma8</a>(&amp;self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='type' href='../image/type.GrayImage.html' title='image::GrayImage'>GrayImage</a>&gt;</code></h4>
+<div class='docblock'><p>Return a reference to an 8bit Grayscale image</p>
+</div><h4 id='method.as_mut_luma8' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.as_mut_luma8' class='fnname'>as_mut_luma8</a>(&amp;mut self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;mut <a class='type' href='../image/type.GrayImage.html' title='image::GrayImage'>GrayImage</a>&gt;</code></h4>
+<div class='docblock'><p>Return a mutable reference to an 8bit Grayscale image</p>
+</div><h4 id='method.as_luma_alpha8' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.as_luma_alpha8' class='fnname'>as_luma_alpha8</a>(&amp;self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='type' href='../image/type.GrayAlphaImage.html' title='image::GrayAlphaImage'>GrayAlphaImage</a>&gt;</code></h4>
+<div class='docblock'><p>Return a reference to an 8bit Grayscale image with an alpha channel</p>
+</div><h4 id='method.as_mut_luma_alpha8' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.as_mut_luma_alpha8' class='fnname'>as_mut_luma_alpha8</a>(&amp;mut self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;mut <a class='type' href='../image/type.GrayAlphaImage.html' title='image::GrayAlphaImage'>GrayAlphaImage</a>&gt;</code></h4>
+<div class='docblock'><p>Return a mutable reference to an 8bit Grayscale image with an alpha channel</p>
+</div><h4 id='method.raw_pixels' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.raw_pixels' class='fnname'>raw_pixels</a>(&amp;self) -&gt; <a class='struct' href='http://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;</code></h4>
+<div class='docblock'><p>Return this image&#39;s pixels as a byte vector.</p>
+</div><h4 id='method.color' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.color' class='fnname'>color</a>(&amp;self) -&gt; <a class='enum' href='../image/enum.ColorType.html' title='image::ColorType'>ColorType</a></code></h4>
+<div class='docblock'><p>Return this image&#39;s color type.</p>
+</div><h4 id='method.grayscale' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.grayscale' class='fnname'>grayscale</a>(&amp;self) -&gt; <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h4>
+<div class='docblock'><p>Return a grayscale version of this image.</p>
+</div><h4 id='method.invert' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.invert' class='fnname'>invert</a>(&amp;mut self)</code></h4>
+<div class='docblock'><p>Invert the colors of this image.
+This method operates inplace.</p>
+</div><h4 id='method.resize' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.resize' class='fnname'>resize</a>(&amp;self, nwidth: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, nheight: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, filter: <a class='enum' href='../image/enum.FilterType.html' title='image::FilterType'>FilterType</a>) -&gt; <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h4>
+<div class='docblock'><p>Resize this image using the specified filter algorithm.
+Returns a new image. The image&#39;s aspect ratio is preserved.
+<code>nwidth</code> and <code>nheight</code> are the new image&#39;s dimensions</p>
+</div><h4 id='method.resize_exact' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.resize_exact' class='fnname'>resize_exact</a>(&amp;self, nwidth: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, nheight: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, filter: <a class='enum' href='../image/enum.FilterType.html' title='image::FilterType'>FilterType</a>) -&gt; <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h4>
+<div class='docblock'><p>Resize this image using the specified filter algorithm.
+Returns a new image. Does not preserve aspect ratio.
+<code>nwidth</code> and <code>nheight</code> are the new image&#39;s dimensions</p>
+</div><h4 id='method.blur' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.blur' class='fnname'>blur</a>(&amp;self, sigma: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>) -&gt; <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h4>
+<div class='docblock'><p>Performs a Gaussian blur on this image.
+<code>sigma</code> is a measure of how much to blur by.</p>
+</div><h4 id='method.unsharpen' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.unsharpen' class='fnname'>unsharpen</a>(&amp;self, sigma: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>, threshold: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>) -&gt; <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h4>
+<div class='docblock'><p>Performs an unsharpen mask on this image
+<code>sigma</code> is the amount to blur the image by.
+<code>threshold</code> is a control of how much to sharpen.
+see <a href="https://en.wikipedia.org/wiki/Unsharp_masking#Digital_unsharp_masking">https://en.wikipedia.org/wiki/Unsharp_masking#Digital_unsharp_masking</a></p>
+</div><h4 id='method.filter3x3' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.filter3x3' class='fnname'>filter3x3</a>(&amp;self, kernel: <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a><a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>) -&gt; <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h4>
+<div class='docblock'><p>Filters this image with the specified 3x3 kernel.</p>
+</div><h4 id='method.adjust_contrast' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.adjust_contrast' class='fnname'>adjust_contrast</a>(&amp;self, c: <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>) -&gt; <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h4>
+<div class='docblock'><p>Adjust the contrast of this image.
+<code>contrast</code> is the amount to adjust the contrast by.
+Negative values decrease the contrast and positive values increase the contrast.</p>
+</div><h4 id='method.brighten' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.brighten' class='fnname'>brighten</a>(&amp;self, value: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>) -&gt; <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h4>
+<div class='docblock'><p>Brighten the pixels of this image.
+<code>value</code> is the amount to brighten each pixel by.
+Negative values decrease the brightness and positive values increase it.</p>
+</div><h4 id='method.flipv' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.flipv' class='fnname'>flipv</a>(&amp;self) -&gt; <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h4>
+<div class='docblock'><p>Flip this image vertically</p>
+</div><h4 id='method.fliph' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.fliph' class='fnname'>fliph</a>(&amp;self) -&gt; <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h4>
+<div class='docblock'><p>Flip this image horizontally</p>
+</div><h4 id='method.rotate90' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.rotate90' class='fnname'>rotate90</a>(&amp;self) -&gt; <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h4>
+<div class='docblock'><p>Rotate this image 90 degrees clockwise.</p>
+</div><h4 id='method.rotate180' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.rotate180' class='fnname'>rotate180</a>(&amp;self) -&gt; <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h4>
+<div class='docblock'><p>Rotate this image 180 degrees clockwise.</p>
+</div><h4 id='method.rotate270' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.rotate270' class='fnname'>rotate270</a>(&amp;self) -&gt; <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h4>
+<div class='docblock'><p>Rotate this image 270 degrees clockwise.</p>
+</div><h4 id='method.save' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.save' class='fnname'>save</a>&lt;W: <a class='trait' href='http://doc.rust-lang.org/nightly/std/old_io/trait.Writer.html' title='std::old_io::Writer'>Writer</a>&gt;(&amp;self, w: &amp;mut W, format: <a class='enum' href='../image/enum.ImageFormat.html' title='image::ImageFormat'>ImageFormat</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/nightly/std/old_io/type.IoResult.html' title='std::old_io::IoResult'>IoResult</a>&lt;<a class='type' href='../image/type.ImageResult.html' title='image::ImageResult'>ImageResult</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;&gt;</code></h4>
+<div class='docblock'><p>Encode this image and write it to <code>w</code></p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl <a class='trait' href='../image/trait.GenericImage.html' title='image::GenericImage'>GenericImage</a> for <a class='enum' href='../image/enum.DynamicImage.html' title='image::DynamicImage'>DynamicImage</a></code></h3><div class='impl-items'><h4 id='assoc_type.Pixel' class='type'><a class='stability Unmarked' title='No stability level'></a><code>type Pixel = <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;</code></h4>
+<h4 id='method.dimensions' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.dimensions' class='fnname'>dimensions</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>)</a></code></h4>
+<h4 id='method.bounds' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.bounds' class='fnname'>bounds</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>)</a></code></h4>
+<h4 id='method.get_pixel' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_pixel' class='fnname'>get_pixel</a>(&amp;self, x: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, y: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;</code></h4>
+<h4 id='method.put_pixel' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.put_pixel' class='fnname'>put_pixel</a>(&amp;mut self, x: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, y: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, pixel: <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;)</code></h4>
+<h4 id='method.blend_pixel' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.blend_pixel' class='fnname'>blend_pixel</a>(&amp;mut self, x: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, y: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, pixel: <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;)</code></h4>
+<h4 id='method.get_pixel_mut' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_pixel_mut' class='fnname'>get_pixel_mut</a>(&amp;mut self, _: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, _: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; &amp;mut <a class='struct' href='../image/struct.Rgba.html' title='image::Rgba'>Rgba</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;</code></h4>
+<h4 id='method.width' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.width' class='fnname'>width</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></h4>
+<h4 id='method.height' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.height' class='fnname'>height</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></h4>
+<h4 id='method.in_bounds' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.in_bounds' class='fnname'>in_bounds</a>(&amp;self, x: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, y: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.unsafe_get_pixel' class='method'><a class='stability Unmarked' title='No stability level'></a><code>unsafe fn <a href='#method.unsafe_get_pixel' class='fnname'>unsafe_get_pixel</a>(&amp;self, x: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, y: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; Self::<a class='trait' href='../image/trait.GenericImage.html' title='image::GenericImage'>Pixel</a></code></h4>
+<h4 id='method.unsafe_put_pixel' class='method'><a class='stability Unmarked' title='No stability level'></a><code>unsafe fn <a href='#method.unsafe_put_pixel' class='fnname'>unsafe_put_pixel</a>(&amp;mut self, x: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, y: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, pixel: Self::<a class='trait' href='../image/trait.GenericImage.html' title='image::GenericImage'>Pixel</a>)</code></h4>
+<h4 id='method.pixels' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.pixels' class='fnname'>pixels</a>(&amp;self) -&gt; <a class='struct' href='../image/struct.Pixels.html' title='image::Pixels'>Pixels</a>&lt;Self&gt;</code></h4>
+<h4 id='method.pixels_mut' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.pixels_mut' class='fnname'>pixels_mut</a>(&amp;mut self) -&gt; <a class='struct' href='../image/struct.MutPixels.html' title='image::MutPixels'>MutPixels</a>&lt;Self&gt;</code></h4>
+<h4 id='method.copy_from' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.copy_from' class='fnname'>copy_from</a>&lt;O&gt;(&amp;mut self, other: &amp;O, x: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, y: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a> <span class='where'>where O: <a class='trait' href='../image/trait.GenericImage.html' title='image::GenericImage'>GenericImage</a>&lt;Pixel=Self::<a class='trait' href='../image/trait.GenericImage.html' title='image::GenericImage'>Pixel</a>&gt;</span></code></h4>
+<h4 id='method.sub_image' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.sub_image' class='fnname'>sub_image</a>&lt;'a&gt;(&amp;'a mut self, x: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, y: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, width: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, height: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='struct' href='../image/struct.SubImage.html' title='image::SubImage'>SubImage</a>&lt;'a, Self&gt; <span class='where'>where Self: 'static, &lt;Self::<a class='trait' href='../image/trait.GenericImage.html' title='image::GenericImage'>Pixel</a> as <a class='trait' href='../image/trait.Pixel.html' title='image::Pixel'>Pixel</a>&gt;::Subpixel: 'static, Self::<a class='trait' href='../image/trait.GenericImage.html' title='image::GenericImage'>Pixel</a>: 'static</span></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "image";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>

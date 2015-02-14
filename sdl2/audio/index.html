@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `audio` mod in crate `sdl2`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, audio">
+
+    <title>sdl2::audio - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>sdl2</a></p><div class='block mod'><h2>Modules</h2><a class='mod current' href='../audio/index.html' title='Audio Functions'>audio</a><a class='mod ' href='../clipboard/index.html' title=''>clipboard</a><a class='mod ' href='../controller/index.html' title=''>controller</a><a class='mod ' href='../cpuinfo/index.html' title=''>cpuinfo</a><a class='mod ' href='../event/index.html' title='Event Handling'>event</a><a class='mod ' href='../filesystem/index.html' title=''>filesystem</a><a class='mod ' href='../haptic/index.html' title='Haptic Functions'>haptic</a><a class='mod ' href='../joystick/index.html' title=''>joystick</a><a class='mod ' href='../keyboard/index.html' title=''>keyboard</a><a class='mod ' href='../keycode/index.html' title=''>keycode</a><a class='mod ' href='../messagebox/index.html' title=''>messagebox</a><a class='mod ' href='../mouse/index.html' title=''>mouse</a><a class='mod ' href='../pixels/index.html' title=''>pixels</a><a class='mod ' href='../rect/index.html' title=''>rect</a><a class='mod ' href='../render/index.html' title='2D accelerated rendering'>render</a><a class='mod ' href='../rwops/index.html' title=''>rwops</a><a class='mod ' href='../scancode/index.html' title=''>scancode</a><a class='mod ' href='../sdl/index.html' title=''>sdl</a><a class='mod ' href='../surface/index.html' title=''>surface</a><a class='mod ' href='../timer/index.html' title=''>timer</a><a class='mod ' href='../touch/index.html' title=''>touch</a><a class='mod ' href='../version/index.html' title='Querying SDL Version'>version</a><a class='mod ' href='../video/index.html' title=''>video</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>sdl2</a>::<wbr><a class='mod' href=''>audio</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-67967' href='../../src/sdl2/audio.rs.html#1-505'>[src]</a></span></h1>
+<div class='docblock'><p>Audio Functions</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.AudioCVT.html'
+                               title='sdl2::audio::AudioCVT'>AudioCVT</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.AudioDevice.html'
+                               title='sdl2::audio::AudioDevice'>AudioDevice</a></td>
+                        <td class='docblock short'><p>Wraps SDL_AudioDeviceID and owns the callback data used by the audio device.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.AudioDeviceLockGuard.html'
+                               title='sdl2::audio::AudioDeviceLockGuard'>AudioDeviceLockGuard</a></td>
+                        <td class='docblock short'><p>Similar to <code>std::sync::MutexGuard</code>, but for use with <code>AudioDevice::lock()</code>.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.AudioSpec.html'
+                               title='sdl2::audio::AudioSpec'>AudioSpec</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.AudioSpecDesired.html'
+                               title='sdl2::audio::AudioSpecDesired'>AudioSpecDesired</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.AudioSpecWAV.html'
+                               title='sdl2::audio::AudioSpecWAV'>AudioSpecWAV</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='enum' href='enum.AudioStatus.html'
+                               title='sdl2::audio::AudioStatus'>AudioStatus</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.AUDIOF32.html'
+                               title='sdl2::audio::AUDIOF32'>AUDIOF32</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.AUDIOF32LSB.html'
+                               title='sdl2::audio::AUDIOF32LSB'>AUDIOF32LSB</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.AUDIOF32MSB.html'
+                               title='sdl2::audio::AUDIOF32MSB'>AUDIOF32MSB</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.AUDIOF32SYS.html'
+                               title='sdl2::audio::AUDIOF32SYS'>AUDIOF32SYS</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.AUDIOS16.html'
+                               title='sdl2::audio::AUDIOS16'>AUDIOS16</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.AUDIOS16LSB.html'
+                               title='sdl2::audio::AUDIOS16LSB'>AUDIOS16LSB</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.AUDIOS16MSB.html'
+                               title='sdl2::audio::AUDIOS16MSB'>AUDIOS16MSB</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.AUDIOS16SYS.html'
+                               title='sdl2::audio::AUDIOS16SYS'>AUDIOS16SYS</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.AUDIOS32.html'
+                               title='sdl2::audio::AUDIOS32'>AUDIOS32</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.AUDIOS32LSB.html'
+                               title='sdl2::audio::AUDIOS32LSB'>AUDIOS32LSB</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.AUDIOS32MSB.html'
+                               title='sdl2::audio::AUDIOS32MSB'>AUDIOS32MSB</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.AUDIOS32SYS.html'
+                               title='sdl2::audio::AUDIOS32SYS'>AUDIOS32SYS</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.AUDIOS8.html'
+                               title='sdl2::audio::AUDIOS8'>AUDIOS8</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.AUDIOU16.html'
+                               title='sdl2::audio::AUDIOU16'>AUDIOU16</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.AUDIOU16LSB.html'
+                               title='sdl2::audio::AUDIOU16LSB'>AUDIOU16LSB</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.AUDIOU16MSB.html'
+                               title='sdl2::audio::AUDIOU16MSB'>AUDIOU16MSB</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.AUDIOU16SYS.html'
+                               title='sdl2::audio::AUDIOU16SYS'>AUDIOU16SYS</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.AUDIOU8.html'
+                               title='sdl2::audio::AUDIOU8'>AUDIOU8</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='trait' href='trait.AudioCallback.html'
+                               title='sdl2::audio::AudioCallback'>AudioCallback</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='trait' href='trait.AudioFormatNum.html'
+                               title='sdl2::audio::AudioFormatNum'>AudioFormatNum</a></td>
+                        <td class='docblock short'><p>A phantom type for retreiving the SDL_AudioFormat of a given generic type.
+All format types are returned as native-endian.</p>
+</td>
+                    </tr>
+                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.audio_init.html'
+                               title='sdl2::audio::audio_init'>audio_init</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.audio_quit.html'
+                               title='sdl2::audio::audio_quit'>audio_quit</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.get_audio_device_name.html'
+                               title='sdl2::audio::get_audio_device_name'>get_audio_device_name</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.get_audio_driver.html'
+                               title='sdl2::audio::get_audio_driver'>get_audio_driver</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.get_current_audio_driver.html'
+                               title='sdl2::audio::get_current_audio_driver'>get_current_audio_driver</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.get_num_audio_devices.html'
+                               title='sdl2::audio::get_num_audio_devices'>get_num_audio_devices</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.get_num_audio_drivers.html'
+                               title='sdl2::audio::get_num_audio_drivers'>get_num_audio_drivers</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='type' href='type.AudioFormat.html'
+                               title='sdl2::audio::AudioFormat'>AudioFormat</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

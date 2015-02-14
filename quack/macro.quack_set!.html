@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `quack_set!` macro in crate `quack`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, quack_set!">
+
+    <title>quack::quack_set! - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>quack</a></p><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.ActOn.html' title='Does something to an object.'>ActOn</a><a class='trait ' href='trait.Action.html' title='Automatically implemented through the `ActOn` trait.'>Action</a><a class='trait ' href='trait.Get.html' title='Automatically implemented through the `GetFrom` trait.'>Get</a><a class='trait ' href='trait.GetFrom.html' title='Something that can be retrieved from another object.'>GetFrom</a><a class='trait ' href='trait.Pair.html' title='Used to reduce the need for associated types.'>Pair</a><a class='trait ' href='trait.Set.html' title='Automatically implemented through the `SetAt` trait.'>Set</a><a class='trait ' href='trait.SetAt.html' title='Something that can be set at an object.'>SetAt</a></div><div class='block macro'><h2>Macros</h2><a class='macro ' href='macro.quack!.html' title=''>quack!</a><a class='macro ' href='macro.quack_action!.html' title=''>quack_action!</a><a class='macro ' href='macro.quack_get!.html' title=''>quack_get!</a><a class='macro ' href='macro.quack_macro_items!.html' title='Used to work around limits in macro syntax.'>quack_macro_items!</a><a class='macro current' href='macro.quack_set!.html' title=''>quack_set!</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content macro">
+<h1 class='fqn'><span class='in-band'><a href='index.html'>quack</a>::<wbr><a class='macro' href=''>quack_set!</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-665' href='../src/quack/lib.rs.html#90-114'>[src]</a></span></h1>
+<pre class='rust macro'>
+<span class='macro'>macro_rules</span><span class='macro'>!</span> <span class='ident'>quack_set</span> {
+    (
+        <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>this</span>:<span class='ident'>ident</span> : <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>this_type</span>:<span class='ident'>ident</span> [$(<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>t</span>:<span class='ident'>tt</span>),<span class='op'>*</span>]
+        <span class='kw'>fn</span> [$(<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>u</span>:<span class='ident'>tt</span>),<span class='op'>*</span>] (<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>val</span>:<span class='ident'>ident</span> : <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>set_prop_type</span>:<span class='ident'>path</span>) [$(<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>w</span>:<span class='ident'>tt</span>)<span class='op'>*</span>] <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>f</span>:<span class='ident'>block</span>
+    ) <span class='op'>=&gt;</span> {<span class='macro'>quack_macro_items</span><span class='macro'>!</span>{
+        <span class='kw'>impl</span><span class='op'>&lt;</span>$(<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>u</span>),<span class='op'>*</span><span class='op'>&gt;</span> <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>crate</span>::<span class='ident'>SetAt</span> <span class='kw'>for</span> (<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>set_prop_type</span>, <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>this_type</span><span class='op'>&lt;</span>$(<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>t</span>),<span class='op'>*</span><span class='op'>&gt;</span>)
+            $(<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>w</span>)<span class='op'>*</span>
+        {
+            <span class='attribute'>#[<span class='ident'>allow</span>(<span class='ident'>unused_variables</span>)]</span>
+            <span class='attribute'>#[<span class='ident'>inline</span>(<span class='ident'>always</span>)]</span>
+            <span class='kw'>fn</span> <span class='ident'>set_at</span>(<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>val</span> : <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>set_prop_type</span>, <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>this</span> : <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>this_type</span><span class='op'>&lt;</span>$(<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>t</span>),<span class='op'>*</span><span class='op'>&gt;</span>) {
+                <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>f</span>
+            }
+        }
+    }};
+    (
+        <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>this</span>:<span class='ident'>ident</span> : <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>this_type</span>:<span class='ident'>ident</span> [$(<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>t</span>:<span class='ident'>tt</span>),<span class='op'>*</span>]
+        <span class='kw'>fn</span> (<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>val</span>:<span class='ident'>ident</span> : <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>set_prop_type</span>:<span class='ident'>path</span>) [$(<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>w</span>:<span class='ident'>tt</span>)<span class='op'>*</span>] <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>f</span>:<span class='ident'>block</span>
+    ) <span class='op'>=&gt;</span> {
+        <span class='macro'>quack_set</span><span class='macro'>!</span> {
+            <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>this</span> : <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>this_type</span> [$(<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>t</span>),<span class='op'>*</span>]
+            <span class='kw'>fn</span> [$(<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>t</span>),<span class='op'>*</span>] (<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>val</span> : <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>set_prop_type</span>) [$(<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>w</span>)<span class='op'>*</span>] <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>f</span>
+        }
+    }
+}
+</pre>
+</section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "quack";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `image` mod in crate `graphics`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, image">
+
+    <title>graphics::image - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>graphics</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='../character/index.html' title='A text character'>character</a><a class='mod ' href='../color/index.html' title='Helper methods for colors'>color</a><a class='mod ' href='../context/index.html' title='Transformation context'>context</a><a class='mod ' href='../deform/index.html' title='Least square deforming of a 2D grid.'>deform</a><a class='mod ' href='../ellipse/index.html' title='Draw ellipse'>ellipse</a><a class='mod ' href='../grid/index.html' title='A flat grid with square cells.'>grid</a><a class='mod current' href='../image/index.html' title='Draw image'>image</a><a class='mod ' href='../internal/index.html' title='Contains type aliases used in this library'>internal</a><a class='mod ' href='../line/index.html' title='Draw Line'>line</a><a class='mod ' href='../modular_index/index.html' title='Helper functions for computing modular index safely.'>modular_index</a><a class='mod ' href='../polygon/index.html' title='Draw polygon'>polygon</a><a class='mod ' href='../radians/index.html' title='Reexport radians helper trait from vecmath'>radians</a><a class='mod ' href='../rectangle/index.html' title='Draw rectangle'>rectangle</a><a class='mod ' href='../text/index.html' title='Draw text'>text</a><a class='mod ' href='../triangulation/index.html' title='Methods for converting shapes into triangles.'>triangulation</a><a class='mod ' href='../vecmath/index.html' title='Various methods for computing with vectors.'>vecmath</a></div><div class='block struct'><h2>Structs</h2><a class='struct ' href='../struct.Color.html' title='A color property'>Color</a><a class='struct ' href='../struct.Rect.html' title='A rectangle property'>Rect</a><a class='struct ' href='../struct.SrcRect.html' title='A source rectangle property'>SrcRect</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='../trait.BackEnd.html' title='Implemented by all graphics back-ends.'>BackEnd</a><a class='trait ' href='../trait.ImageSize.html' title='Implemented by all images to be used with generic algorithms.'>ImageSize</a><a class='trait ' href='../trait.RelativeColor.html' title='Implemented by contexts that contains color.'>RelativeColor</a><a class='trait ' href='../trait.RelativeRectangle.html' title='Should be implemented by contexts that have rectangle information.'>RelativeRectangle</a><a class='trait ' href='../trait.RelativeSourceRectangle.html' title='Should be implemented by contexts that have source rectangle information.'>RelativeSourceRectangle</a><a class='trait ' href='../trait.RelativeTransform.html' title='Implemented by contexts that can transform.'>RelativeTransform</a><a class='trait ' href='../trait.RelativeViewTransform.html' title='Should be implemented by contexts that draws something relative to view.'>RelativeViewTransform</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='../fn.clear.html' title='Clears the screen.'>clear</a><a class='fn ' href='../fn.ellipse.html' title='Draws ellipse.'>ellipse</a><a class='fn ' href='../fn.image.html' title='Draws image.'>image</a><a class='fn ' href='../fn.polygon.html' title='Draws polygon.'>polygon</a><a class='fn ' href='../fn.rectangle.html' title='Draws rectangle.'>rectangle</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>graphics</a>::<wbr><a class='mod' href=''>image</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-3747' href='../../src/graphics/image.rs.html#1-101'>[src]</a></span></h1>
+<div class='docblock'><p>Draw image</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.Image.html'
+                               title='graphics::image::Image'>Image</a></td>
+                        <td class='docblock short'><p>An image</p>
+</td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "graphics";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

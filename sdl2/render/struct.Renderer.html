@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Renderer` struct in crate `sdl2`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Renderer">
+
+    <title>sdl2::render::Renderer - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>render</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.RenderDrawer.html' title='Drawing functionality for the render context.'>RenderDrawer</a><a class='struct ' href='struct.RenderTarget.html' title='A handle for getting/setting the render target of the render context.'>RenderTarget</a><a class='struct current' href='struct.Renderer.html' title='2D rendering context'>Renderer</a><a class='struct ' href='struct.RendererFlags.html' title=''>RendererFlags</a><a class='struct ' href='struct.RendererInfo.html' title='A structure that contains information on the capabilities of a render driver or the current render context.'>RendererInfo</a><a class='struct ' href='struct.Texture.html' title='A texture for a rendering context.'>Texture</a><a class='struct ' href='struct.TextureQuery.html' title=''>TextureQuery</a></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.BlendMode.html' title=''>BlendMode</a><a class='enum ' href='enum.RenderDriverIndex.html' title=''>RenderDriverIndex</a><a class='enum ' href='enum.RendererParent.html' title=''>RendererParent</a><a class='enum ' href='enum.TextureAccess.html' title=''>TextureAccess</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.get_num_render_drivers.html' title=''>get_num_render_drivers</a><a class='fn ' href='fn.get_render_driver_info.html' title=''>get_render_driver_info</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>render</a>::<wbr><a class='struct' href=''>Renderer</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-61936' href='../../src/sdl2/render.rs.html#127-131'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Renderer {
+    // some fields omitted
+}</pre><div class='docblock'><p>2D rendering context</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl <a class='struct' href='../../sdl2/render/struct.Renderer.html' title='sdl2::render::Renderer'>Renderer</a></code></h3><div class='impl-items'><h4 id='method.from_window' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.from_window' class='fnname'>from_window</a>(window: <a class='struct' href='../../sdl2/video/struct.Window.html' title='sdl2::video::Window'>Window</a>, index: <a class='enum' href='../../sdl2/render/enum.RenderDriverIndex.html' title='sdl2::render::RenderDriverIndex'>RenderDriverIndex</a>, renderer_flags: <a class='struct' href='../../sdl2/render/struct.RendererFlags.html' title='sdl2::render::RendererFlags'>RendererFlags</a>) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a class='struct' href='../../sdl2/render/struct.Renderer.html' title='sdl2::render::Renderer'>Renderer</a>&gt;</code></h4>
+<div class='docblock'><p>Creates a 2D rendering context for a window.</p>
+</div><h4 id='method.new_with_window' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.new_with_window' class='fnname'>new_with_window</a>(width: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>, height: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>, window_flags: <a class='struct' href='../../sdl2/video/struct.WindowFlags.html' title='sdl2::video::WindowFlags'>WindowFlags</a>) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a class='struct' href='../../sdl2/render/struct.Renderer.html' title='sdl2::render::Renderer'>Renderer</a>&gt;</code></h4>
+<div class='docblock'><p>Creates a window and default renderer.</p>
+</div><h4 id='method.from_surface' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.from_surface' class='fnname'>from_surface</a>(surface: <a class='struct' href='../../sdl2/surface/struct.Surface.html' title='sdl2::surface::Surface'>Surface</a>) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a class='struct' href='../../sdl2/render/struct.Renderer.html' title='sdl2::render::Renderer'>Renderer</a>&gt;</code></h4>
+<div class='docblock'><p>Creates a 2D software rendering context for a surface.</p>
+</div><h4 id='method.get_info' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_info' class='fnname'>get_info</a>(&amp;self) -&gt; <a class='struct' href='../../sdl2/render/struct.RendererInfo.html' title='sdl2::render::RendererInfo'>RendererInfo</a></code></h4>
+<div class='docblock'><p>Gets information about the rendering context.</p>
+</div><h4 id='method.get_parent' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_parent' class='fnname'>get_parent</a>(&amp;self) -&gt; &amp;<a class='enum' href='../../sdl2/render/enum.RendererParent.html' title='sdl2::render::RendererParent'>RendererParent</a></code></h4>
+<div class='docblock'><p>Gets the window or surface the rendering context was created from.</p>
+</div><h4 id='method.get_parent_as_window' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_parent_as_window' class='fnname'>get_parent_as_window</a>(&amp;self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../sdl2/video/struct.Window.html' title='sdl2::video::Window'>Window</a>&gt;</code></h4>
+<h4 id='method.get_parent_as_surface' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.get_parent_as_surface' class='fnname'>get_parent_as_surface</a>(&amp;self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../sdl2/surface/struct.Surface.html' title='sdl2::surface::Surface'>Surface</a>&gt;</code></h4>
+<h4 id='method.unwrap_parent' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.unwrap_parent' class='fnname'>unwrap_parent</a>(self) -&gt; <a class='enum' href='../../sdl2/render/enum.RendererParent.html' title='sdl2::render::RendererParent'>RendererParent</a></code></h4>
+<h4 id='method.unwrap_parent_as_window' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.unwrap_parent_as_window' class='fnname'>unwrap_parent_as_window</a>(self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../sdl2/video/struct.Window.html' title='sdl2::video::Window'>Window</a>&gt;</code></h4>
+<h4 id='method.unwrap_parent_as_surface' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.unwrap_parent_as_surface' class='fnname'>unwrap_parent_as_surface</a>(self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../sdl2/surface/struct.Surface.html' title='sdl2::surface::Surface'>Surface</a>&gt;</code></h4>
+<h4 id='method.drawer' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.drawer' class='fnname'>drawer</a>(&amp;self) -&gt; <a class='struct' href='../../sdl2/render/struct.RenderDrawer.html' title='sdl2::render::RenderDrawer'>RenderDrawer</a></code></h4>
+<div class='docblock'><p>Provides drawing methods for the renderer.</p>
+
+<h1 id="remarks" class='section-header'><a
+                           href="#remarks">Remarks</a></h1>
+<p>This method is not <code>&amp;mut self</code>.
+It uses interior mutability via <code>RenderDrawer&lt;&#39;renderer&gt;</code> to preserve the
+Renderer&#39;s lifetime, and therefore the lifetimes of any Textures that
+belong to the Renderer.</p>
+
+<p>Only one <code>RenderDrawer</code> per <code>Renderer</code> can be active at a time.
+If this method is called and an existing <code>RenderDrawer</code> from this
+instance is active, the program will panic.</p>
+
+<h1 id="examples" class='section-header'><a
+                           href="#examples">Examples</a></h1><pre id='rust-example-rendered' class='rust '>
+<span class='kw'>use</span> <span class='ident'>sdl2</span>::<span class='ident'>render</span>::<span class='ident'>Renderer</span>;
+<span class='kw'>use</span> <span class='ident'>sdl2</span>::<span class='ident'>rect</span>::<span class='ident'>Rect</span>;
+
+<span class='kw'>fn</span> <span class='ident'>test_draw</span>(<span class='ident'>renderer</span>: <span class='kw-2'>&amp;</span><span class='ident'>Renderer</span>) {
+    <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>drawer</span> <span class='op'>=</span> <span class='ident'>renderer</span>.<span class='ident'>drawer</span>();
+    <span class='ident'>drawer</span>.<span class='ident'>clear</span>();
+    <span class='ident'>drawer</span>.<span class='ident'>draw_rect</span>(<span class='ident'>Rect</span>::<span class='ident'>new</span>(<span class='number'>50</span>, <span class='number'>50</span>, <span class='number'>150</span>, <span class='number'>175</span>));
+    <span class='ident'>drawer</span>.<span class='ident'>present</span>();
+}
+</pre>
+</div><h4 id='method.raw' class='method'><a class='stability Unmarked' title='No stability level'></a><code>unsafe fn <a href='#method.raw' class='fnname'>raw</a>(&amp;self) -&gt; *const <a class='struct' href='../../sdl2-sys/render/struct.SDL_Renderer.html' title='sdl2-sys::render::SDL_Renderer'>SDL_Renderer</a></code></h4>
+<div class='docblock'><p>Unwraps the window or surface the rendering context was created from.</p>
+</div><h4 id='method.from_ll' class='method'><a class='stability Unmarked' title='No stability level'></a><code>unsafe fn <a href='#method.from_ll' class='fnname'>from_ll</a>(raw: *const <a class='struct' href='../../sdl2-sys/render/struct.SDL_Renderer.html' title='sdl2-sys::render::SDL_Renderer'>SDL_Renderer</a>, parent: <a class='enum' href='../../sdl2/render/enum.RendererParent.html' title='sdl2::render::RendererParent'>RendererParent</a>) -&gt; <a class='struct' href='../../sdl2/render/struct.Renderer.html' title='sdl2::render::Renderer'>Renderer</a></code></h4>
+</div><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl <a class='struct' href='../../sdl2/render/struct.Renderer.html' title='sdl2::render::Renderer'>Renderer</a></code></h3><div class='docblock'><p>Texture-creating methods for the renderer</p>
+</div><div class='impl-items'><h4 id='method.create_texture' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.create_texture' class='fnname'>create_texture</a>(&amp;self, format: <a class='enum' href='../../sdl2/pixels/enum.PixelFormatEnum.html' title='sdl2::pixels::PixelFormatEnum'>PixelFormatEnum</a>, access: <a class='enum' href='../../sdl2/render/enum.TextureAccess.html' title='sdl2::render::TextureAccess'>TextureAccess</a>, size: <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>)</a>) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a class='struct' href='../../sdl2/render/struct.Texture.html' title='sdl2::render::Texture'>Texture</a>&gt;</code></h4>
+<div class='docblock'><p>Creates a texture for a rendering context.</p>
+
+<p><code>size</code> is the width and height of the texture.</p>
+</div><h4 id='method.create_texture_static' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.create_texture_static' class='fnname'>create_texture_static</a>(&amp;self, format: <a class='enum' href='../../sdl2/pixels/enum.PixelFormatEnum.html' title='sdl2::pixels::PixelFormatEnum'>PixelFormatEnum</a>, size: <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>)</a>) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a class='struct' href='../../sdl2/render/struct.Texture.html' title='sdl2::render::Texture'>Texture</a>&gt;</code></h4>
+<div class='docblock'><p>Shorthand for <code>create_texture(format, TextureAccess::Static, size)</code></p>
+</div><h4 id='method.create_texture_streaming' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.create_texture_streaming' class='fnname'>create_texture_streaming</a>(&amp;self, format: <a class='enum' href='../../sdl2/pixels/enum.PixelFormatEnum.html' title='sdl2::pixels::PixelFormatEnum'>PixelFormatEnum</a>, size: <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>)</a>) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a class='struct' href='../../sdl2/render/struct.Texture.html' title='sdl2::render::Texture'>Texture</a>&gt;</code></h4>
+<div class='docblock'><p>Shorthand for <code>create_texture(format, TextureAccess::Streaming, size)</code></p>
+</div><h4 id='method.create_texture_target' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.create_texture_target' class='fnname'>create_texture_target</a>(&amp;self, format: <a class='enum' href='../../sdl2/pixels/enum.PixelFormatEnum.html' title='sdl2::pixels::PixelFormatEnum'>PixelFormatEnum</a>, size: <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>)</a>) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a class='struct' href='../../sdl2/render/struct.Texture.html' title='sdl2::render::Texture'>Texture</a>&gt;</code></h4>
+<div class='docblock'><p>Shorthand for <code>create_texture(format, TextureAccess::Target, size)</code></p>
+</div><h4 id='method.create_texture_from_surface' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.create_texture_from_surface' class='fnname'>create_texture_from_surface</a>(&amp;self, surface: &amp;<a class='struct' href='../../sdl2/surface/struct.Surface.html' title='sdl2::surface::Surface'>Surface</a>) -&gt; <a class='type' href='../../sdl2/sdl/type.SdlResult.html' title='sdl2::sdl::SdlResult'>SdlResult</a>&lt;<a class='struct' href='../../sdl2/render/struct.Texture.html' title='sdl2::render::Texture'>Texture</a>&gt;</code></h4>
+<div class='docblock'><p>Creates a texture from an existing surface.</p>
+
+<h1 id="remarks" class='section-header'><a
+                           href="#remarks">Remarks</a></h1>
+<p>The access hint for the created texture is <code>TextureAccess::Static</code>.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../sdl2/render/struct.Renderer.html' title='sdl2::render::Renderer'>Renderer</a></code></h3><div class='impl-items'><h4 id='method.drop' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

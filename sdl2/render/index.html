@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `render` mod in crate `sdl2`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, render">
+
+    <title>sdl2::render - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>sdl2</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='../audio/index.html' title='Audio Functions'>audio</a><a class='mod ' href='../clipboard/index.html' title=''>clipboard</a><a class='mod ' href='../controller/index.html' title=''>controller</a><a class='mod ' href='../cpuinfo/index.html' title=''>cpuinfo</a><a class='mod ' href='../event/index.html' title='Event Handling'>event</a><a class='mod ' href='../filesystem/index.html' title=''>filesystem</a><a class='mod ' href='../haptic/index.html' title='Haptic Functions'>haptic</a><a class='mod ' href='../joystick/index.html' title=''>joystick</a><a class='mod ' href='../keyboard/index.html' title=''>keyboard</a><a class='mod ' href='../keycode/index.html' title=''>keycode</a><a class='mod ' href='../messagebox/index.html' title=''>messagebox</a><a class='mod ' href='../mouse/index.html' title=''>mouse</a><a class='mod ' href='../pixels/index.html' title=''>pixels</a><a class='mod ' href='../rect/index.html' title=''>rect</a><a class='mod current' href='../render/index.html' title='2D accelerated rendering'>render</a><a class='mod ' href='../rwops/index.html' title=''>rwops</a><a class='mod ' href='../scancode/index.html' title=''>scancode</a><a class='mod ' href='../sdl/index.html' title=''>sdl</a><a class='mod ' href='../surface/index.html' title=''>surface</a><a class='mod ' href='../timer/index.html' title=''>timer</a><a class='mod ' href='../touch/index.html' title=''>touch</a><a class='mod ' href='../version/index.html' title='Querying SDL Version'>version</a><a class='mod ' href='../video/index.html' title=''>video</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>sdl2</a>::<wbr><a class='mod' href=''>render</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-60184' href='../../src/sdl2/render.rs.html#1-1059'>[src]</a></span></h1>
+<div class='docblock'><p>2D accelerated rendering</p>
+
+<p>Official C documentation: <a href="https://wiki.libsdl.org/CategoryRender">https://wiki.libsdl.org/CategoryRender</a></p>
+
+<h1 id="introduction" class='section-header'><a
+                           href="#introduction">Introduction</a></h1>
+<p>This module contains functions for 2D accelerated rendering.</p>
+
+<p>This API supports the following features:</p>
+
+<ul>
+<li>single pixel points</li>
+<li>single pixel lines</li>
+<li>filled rectangles</li>
+<li>texture images</li>
+<li>All of these may be drawn in opaque, blended, or additive modes.</li>
+</ul>
+
+<p>The texture images can have an additional color tint or alpha modulation
+applied to them, and may also be stretched with linear interpolation,
+rotated or flipped/mirrored.</p>
+
+<p>For advanced functionality like particle effects or actual 3D you should use
+SDL&#39;s OpenGL/Direct3D support or one of the many available 3D engines.</p>
+
+<p>This API is not designed to be used from multiple threads, see
+<a href="http://bugzilla.libsdl.org/show_bug.cgi?id=1995">this bug</a> for details.</p>
+
+<h1 id="rust-differences" class='section-header'><a
+                           href="#rust-differences">Rust differences</a></h1>
+<p>The Rust version of the render API deviates slightly from the original,
+in order to be more idiomatic with Rust and to adhere to its notion of
+memory safety.</p>
+
+<p>All <code>Texture</code> types are restricted to live for only as long as
+the parent <code>Renderer</code>.
+Consequentially, this means that <code>Renderer</code> never mutates and that all
+drawing functionality is put behind interior mutability using
+<code>RenderDrawer&lt;&#39;renderer&gt;</code>.</p>
+
+<p>None of the draw methods in <code>RenderDrawer</code> are expected to fail.
+If they do, a panic is raised and the program is aborted.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.RenderDrawer.html'
+                               title='sdl2::render::RenderDrawer'>RenderDrawer</a></td>
+                        <td class='docblock short'><p>Drawing functionality for the render context.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.RenderTarget.html'
+                               title='sdl2::render::RenderTarget'>RenderTarget</a></td>
+                        <td class='docblock short'><p>A handle for getting/setting the render target of the render context.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.Renderer.html'
+                               title='sdl2::render::Renderer'>Renderer</a></td>
+                        <td class='docblock short'><p>2D rendering context</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.RendererFlags.html'
+                               title='sdl2::render::RendererFlags'>RendererFlags</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.RendererInfo.html'
+                               title='sdl2::render::RendererInfo'>RendererInfo</a></td>
+                        <td class='docblock short'><p>A structure that contains information on the capabilities of a render driver
+or the current render context.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.Texture.html'
+                               title='sdl2::render::Texture'>Texture</a></td>
+                        <td class='docblock short'><p>A texture for a rendering context.</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.TextureQuery.html'
+                               title='sdl2::render::TextureQuery'>TextureQuery</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='enum' href='enum.BlendMode.html'
+                               title='sdl2::render::BlendMode'>BlendMode</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='enum' href='enum.RenderDriverIndex.html'
+                               title='sdl2::render::RenderDriverIndex'>RenderDriverIndex</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='enum' href='enum.RendererParent.html'
+                               title='sdl2::render::RendererParent'>RendererParent</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='enum' href='enum.TextureAccess.html'
+                               title='sdl2::render::TextureAccess'>TextureAccess</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.ACCELERATED.html'
+                               title='sdl2::render::ACCELERATED'>ACCELERATED</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.PRESENTVSYNC.html'
+                               title='sdl2::render::PRESENTVSYNC'>PRESENTVSYNC</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.SOFTWARE.html'
+                               title='sdl2::render::SOFTWARE'>SOFTWARE</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='constant' href='constant.TARGETTEXTURE.html'
+                               title='sdl2::render::TARGETTEXTURE'>TARGETTEXTURE</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.get_num_render_drivers.html'
+                               title='sdl2::render::get_num_render_drivers'>get_num_render_drivers</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.get_render_driver_info.html'
+                               title='sdl2::render::get_render_driver_info'>get_render_driver_info</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

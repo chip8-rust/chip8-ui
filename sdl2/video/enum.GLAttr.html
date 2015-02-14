@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `GLAttr` enum in crate `sdl2`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, GLAttr">
+
+    <title>sdl2::video::GLAttr - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>video</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.DisplayMode.html' title=''>DisplayMode</a><a class='struct ' href='struct.GLContext.html' title=''>GLContext</a><a class='struct ' href='struct.Window.html' title=''>Window</a><a class='struct ' href='struct.WindowFlags.html' title=''>WindowFlags</a></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.FullscreenType.html' title=''>FullscreenType</a><a class='enum current' href='enum.GLAttr.html' title=''>GLAttr</a><a class='enum ' href='enum.GLProfile.html' title=''>GLProfile</a><a class='enum ' href='enum.WindowPos.html' title=''>WindowPos</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.disable_screen_saver.html' title=''>disable_screen_saver</a><a class='fn ' href='fn.enable_screen_saver.html' title=''>enable_screen_saver</a><a class='fn ' href='fn.get_closest_display_mode.html' title=''>get_closest_display_mode</a><a class='fn ' href='fn.get_current_display_mode.html' title=''>get_current_display_mode</a><a class='fn ' href='fn.get_current_video_driver.html' title=''>get_current_video_driver</a><a class='fn ' href='fn.get_desktop_display_mode.html' title=''>get_desktop_display_mode</a><a class='fn ' href='fn.get_display_bounds.html' title=''>get_display_bounds</a><a class='fn ' href='fn.get_display_mode.html' title=''>get_display_mode</a><a class='fn ' href='fn.get_display_name.html' title=''>get_display_name</a><a class='fn ' href='fn.get_num_display_modes.html' title=''>get_num_display_modes</a><a class='fn ' href='fn.get_num_video_displays.html' title=''>get_num_video_displays</a><a class='fn ' href='fn.get_num_video_drivers.html' title=''>get_num_video_drivers</a><a class='fn ' href='fn.get_video_driver.html' title=''>get_video_driver</a><a class='fn ' href='fn.gl_extension_supported.html' title=''>gl_extension_supported</a><a class='fn ' href='fn.gl_get_attribute.html' title=''>gl_get_attribute</a><a class='fn ' href='fn.gl_get_current_context.html' title=''>gl_get_current_context</a><a class='fn ' href='fn.gl_get_current_window.html' title=''>gl_get_current_window</a><a class='fn ' href='fn.gl_get_proc_address.html' title=''>gl_get_proc_address</a><a class='fn ' href='fn.gl_get_swap_interval.html' title=''>gl_get_swap_interval</a><a class='fn ' href='fn.gl_load_library.html' title=''>gl_load_library</a><a class='fn ' href='fn.gl_set_attribute.html' title=''>gl_set_attribute</a><a class='fn ' href='fn.gl_set_swap_interval.html' title=''>gl_set_swap_interval</a><a class='fn ' href='fn.gl_unload_library.html' title=''>gl_unload_library</a><a class='fn ' href='fn.is_screen_saver_enabled.html' title=''>is_screen_saver_enabled</a><a class='fn ' href='fn.video_init.html' title=''>video_init</a><a class='fn ' href='fn.video_quit.html' title=''>video_quit</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>sdl2</a>::<wbr><a href='index.html'>video</a>::<wbr><a class='enum' href=''>GLAttr</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-55161' href='../../src/sdl2/video.rs.html#17-42'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum GLAttr {
+    GLRedSize,
+    GLGreenSize,
+    GLBlueSize,
+    GLAlphaSize,
+    GLBufferSize,
+    GLDoubleBuffer,
+    GLDepthSize,
+    GLStencilSize,
+    GLAccumRedSize,
+    GLAccumGreenSize,
+    GLAccumBlueSize,
+    GLAccumAlphaSize,
+    GLStereo,
+    GLMultiSampleBuffers,
+    GLMultiSampleSamples,
+    GLAcceleratedVisual,
+    GLRetailedBacking,
+    GLContextMajorVersion,
+    GLContextMinorVersion,
+    GLContextEGL,
+    GLContextFlags,
+    GLContextProfileMask,
+    GLShareWithCurrentContext,
+    GLFramebufferSRGBCapable,
+}</pre><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.GLRedSize'><a class='stability Unmarked' title='No stability level'></a><code>GLRedSize</code></td><td></td></tr><tr><td id='variant.GLGreenSize'><a class='stability Unmarked' title='No stability level'></a><code>GLGreenSize</code></td><td></td></tr><tr><td id='variant.GLBlueSize'><a class='stability Unmarked' title='No stability level'></a><code>GLBlueSize</code></td><td></td></tr><tr><td id='variant.GLAlphaSize'><a class='stability Unmarked' title='No stability level'></a><code>GLAlphaSize</code></td><td></td></tr><tr><td id='variant.GLBufferSize'><a class='stability Unmarked' title='No stability level'></a><code>GLBufferSize</code></td><td></td></tr><tr><td id='variant.GLDoubleBuffer'><a class='stability Unmarked' title='No stability level'></a><code>GLDoubleBuffer</code></td><td></td></tr><tr><td id='variant.GLDepthSize'><a class='stability Unmarked' title='No stability level'></a><code>GLDepthSize</code></td><td></td></tr><tr><td id='variant.GLStencilSize'><a class='stability Unmarked' title='No stability level'></a><code>GLStencilSize</code></td><td></td></tr><tr><td id='variant.GLAccumRedSize'><a class='stability Unmarked' title='No stability level'></a><code>GLAccumRedSize</code></td><td></td></tr><tr><td id='variant.GLAccumGreenSize'><a class='stability Unmarked' title='No stability level'></a><code>GLAccumGreenSize</code></td><td></td></tr><tr><td id='variant.GLAccumBlueSize'><a class='stability Unmarked' title='No stability level'></a><code>GLAccumBlueSize</code></td><td></td></tr><tr><td id='variant.GLAccumAlphaSize'><a class='stability Unmarked' title='No stability level'></a><code>GLAccumAlphaSize</code></td><td></td></tr><tr><td id='variant.GLStereo'><a class='stability Unmarked' title='No stability level'></a><code>GLStereo</code></td><td></td></tr><tr><td id='variant.GLMultiSampleBuffers'><a class='stability Unmarked' title='No stability level'></a><code>GLMultiSampleBuffers</code></td><td></td></tr><tr><td id='variant.GLMultiSampleSamples'><a class='stability Unmarked' title='No stability level'></a><code>GLMultiSampleSamples</code></td><td></td></tr><tr><td id='variant.GLAcceleratedVisual'><a class='stability Unmarked' title='No stability level'></a><code>GLAcceleratedVisual</code></td><td></td></tr><tr><td id='variant.GLRetailedBacking'><a class='stability Unmarked' title='No stability level'></a><code>GLRetailedBacking</code></td><td></td></tr><tr><td id='variant.GLContextMajorVersion'><a class='stability Unmarked' title='No stability level'></a><code>GLContextMajorVersion</code></td><td></td></tr><tr><td id='variant.GLContextMinorVersion'><a class='stability Unmarked' title='No stability level'></a><code>GLContextMinorVersion</code></td><td></td></tr><tr><td id='variant.GLContextEGL'><a class='stability Unmarked' title='No stability level'></a><code>GLContextEGL</code></td><td></td></tr><tr><td id='variant.GLContextFlags'><a class='stability Unmarked' title='No stability level'></a><code>GLContextFlags</code></td><td></td></tr><tr><td id='variant.GLContextProfileMask'><a class='stability Unmarked' title='No stability level'></a><code>GLContextProfileMask</code></td><td></td></tr><tr><td id='variant.GLShareWithCurrentContext'><a class='stability Unmarked' title='No stability level'></a><code>GLShareWithCurrentContext</code></td><td></td></tr><tr><td id='variant.GLFramebufferSRGBCapable'><a class='stability Unmarked' title='No stability level'></a><code>GLFramebufferSRGBCapable</code></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../../sdl2/video/enum.GLAttr.html' title='sdl2::video::GLAttr'>GLAttr</a></code></h3><div class='impl-items'><h4 id='method.eq' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../sdl2/video/enum.GLAttr.html' title='sdl2::video::GLAttr'>GLAttr</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../sdl2/video/enum.GLAttr.html' title='sdl2::video::GLAttr'>GLAttr</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../sdl2/video/enum.GLAttr.html' title='sdl2::video::GLAttr'>GLAttr</a></code></h3><div class='impl-items'><h4 id='method.clone' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../sdl2/video/enum.GLAttr.html' title='sdl2::video::GLAttr'>GLAttr</a></code></h4>
+<h4 id='method.clone_from' class='tymethod'><a class='stability Unstable' title='Unstable: this function is rarely used'></a><code>fn <a href='#tymethod.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../../sdl2/video/enum.GLAttr.html' title='sdl2::video::GLAttr'>GLAttr</a></code></h3><div class='impl-items'></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "sdl2";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

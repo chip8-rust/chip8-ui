@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `PixelMode` enum in crate `freetype`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, PixelMode">
+
+    <title>freetype::bitmap::PixelMode - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>freetype</a>::<wbr><a href='index.html'>bitmap</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.Bitmap.html' title=''>Bitmap</a></div><div class='block enum'><h2>Enums</h2><a class='enum current' href='enum.PixelMode.html' title='An enumeration type used to describe the format of pixels in a given bitmap. Note that additional formats may be added in the future.'>PixelMode</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>freetype</a>::<wbr><a href='index.html'>bitmap</a>::<wbr><a class='enum' href=''>PixelMode</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-21' href='../../src/freetype/bitmap.rs.html#7-49'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum PixelMode {
+    None,
+    Mono,
+    Gray,
+    Gray2,
+    Gray4,
+    Lcd,
+    LcdV,
+    Bgra,
+}</pre><div class='docblock'><p>An enumeration type used to describe the format of pixels in a given bitmap. Note that
+additional formats may be added in the future.</p>
+</div><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.None'><a class='stability Unmarked' title='No stability level'></a><code>None</code></td><td><div class='docblock'><p>This value is reserved.</p>
+</div></td></tr><tr><td id='variant.Mono'><a class='stability Unmarked' title='No stability level'></a><code>Mono</code></td><td><div class='docblock'><p>A monochrome bitmap, using 1 bit per pixel. Note that pixels are
+stored in most-significant order (MSB), which means that the left-most
+pixel in a byte has value 128.</p>
+</div></td></tr><tr><td id='variant.Gray'><a class='stability Unmarked' title='No stability level'></a><code>Gray</code></td><td><div class='docblock'><p>An 8-bit bitmap, generally used to represent anti-aliased glyph images.
+Each pixel is stored in one byte. Note that the number of <code>gray</code>
+levels is stored in the <code>num_grays</code> field of the FT_Bitmap structure
+(it generally is 256).</p>
+</div></td></tr><tr><td id='variant.Gray2'><a class='stability Unmarked' title='No stability level'></a><code>Gray2</code></td><td><div class='docblock'><p>A 2-bit per pixel bitmap, used to represent embedded anti-aliased
+bitmaps in font files according to the OpenType specification. We
+haven&#39;t found a single font using this format, however.</p>
+</div></td></tr><tr><td id='variant.Gray4'><a class='stability Unmarked' title='No stability level'></a><code>Gray4</code></td><td><div class='docblock'><p>A 4-bit per pixel bitmap, representing embedded anti-aliased bitmaps in
+font files according to the OpenType specification. We haven&#39;t found a
+single font using this format, however.</p>
+</div></td></tr><tr><td id='variant.Lcd'><a class='stability Unmarked' title='No stability level'></a><code>Lcd</code></td><td><div class='docblock'><p>An 8-bit bitmap, representing RGB or BGR decimated glyph images used
+for display on LCD displays; the bitmap is three times wider than the
+original glyph image. See also FT_RENDER_MODE_LCD.</p>
+</div></td></tr><tr><td id='variant.LcdV'><a class='stability Unmarked' title='No stability level'></a><code>LcdV</code></td><td><div class='docblock'><p>An 8-bit bitmap, representing RGB or BGR decimated glyph images used for
+display on rotated LCD displays; the bitmap is three times taller than
+the original glyph image. See also FT_RENDER_MODE_LCD_V.</p>
+</div></td></tr><tr><td id='variant.Bgra'><a class='stability Unmarked' title='No stability level'></a><code>Bgra</code></td><td><div class='docblock'><p>An image with four 8-bit channels per pixel, representing a color image
+(such as emoticons) with alpha channel. For each pixel, the format is
+BGRA, which means, the blue channel comes first in memory. The color
+channels are pre-multiplied and in the sRGB colorspace. For example,
+full red at half-translucent opacity will be represented as
+<code>00,00,80,80</code>, not <code>00,00,FF,80</code>. See also FT_LOAD_COLOR.</p>
+</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../freetype/bitmap/enum.PixelMode.html' title='freetype::bitmap::PixelMode'>PixelMode</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='http://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../../freetype/bitmap/enum.PixelMode.html' title='freetype::bitmap::PixelMode'>PixelMode</a></code></h3><div class='impl-items'></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "freetype";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

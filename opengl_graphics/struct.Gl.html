@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Gl` struct in crate `opengl_graphics`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Gl">
+
+    <title>opengl_graphics::Gl - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>opengl_graphics</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='error/index.html' title='Errors'>error</a><a class='mod ' href='glyph_cache/index.html' title='Glyph caching'>glyph_cache</a><a class='mod ' href='shader_utils/index.html' title='Helper functions for dealing with shaders.'>shader_utils</a></div><div class='block struct'><h2>Structs</h2><a class='struct current' href='struct.Gl.html' title='Contains OpenGL data.'>Gl</a><a class='struct ' href='struct.Texture.html' title='Wraps OpenGL texture data. The texture gets deleted when running out of scope.'>Texture</a></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.OpenGL.html' title=''>OpenGL</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>opengl_graphics</a>::<wbr><a class='struct' href=''>Gl</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-2022' href='../src/opengl_graphics/gl_back_end.rs.html#307-312'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Gl {
+    // some fields omitted
+}</pre><div class='docblock'><p>Contains OpenGL data.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;'a&gt; <a class='struct' href='../opengl_graphics/struct.Gl.html' title='opengl_graphics::Gl'>Gl</a></code></h3><div class='impl-items'><h4 id='method.new' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.new' class='fnname'>new</a>(opengl: <a class='enum' href='../opengl_graphics/enum.OpenGL.html' title='opengl_graphics::OpenGL'>OpenGL</a>) -&gt; <a class='struct' href='../opengl_graphics/struct.Gl.html' title='opengl_graphics::Gl'>Gl</a></code></h4>
+<div class='docblock'><p>Creates a new OpenGL back-end.</p>
+
+<h1 id="panics" class='section-header'><a
+                           href="#panics">Panics</a></h1>
+<p>If the OpenGL function pointers have not been loaded yet.
+See <a href="https://github.com/PistonDevelopers/opengl_graphics/issues/103">https://github.com/PistonDevelopers/opengl_graphics/issues/103</a> for more info.</p>
+</div><h4 id='method.viewport' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.viewport' class='fnname'>viewport</a>(&amp;mut self, x: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>, y: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>, w: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>, h: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>)</code></h4>
+<div class='docblock'><p>Sets viewport with normalized coordinates and center as origin.</p>
+</div><h4 id='method.use_program' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.use_program' class='fnname'>use_program</a>(&amp;mut self, program: <a class='type' href='../gl/types/type.GLuint.html' title='gl::types::GLuint'>GLuint</a>)</code></h4>
+<div class='docblock'><p>Sets the current program only if the program is not in use.</p>
+</div><h4 id='method.clear_program' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.clear_program' class='fnname'>clear_program</a>(&amp;mut self)</code></h4>
+<div class='docblock'><p>Unset the current program.</p>
+
+<p>This forces the current program to be set on next drawing call.</p>
+</div><h4 id='method.draw' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.draw' class='fnname'>draw</a>&lt;F&gt;(&amp;mut self, viewport: <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[<a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>; 4]</a>, f: F) <span class='where'>where F: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.FnOnce.html' title='core::ops::FnOnce'>FnOnce</a>(<a class='struct' href='../graphics/context/struct.Context.html' title='graphics::context::Context'>Context</a>, &amp;mut <a class='struct' href='../opengl_graphics/struct.Gl.html' title='opengl_graphics::Gl'>Gl</a>)</span></code></h4>
+<div class='docblock'><p>Draws graphics.</p>
+</div><h4 id='method.has_texture_alpha' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.has_texture_alpha' class='fnname'>has_texture_alpha</a>(&amp;self, _texture: &amp;<a class='struct' href='../opengl_graphics/struct.Texture.html' title='opengl_graphics::Texture'>Texture</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Assume all textures has alpha channel for now.</p>
+</div><h4 id='method.enable_alpha_blend' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.enable_alpha_blend' class='fnname'>enable_alpha_blend</a>(&amp;mut self)</code></h4>
+<div class='docblock'><p>Enabled alpha blending.</p>
+</div><h4 id='method.disable_alpha_blend' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.disable_alpha_blend' class='fnname'>disable_alpha_blend</a>(&amp;mut self)</code></h4>
+<div class='docblock'><p>Disables alpha blending.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl <a class='trait' href='../graphics/back_end/trait.BackEnd.html' title='graphics::back_end::BackEnd'>BackEnd</a> for <a class='struct' href='../opengl_graphics/struct.Gl.html' title='opengl_graphics::Gl'>Gl</a></code></h3><div class='impl-items'><h4 id='assoc_type.Texture' class='type'><a class='stability Unmarked' title='No stability level'></a><code>type Texture = <a class='struct' href='../opengl_graphics/struct.Texture.html' title='opengl_graphics::Texture'>Texture</a></code></h4>
+<h4 id='method.clear' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.clear' class='fnname'>clear</a>(&amp;mut self, color: <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[<a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>; 4]</a>)</code></h4>
+<h4 id='method.tri_list' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.tri_list' class='fnname'>tri_list</a>&lt;F&gt;(&amp;mut self, color: &amp;<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[<a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>; 4]</a>, f: F) <span class='where'>where F: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(&amp;mut <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a><a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>))</span></code></h4>
+<h4 id='method.tri_list_uv' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.tri_list_uv' class='fnname'>tri_list_uv</a>&lt;F&gt;(&amp;mut self, color: &amp;<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[<a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>; 4]</a>, texture: &amp;<a class='struct' href='../opengl_graphics/struct.Texture.html' title='opengl_graphics::Texture'>Texture</a>, f: F) <span class='where'>where F: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(&amp;mut <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a><a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a><a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>))</span></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "opengl_graphics";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>

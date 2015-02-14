@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `FT_Get_Track_Kerning` fn in crate `freetype`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, FT_Get_Track_Kerning">
+
+    <title>freetype::ffi::FT_Get_Track_Kerning - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>freetype</a>::<wbr><a href='index.html'>ffi</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.FT_BBox.html' title=''>FT_BBox</a><a class='struct ' href='struct.FT_Bitmap.html' title=''>FT_Bitmap</a><a class='struct ' href='struct.FT_BitmapGlyphRec.html' title=''>FT_BitmapGlyphRec</a><a class='struct ' href='struct.FT_Bitmap_Size.html' title=''>FT_Bitmap_Size</a><a class='struct ' href='struct.FT_CharMapRec.html' title=''>FT_CharMapRec</a><a class='struct ' href='struct.FT_Data.html' title=''>FT_Data</a><a class='struct ' href='struct.FT_FaceRec.html' title=''>FT_FaceRec</a><a class='struct ' href='struct.FT_Generic.html' title=''>FT_Generic</a><a class='struct ' href='struct.FT_GlyphRec.html' title=''>FT_GlyphRec</a><a class='struct ' href='struct.FT_GlyphSlotRec.html' title=''>FT_GlyphSlotRec</a><a class='struct ' href='struct.FT_Glyph_Metrics.html' title=''>FT_Glyph_Metrics</a><a class='struct ' href='struct.FT_ListNodeRec.html' title=''>FT_ListNodeRec</a><a class='struct ' href='struct.FT_ListRec.html' title=''>FT_ListRec</a><a class='struct ' href='struct.FT_Matrix.html' title=''>FT_Matrix</a><a class='struct ' href='struct.FT_MemoryRec.html' title=''>FT_MemoryRec</a><a class='struct ' href='struct.FT_Open_Args.html' title=''>FT_Open_Args</a><a class='struct ' href='struct.FT_Outline.html' title=''>FT_Outline</a><a class='struct ' href='struct.FT_OutlineGlyphRec.html' title=''>FT_OutlineGlyphRec</a><a class='struct ' href='struct.FT_Parameter.html' title=''>FT_Parameter</a><a class='struct ' href='struct.FT_SizeRec.html' title=''>FT_SizeRec</a><a class='struct ' href='struct.FT_Size_Metrics.html' title=''>FT_Size_Metrics</a><a class='struct ' href='struct.FT_Size_RequestRec.html' title=''>FT_Size_RequestRec</a><a class='struct ' href='struct.FT_StreamRec.html' title=''>FT_StreamRec</a><a class='struct ' href='struct.FT_UnitVector.html' title=''>FT_UnitVector</a><a class='struct ' href='struct.FT_Vector.html' title=''>FT_Vector</a><a class='struct ' href='struct.TT_OS2.html' title=''>TT_OS2</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.FTErrorMethods.html' title=''>FTErrorMethods</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.FT_Add_Default_Modules.html' title=''>FT_Add_Default_Modules</a><a class='fn ' href='fn.FT_Attach_File.html' title=''>FT_Attach_File</a><a class='fn ' href='fn.FT_Attach_Stream.html' title=''>FT_Attach_Stream</a><a class='fn ' href='fn.FT_Done_Face.html' title=''>FT_Done_Face</a><a class='fn ' href='fn.FT_Done_FreeType.html' title=''>FT_Done_FreeType</a><a class='fn ' href='fn.FT_Done_Glyph.html' title=''>FT_Done_Glyph</a><a class='fn ' href='fn.FT_Done_Library.html' title=''>FT_Done_Library</a><a class='fn ' href='fn.FT_Get_Char_Index.html' title=''>FT_Get_Char_Index</a><a class='fn ' href='fn.FT_Get_Charmap_Index.html' title=''>FT_Get_Charmap_Index</a><a class='fn ' href='fn.FT_Get_FSType_Flags.html' title=''>FT_Get_FSType_Flags</a><a class='fn ' href='fn.FT_Get_First_Char.html' title=''>FT_Get_First_Char</a><a class='fn ' href='fn.FT_Get_Glyph.html' title=''>FT_Get_Glyph</a><a class='fn ' href='fn.FT_Get_Glyph_Name.html' title=''>FT_Get_Glyph_Name</a><a class='fn ' href='fn.FT_Get_Kerning.html' title=''>FT_Get_Kerning</a><a class='fn ' href='fn.FT_Get_Name_Index.html' title=''>FT_Get_Name_Index</a><a class='fn ' href='fn.FT_Get_Next_Char.html' title=''>FT_Get_Next_Char</a><a class='fn ' href='fn.FT_Get_Postscript_Name.html' title=''>FT_Get_Postscript_Name</a><a class='fn ' href='fn.FT_Get_Sfnt_Table.html' title=''>FT_Get_Sfnt_Table</a><a class='fn ' href='fn.FT_Get_SubGlyph_Info.html' title=''>FT_Get_SubGlyph_Info</a><a class='fn current' href='fn.FT_Get_Track_Kerning.html' title=''>FT_Get_Track_Kerning</a><a class='fn ' href='fn.FT_Glyph_Copy.html' title=''>FT_Glyph_Copy</a><a class='fn ' href='fn.FT_Glyph_Get_CBox.html' title=''>FT_Glyph_Get_CBox</a><a class='fn ' href='fn.FT_Glyph_To_Bitmap.html' title=''>FT_Glyph_To_Bitmap</a><a class='fn ' href='fn.FT_Glyph_Transform.html' title=''>FT_Glyph_Transform</a><a class='fn ' href='fn.FT_HAS_COLOR.html' title=''>FT_HAS_COLOR</a><a class='fn ' href='fn.FT_HAS_FIXED_SIZES.html' title=''>FT_HAS_FIXED_SIZES</a><a class='fn ' href='fn.FT_HAS_GLYPH_NAMES.html' title=''>FT_HAS_GLYPH_NAMES</a><a class='fn ' href='fn.FT_HAS_HORIZONTAL.html' title=''>FT_HAS_HORIZONTAL</a><a class='fn ' href='fn.FT_HAS_KERNING.html' title=''>FT_HAS_KERNING</a><a class='fn ' href='fn.FT_HAS_MULTIPLE_MASTERS.html' title=''>FT_HAS_MULTIPLE_MASTERS</a><a class='fn ' href='fn.FT_HAS_VERTICAL.html' title=''>FT_HAS_VERTICAL</a><a class='fn ' href='fn.FT_IS_CID_KEYED.html' title=''>FT_IS_CID_KEYED</a><a class='fn ' href='fn.FT_IS_FIXED_WIDTH.html' title=''>FT_IS_FIXED_WIDTH</a><a class='fn ' href='fn.FT_IS_SCALABLE.html' title=''>FT_IS_SCALABLE</a><a class='fn ' href='fn.FT_IS_SFNT.html' title=''>FT_IS_SFNT</a><a class='fn ' href='fn.FT_IS_TRICKY.html' title=''>FT_IS_TRICKY</a><a class='fn ' href='fn.FT_Init_FreeType.html' title=''>FT_Init_FreeType</a><a class='fn ' href='fn.FT_Load_Char.html' title=''>FT_Load_Char</a><a class='fn ' href='fn.FT_Load_Glyph.html' title=''>FT_Load_Glyph</a><a class='fn ' href='fn.FT_New_Face.html' title=''>FT_New_Face</a><a class='fn ' href='fn.FT_New_Library.html' title=''>FT_New_Library</a><a class='fn ' href='fn.FT_New_Memory_Face.html' title=''>FT_New_Memory_Face</a><a class='fn ' href='fn.FT_Open_Face.html' title=''>FT_Open_Face</a><a class='fn ' href='fn.FT_Reference_Face.html' title=''>FT_Reference_Face</a><a class='fn ' href='fn.FT_Reference_Library.html' title=''>FT_Reference_Library</a><a class='fn ' href='fn.FT_Render_Glyph.html' title=''>FT_Render_Glyph</a><a class='fn ' href='fn.FT_Request_Size.html' title=''>FT_Request_Size</a><a class='fn ' href='fn.FT_Select_CharMap.html' title=''>FT_Select_CharMap</a><a class='fn ' href='fn.FT_Select_Size.html' title=''>FT_Select_Size</a><a class='fn ' href='fn.FT_Set_Char_Size.html' title=''>FT_Set_Char_Size</a><a class='fn ' href='fn.FT_Set_Charmap.html' title=''>FT_Set_Charmap</a><a class='fn ' href='fn.FT_Set_Pixel_Sizes.html' title=''>FT_Set_Pixel_Sizes</a><a class='fn ' href='fn.FT_Set_Transform.html' title=''>FT_Set_Transform</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content fn">
+<h1 class='fqn'><span class='in-band'>Function <a href='../index.html'>freetype</a>::<wbr><a href='index.html'>ffi</a>::<wbr><a class='fn' href=''>FT_Get_Track_Kerning</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-2597' href='../../freetype-sys/fn.FT_Get_Track_Kerning.html?gotosrc=2597'>[src]</a></span></h1>
+<pre class='rust fn'>pub unsafe fn FT_Get_Track_Kerning(face: *mut <a class='struct' href='../../freetype/ffi/struct.FT_FaceRec.html' title='freetype::ffi::FT_FaceRec'>FT_FaceRec</a>, point_size: <a href='http://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>, degree: <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>, akerning: *const <a href='http://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></pre></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "freetype";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

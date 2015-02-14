@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `EventMap` trait in crate `event`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, EventMap">
+
+    <title>event::events::EventMap - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>event</a>::<wbr><a href='index.html'>events</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.Events.html' title='An event loop iterator'>Events</a><a class='struct ' href='struct.IdleArgs.html' title='Idle arguments, such as expected idle time in seconds.'>IdleArgs</a><a class='struct ' href='struct.MaxFps.html' title='The maximum number of frames per second'>MaxFps</a><a class='struct ' href='struct.PollEvent.html' title='Polls event from window.'>PollEvent</a><a class='struct ' href='struct.RenderArgs.html' title='Render arguments'>RenderArgs</a><a class='struct ' href='struct.ShouldClose.html' title='Whether window should close or not.'>ShouldClose</a><a class='struct ' href='struct.Size.html' title='The size of the window.'>Size</a><a class='struct ' href='struct.SwapBuffers.html' title='Tells window to swap buffers.'>SwapBuffers</a><a class='struct ' href='struct.UpdateArgs.html' title='Update arguments, such as delta time in seconds'>UpdateArgs</a><a class='struct ' href='struct.Ups.html' title='The number of updates per second'>Ups</a></div><div class='block trait'><h2>Traits</h2><a class='trait current' href='trait.EventMap.html' title='Methods required to map from consumed event to emitted event.'>EventMap</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content trait">
+<h1 class='fqn'><span class='in-band'>Trait <a href='../index.html'>event</a>::<wbr><a href='index.html'>events</a>::<wbr><a class='trait' href=''>EventMap</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-640' href='../../event_loop/trait.EventMap.html?gotosrc=640'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait EventMap&lt;I&gt; {
+    fn <a href='#tymethod.render' class='fnname'>render</a>(args: <a class='struct' href='../../event/struct.RenderArgs.html' title='event::RenderArgs'>RenderArgs</a>) -&gt; Self;
+    fn <a href='#tymethod.update' class='fnname'>update</a>(args: <a class='struct' href='../../event/struct.UpdateArgs.html' title='event::UpdateArgs'>UpdateArgs</a>) -&gt; Self;
+    fn <a href='#tymethod.input' class='fnname'>input</a>(args: I) -&gt; Self;
+    fn <a href='#tymethod.idle' class='fnname'>idle</a>(<a class='struct' href='../../event/struct.IdleArgs.html' title='event::IdleArgs'>IdleArgs</a>) -&gt; Self;
+}</pre><div class='docblock'><p>Methods required to map from consumed event to emitted event.</p>
+</div>
+            <h2 id='required-methods'>Required Methods</h2>
+            <div class='methods'>
+        <h3 id='tymethod.render' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#tymethod.render' class='fnname'>render</a>(args: <a class='struct' href='../../event/struct.RenderArgs.html' title='event::RenderArgs'>RenderArgs</a>) -&gt; Self</code></h3><div class='docblock'><p>Creates a render event.</p>
+</div><h3 id='tymethod.update' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#tymethod.update' class='fnname'>update</a>(args: <a class='struct' href='../../event/struct.UpdateArgs.html' title='event::UpdateArgs'>UpdateArgs</a>) -&gt; Self</code></h3><div class='docblock'><p>Creates an update event.</p>
+</div><h3 id='tymethod.input' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#tymethod.input' class='fnname'>input</a>(args: I) -&gt; Self</code></h3><div class='docblock'><p>Creates an input event.</p>
+</div><h3 id='tymethod.idle' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#tymethod.idle' class='fnname'>idle</a>(<a class='struct' href='../../event/struct.IdleArgs.html' title='event::IdleArgs'>IdleArgs</a>) -&gt; Self</code></h3><div class='docblock'><p>Creates an idle event.</p>
+</div></div>
+        <h2 id='implementors'>Implementors</h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;I&gt; <a class='trait' href='../../event/events/trait.EventMap.html' title='event::events::EventMap'>EventMap</a>&lt;I&gt; for <a class='enum' href='../../event/enum.Event.html' title='event::Event'>Event</a>&lt;I&gt;</code></li>
+</ul><script type="text/javascript" async
+                              src="../../implementors/event_loop/trait.EventMap.js">
+                      </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "event";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

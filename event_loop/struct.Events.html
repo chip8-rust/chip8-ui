@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Events` struct in crate `event_loop`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Events">
+
+    <title>event_loop::Events - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>event_loop</a></p><div class='block struct'><h2>Structs</h2><a class='struct current' href='struct.Events.html' title='An event loop iterator'>Events</a><a class='struct ' href='struct.IdleArgs.html' title='Idle arguments, such as expected idle time in seconds.'>IdleArgs</a><a class='struct ' href='struct.MaxFps.html' title='The maximum number of frames per second'>MaxFps</a><a class='struct ' href='struct.PollEvent.html' title='Polls event from window.'>PollEvent</a><a class='struct ' href='struct.RenderArgs.html' title='Render arguments'>RenderArgs</a><a class='struct ' href='struct.ShouldClose.html' title='Whether window should close or not.'>ShouldClose</a><a class='struct ' href='struct.Size.html' title='The size of the window.'>Size</a><a class='struct ' href='struct.SwapBuffers.html' title='Tells window to swap buffers.'>SwapBuffers</a><a class='struct ' href='struct.UpdateArgs.html' title='Update arguments, such as delta time in seconds'>UpdateArgs</a><a class='struct ' href='struct.Ups.html' title='The number of updates per second'>Ups</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.EventMap.html' title='Methods required to map from consumed event to emitted event.'>EventMap</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>event_loop</a>::<wbr><a class='struct' href=''>Events</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-1217' href='../src/event_loop/lib.rs.html#176-184'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Events&lt;W, I, E&gt; {
+    // some fields omitted
+}</pre><div class='docblock'><p>An event loop iterator</p>
+
+<p><em>Warning: Because the iterator polls events from the window back-end,
+it must be used on the same thread as the window back-end (usually main thread),
+unless the window back-end supports multi-thread event polling.</em></p>
+
+<p>Example:</p>
+<pre id='rust-example-rendered' class='rust '>
+<span class='kw'>fn</span> <span class='ident'>main</span>() {
+    <span class='kw'>let</span> <span class='ident'>opengl</span> <span class='op'>=</span> <span class='ident'>shader_version</span>::<span class='ident'>opengl</span>::<span class='ident'>OpenGL_3_2</span>;
+    <span class='kw'>let</span> <span class='ident'>window</span> <span class='op'>=</span> <span class='ident'>Sdl2Window</span>::<span class='ident'>new</span>(
+        <span class='ident'>opengl</span>,
+        <span class='ident'>WindowSettings</span> {
+            <span class='ident'>title</span>: <span class='string'>&quot;Example&quot;</span>.<span class='ident'>to_string</span>(),
+            <span class='ident'>size</span>: [<span class='number'>500</span>, <span class='number'>500</span>],
+            <span class='ident'>fullscreen</span>: <span class='boolval'>false</span>,
+            <span class='ident'>exit_on_esc</span>: <span class='boolval'>true</span>,
+            <span class='ident'>samples</span>: <span class='number'>0</span>,
+        }
+    )
+    <span class='kw'>let</span> <span class='kw-2'>ref</span> <span class='kw-2'>mut</span> <span class='ident'>gl</span> <span class='op'>=</span> <span class='ident'>Gl</span>::<span class='ident'>new</span>();
+    <span class='kw'>let</span> <span class='ident'>window</span> <span class='op'>=</span> <span class='ident'>RefCell</span>::<span class='ident'>new</span>(<span class='ident'>window</span>);
+    <span class='kw'>for</span> <span class='ident'>e</span> <span class='kw'>in</span> <span class='ident'>Events</span>::<span class='ident'>new</span>(<span class='kw-2'>&amp;</span><span class='ident'>window</span>)
+        .<span class='ident'>set</span>(<span class='ident'>Ups</span>(<span class='number'>120</span>))
+        .<span class='ident'>set</span>(<span class='ident'>MaxFps</span>(<span class='number'>60</span>)) {
+        <span class='kw'>use</span> <span class='ident'>event</span>::<span class='ident'>RenderEvent</span>;
+        <span class='ident'>e</span>.<span class='ident'>render</span>(<span class='op'>|</span><span class='ident'>args</span><span class='op'>|</span> {
+            <span class='comment'>// Set the viewport in window to render graphics.</span>
+            <span class='ident'>gl</span>.<span class='ident'>viewport</span>(<span class='number'>0</span>, <span class='number'>0</span>, <span class='ident'>args</span>.<span class='ident'>width</span> <span class='kw'>as</span> <span class='ident'>i32</span>, <span class='ident'>args</span>.<span class='ident'>height</span> <span class='kw'>as</span> <span class='ident'>i32</span>);
+            <span class='comment'>// Create graphics context with absolute coordinates.</span>
+            <span class='kw'>let</span> <span class='ident'>c</span> <span class='op'>=</span> <span class='ident'>Context</span>::<span class='ident'>abs</span>(<span class='ident'>args</span>.<span class='ident'>width</span> <span class='kw'>as</span> <span class='ident'>f64</span>, <span class='ident'>args</span>.<span class='ident'>height</span> <span class='kw'>as</span> <span class='ident'>f64</span>);
+            <span class='comment'>// Do rendering here.</span>
+        });
+    }
+}
+</pre>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;W, I, E&gt; <a class='struct' href='../event_loop/struct.Events.html' title='event_loop::Events'>Events</a>&lt;W, I, E&gt;</code></h3><div class='impl-items'><h4 id='method.new' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.new' class='fnname'>new</a>(window: W) -&gt; <a class='struct' href='../event_loop/struct.Events.html' title='event_loop::Events'>Events</a>&lt;W, I, E&gt;</code></h4>
+<div class='docblock'><p>Creates a new event iterator with default UPS and FPS settings.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl&lt;W, I, E&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/iter/trait.Iterator.html' title='core::iter::Iterator'>Iterator</a> for <a class='struct' href='../event_loop/struct.Events.html' title='event_loop::Events'>Events</a>&lt;W, I, E&gt; <span class='where'>where <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a class='struct' href='../event_loop/struct.ShouldClose.html' title='event_loop::ShouldClose'>ShouldClose</a>, W)</a>: <a class='trait' href='../quack/trait.Pair.html' title='quack::Pair'>Pair</a>&lt;Data=<a class='struct' href='../event_loop/struct.ShouldClose.html' title='event_loop::ShouldClose'>ShouldClose</a>, Object=W&gt; + <a class='trait' href='../quack/trait.GetFrom.html' title='quack::GetFrom'>GetFrom</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a class='struct' href='../event_loop/struct.Size.html' title='event_loop::Size'>Size</a>, W)</a>: <a class='trait' href='../quack/trait.Pair.html' title='quack::Pair'>Pair</a>&lt;Data=<a class='struct' href='../event_loop/struct.Size.html' title='event_loop::Size'>Size</a>, Object=W&gt; + <a class='trait' href='../quack/trait.GetFrom.html' title='quack::GetFrom'>GetFrom</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a class='struct' href='../event_loop/struct.SwapBuffers.html' title='event_loop::SwapBuffers'>SwapBuffers</a>, W)</a>: <a class='trait' href='../quack/trait.Pair.html' title='quack::Pair'>Pair</a>&lt;Data=<a class='struct' href='../event_loop/struct.SwapBuffers.html' title='event_loop::SwapBuffers'>SwapBuffers</a>, Object=W&gt; + <a class='trait' href='../quack/trait.ActOn.html' title='quack::ActOn'>ActOn</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;, <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a class='struct' href='../event_loop/struct.PollEvent.html' title='event_loop::PollEvent'>PollEvent</a>, W)</a>: <a class='trait' href='../quack/trait.Pair.html' title='quack::Pair'>Pair</a>&lt;Data=<a class='struct' href='../event_loop/struct.PollEvent.html' title='event_loop::PollEvent'>PollEvent</a>, Object=W&gt; + <a class='trait' href='../quack/trait.ActOn.html' title='quack::ActOn'>ActOn</a>&lt;<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;I&gt;&gt;, E: <a class='trait' href='../event_loop/trait.EventMap.html' title='event_loop::EventMap'>EventMap</a>&lt;I&gt;</span></code></h3><div class='impl-items'><h4 id='assoc_type.Item' class='type'><a class='stability Unmarked' title='No stability level'></a><code>type Item = E</code></h4>
+<h4 id='method.next' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='#method.next' class='fnname'>next</a>(&amp;mut self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;E&gt;</code></h4>
+<div class='docblock'><p>Returns the next game event.</p>
+</div><h4 id='method.size_hint' class='tymethod'><a class='stability Stable' title='Stable'></a><code>fn <a href='#tymethod.size_hint' class='fnname'>size_hint</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>, <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>&gt;)</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "event_loop";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>

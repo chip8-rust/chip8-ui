@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `with_lerp_polygons_tri_list` fn in crate `graphics`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, with_lerp_polygons_tri_list">
+
+    <title>graphics::triangulation::with_lerp_polygons_tri_list - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>graphics</a>::<wbr><a href='index.html'>triangulation</a></p><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.rect_border_tri_list_xy.html' title='Creates triangle list vertices from rectangle.'>rect_border_tri_list_xy</a><a class='fn ' href='fn.rect_tri_list_uv.html' title='Creates triangle list texture coords from image.'>rect_tri_list_uv</a><a class='fn ' href='fn.rect_tri_list_xy.html' title='Creates triangle list vertices from rectangle.'>rect_tri_list_xy</a><a class='fn ' href='fn.stream_polygon_tri_list.html' title='Streams a polygon into tri list. Uses buffers that fit inside L1 cache.'>stream_polygon_tri_list</a><a class='fn ' href='fn.stream_quad_tri_list.html' title='Streams a quad into tri list.'>stream_quad_tri_list</a><a class='fn ' href='fn.tx.html' title='Transformed x coordinate as f32.'>tx</a><a class='fn ' href='fn.ty.html' title='Transformed y coordinate as f32.'>ty</a><a class='fn ' href='fn.with_ellipse_border_tri_list.html' title='Streams an ellipse border specified by a resolution.'>with_ellipse_border_tri_list</a><a class='fn ' href='fn.with_ellipse_tri_list.html' title='Streams an ellipse specified by a resolution.'>with_ellipse_tri_list</a><a class='fn current' href='fn.with_lerp_polygons_tri_list.html' title='Streams tweened polygons using linear interpolation.'>with_lerp_polygons_tri_list</a><a class='fn ' href='fn.with_polygon_tri_list.html' title='Splits polygon into convex segments. Create a buffer that fits into L1 cache with 1KB overhead.'>with_polygon_tri_list</a><a class='fn ' href='fn.with_round_border_line_tri_list.html' title='Streams a round border line.'>with_round_border_line_tri_list</a><a class='fn ' href='fn.with_round_rectangle_border_tri_list.html' title='Streams a round rectangle border.'>with_round_rectangle_border_tri_list</a><a class='fn ' href='fn.with_round_rectangle_tri_list.html' title='Streams a round rectangle.'>with_round_rectangle_tri_list</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content fn">
+<h1 class='fqn'><span class='in-band'>Function <a href='../index.html'>graphics</a>::<wbr><a href='index.html'>triangulation</a>::<wbr><a class='fn' href=''>with_lerp_polygons_tri_list</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-4526' href='../../src/graphics/triangulation.rs.html#40-74'>[src]</a></span></h1>
+<pre class='rust fn'>pub fn with_lerp_polygons_tri_list&lt;F&gt;(m: <a class='type' href='../../graphics/vecmath/type.Matrix2d.html' title='graphics::vecmath::Matrix2d'>Matrix2d</a>, polygons: <a class='type' href='../../graphics/internal/type.Polygons.html' title='graphics::internal::Polygons'>Polygons</a>, tween_factor: <a class='type' href='../../graphics/vecmath/type.Scalar.html' title='graphics::vecmath::Scalar'>Scalar</a>, f: F) <span class='where'>where F: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a><a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>)</span></pre><div class='docblock'><p>Streams tweened polygons using linear interpolation.</p>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "graphics";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>
