@@ -2,7 +2,7 @@
 name = "chip8_ui"
 version = "0.0.1"
 dependencies = [
- "chip8_vm 0.0.2",
+ "chip8_vm 0.0.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "piston2d-graphics 0.0.17 (git+https://github.com/pistondevelopers/graphics)",
  "piston2d-opengl_graphics 0.0.8 (git+https://github.com/pistondevelopers/opengl_graphics)",
  "pistoncore-event 0.0.8 (git+https://github.com/pistondevelopers/event)",
@@ -20,7 +20,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "chip8_vm"
-version = "0.0.2"
+version = "0.0.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "rand 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -43,7 +44,7 @@ dependencies = [
 [[package]]
 name = "freetype-sys"
 version = "0.0.3"
-source = "git+https://github.com/PistonDevelopers/freetype-sys#299443c3049620333ead6d28c551582d2ead1984"
+source = "git+https://github.com/PistonDevelopers/freetype-sys#45615f83607a4e9e0cd1fe69996b39692b76931c"
 dependencies = [
  "libc 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "libz-sys 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
