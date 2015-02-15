@@ -1,0 +1,15 @@
+install:
+- ps: Start-FileDownload 'https://static.rust-lang.org/dist/rust-nightly-i686-pc-windows-gnu.exe'
+- rust-nightly-i686-pc-windows-gnu.exe /VERYSILENT /NORESTART /COMPONENTS="rust,gcc,cargo" /DIR="C:\Program Files (x86)\Rust"
+- cmd: SET PATH=%PATH%;C:\Program Files (x86)\Rust\bin
+- rustc --version
+- cargo --version
+- ps: Start-FileDownload 'https://cdn.rawgit.com/tedsta/getting-started-with-piston/2e908548c5538cfb8c1d1b1b2d56dfe794e60a6e/windows_clibs/i686/SDL2.dll'
+- ps: Start-FileDownload 'https://cdn.rawgit.com/tedsta/getting-started-with-piston/2e908548c5538cfb8c1d1b1b2d56dfe794e60a6e/windows_clibs/i686/libSDL2.dll.a'
+- cmd: move libSDL2.dll.a "C:\Program Files (x86)\Rust\bin\rustlib\i686-pc-windows-gnu\lib\"
+- ps: Start-FileDownload 'https://cdn.rawgit.com/tedsta/getting-started-with-piston/2e908548c5538cfb8c1d1b1b2d56dfe794e60a6e/windows_clibs/i686/libfreetype-6.a'
+- cmd: move libfreetype-6.a "C:\Program Files (x86)\Rust\bin\rustlib\i686-pc-windows-gnu\lib\"
+build: false
+test_script:
+- cargo build --verbose
+- cargo test --verbose
