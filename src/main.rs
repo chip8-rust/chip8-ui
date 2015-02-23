@@ -123,9 +123,9 @@ fn main() {
         if let Some(args) = e.update_args() {
             vm.step(args.dt as f32);
             if vm.beeping() {
-                (*window.borrow_mut()).window.set_title(BEEP_TITLE);
+                (*window.borrow_mut()).window.set_title(BEEP_TITLE).unwrap();
             } else {
-                (*window.borrow_mut()).window.set_title(TITLE);
+                (*window.borrow_mut()).window.set_title(TITLE).unwrap();
             }
         }
         if let Some(args) = e.render_args() {
