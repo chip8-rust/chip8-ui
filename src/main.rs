@@ -4,6 +4,7 @@
 #![feature(env)]
 #![feature(io)]
 #![feature(path)]
+#![feature(fs)]
 
 extern crate shader_version;
 extern crate input;
@@ -24,8 +25,9 @@ use opengl_graphics::{
 };
 
 use std::env;
-use std::old_io::File;
-use std::old_io::BufReader;
+use std::io::{Read, BufReader};
+use std::fs::File;
+use std::path::Path;
 // use std::time::duration::Duration;
 use quack::Set;
 // use input::keyboard::Key;
@@ -51,9 +53,9 @@ fn main() {
         }
     }
 
-    let intro_reader = &mut BufReader::new(INTRO_ROM) as &mut Reader;
+    let intro_reader = &mut BufReader::new(INTRO_ROM) as &mut Read;
     let mut rom_reader = match &mut rom {
-        &mut Some(ref mut r) => r as &mut Reader,
+        &mut Some(ref mut r) => r as &mut Read,
         _ => {
             println!("You can provide a path to a chip8 binary to interpret it.");
             intro_reader
@@ -121,9 +123,9 @@ fn main() {
         if let Some(args) = e.update_args() {
             vm.step(args.dt as f32);
             if vm.beeping() {
-                (*window.borrow_mut()).window.set_title(BEEP_TITLE);
+                (*window.borrow_mut()).window.set_title(BEEP_TITLE).unwrap();
             } else {
-                (*window.borrow_mut()).window.set_title(TITLE);
+                (*window.borrow_mut()).window.set_title(TITLE).unwrap();
             }
         }
         if let Some(args) = e.render_args() {
