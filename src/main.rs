@@ -4,7 +4,6 @@
 #![feature(env)]
 #![feature(io)]
 #![feature(path)]
-#![feature(os)]
 #![feature(fs)]
 
 extern crate shader_version;
@@ -28,6 +27,7 @@ use opengl_graphics::{
 use std::env;
 use std::io::{Read, BufReader};
 use std::fs::File;
+use std::path::Path;
 // use std::time::duration::Duration;
 use quack::Set;
 // use input::keyboard::Key;
