@@ -9,7 +9,7 @@ See [chip8_vm](https://github.com/chip8-rust/chip8-vm) for instructions on inclu
 
 Status
 ==
-[![Build Status](https://travis-ci.org/chip8-rust/chip8-ui.svg?branch=master)](https://travis-ci.org/chip8-rust/chip8-ui)
+[![travis-badge][]][travis] [![appveyor-badge][]][appveyor]
 * Graphics are implemented with [Piston](http://www.piston.rs/).
 * Sound is not supported but is faked by updating the title bar with a note
 symbol when sound should be playing.
@@ -36,3 +36,8 @@ Controls are mapped to these 16 buttons:
 Licence
 ==
 MIT
+
+[travis-badge]: https://img.shields.io/travis/chip8-rust/chip8-ui/master.svg?label=linux%20build
+[travis]: https://travis-ci.org/chip8-rust/chip8-ui
+[appveyor-badge]: https://img.shields.io/appveyor/ci/robo9k/chip8-ui/master.svg?label=windows%20build
+[appveyor]: https://ci.appveyor.com/project/robo9k/chip8-ui/branch/master
