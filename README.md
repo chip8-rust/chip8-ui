@@ -21,9 +21,8 @@ The provided UI depends on SDL2 via [Piston](http://www.piston.rs/) for it's gra
 Usage
 ==
 
-```
-> cargo build
-> cargo run [path_to_ch8_rom]
+```sh
+$ cargo run --release -- <rom>
 ```
 
 Controls are mapped to these 16 buttons:
