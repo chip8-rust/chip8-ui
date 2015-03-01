@@ -28,9 +28,7 @@ use std::env;
 use std::io::{Read, BufReader};
 use std::fs::File;
 use std::path::Path;
-// use std::time::duration::Duration;
 use quack::Set;
-// use input::keyboard::Key;
 use input::Button;
 
 use chip8_vm::vm::Vm;
