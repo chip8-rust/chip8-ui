@@ -14,6 +14,10 @@ extern crate window;
 extern crate opengl_graphics;
 extern crate quack;
 
+#[macro_use]
+extern crate log;
+extern crate env_logger;
+
 extern crate chip8_vm;
 
 use std::cell::RefCell;
@@ -38,6 +42,8 @@ const BEEP_TITLE: &'static str = "♬ Chip8 ♬";
 const INTRO_ROM: &'static [u8] = include_bytes!("intro/intro.ch8");
 
 fn main() {
+    env_logger::init().unwrap();
+
     let mut vm = Vm::new();
 
     let mut rom: Option<File> = None;
@@ -46,7 +52,7 @@ fn main() {
         if let Ok(f) = File::open(&Path::new(&rom_path)) {
             rom = Some(f);
         } else {
-            println!("Could not open rom {}", rom_path);
+            error!("Could not open ROM {}", rom_path);
         }
     }
 
@@ -54,15 +60,15 @@ fn main() {
     let mut rom_reader = match &mut rom {
         &mut Some(ref mut r) => r as &mut Read,
         _ => {
-            println!("You can provide a path to a chip8 binary to interpret it.");
+            info!("You can provide a path to a CHIP-8 ROM to run it.");
             intro_reader
         }
     };
 
     match vm.load_rom(rom_reader) {
-        Ok(size) => println!("Loaded rom size: {}", size),
+        Ok(size) => debug!("Loaded ROM of size: {}", size),
         Err(e) => {
-            println!("Error loading rom: {}", e);
+            error!("Error loading ROM: {}", e);
             return;
         }
     }

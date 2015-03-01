@@ -39,3 +39,5 @@ git = "https://github.com/pistondevelopers/quack"
 
 [dependencies]
 chip8_vm = "0.*"
+log = "0.2.5"
+env_logger = "0.2.2"
