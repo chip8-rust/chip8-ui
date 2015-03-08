@@ -3,7 +3,6 @@
 // TODO revisit these after 1.0.0beta
 #![feature(io)]
 #![feature(path)]
-#![feature(fs)]
 
 extern crate shader_version;
 extern crate input;
