@@ -39,5 +39,7 @@ git = "https://github.com/pistondevelopers/quack"
 
 [dependencies]
 chip8_vm = "0.*"
-log = "0.3.0"
+log = "0.3.1"
 env_logger = "0.3.0"
+docopt = "*"
+rustc-serialize = "*"

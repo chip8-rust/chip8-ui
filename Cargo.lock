@@ -3,6 +3,7 @@ name = "chip8_ui"
 version = "0.0.1"
 dependencies = [
  "chip8_vm 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "docopt 0.6.59 (registry+https://github.com/rust-lang/crates.io-index)",
  "env_logger 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.3.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "piston2d-graphics 0.0.26 (git+https://github.com/pistondevelopers/graphics)",
@@ -12,6 +13,7 @@ dependencies = [
  "pistoncore-sdl2_window 0.0.8 (git+https://github.com/pistondevelopers/sdl2_window)",
  "pistoncore-window 0.1.0 (git+https://github.com/pistondevelopers/window)",
  "quack 0.0.13 (git+https://github.com/pistondevelopers/quack)",
+ "rustc-serialize 0.3.12 (registry+https://github.com/rust-lang/crates.io-index)",
  "shader_version 0.0.5 (git+https://github.com/pistondevelopers/shader_version)",
 ]
 
@@ -40,6 +42,15 @@ version = "0.0.5"
 source = "git+https://github.com/tomaka/clock_ticks#cdb6499b4c0ff6c3dd4a358184389c34d6de7d40"
 dependencies = [
  "libc 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "docopt"
+version = "0.6.59"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "regex 0.1.26 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rustc-serialize 0.3.12 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -179,7 +190,7 @@ dependencies = [
 [[package]]
 name = "piston-texture"
 version = "0.0.1"
-source = "git+https://github.com/PistonDevelopers/texture#3cc4cddc3f8c51c36ea11dd2f63d70aa887f53fb"
+source = "git+https://github.com/pistondevelopers/texture#3cc4cddc3f8c51c36ea11dd2f63d70aa887f53fb"
 
 [[package]]
 name = "piston2d-graphics"
@@ -189,7 +200,7 @@ dependencies = [
  "draw_state 0.0.6 (git+https://github.com/gfx-rs/draw_state)",
  "interpolation 0.0.4 (git+https://github.com/PistonDevelopers/interpolation)",
  "num 0.1.21 (registry+https://github.com/rust-lang/crates.io-index)",
- "piston-texture 0.0.1 (git+https://github.com/PistonDevelopers/texture)",
+ "piston-texture 0.0.1 (git+https://github.com/pistondevelopers/texture)",
  "read_color 0.0.2 (git+https://github.com/PistonDevelopers/read_color)",
  "vecmath 0.0.6 (git+https://github.com/PistonDevelopers/vecmath)",
 ]
@@ -204,7 +215,7 @@ dependencies = [
  "image 0.3.6 (git+https://github.com/pistondevelopers/image)",
  "khronos_api 0.0.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "libc 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)",
- "piston-texture 0.0.1 (git+https://github.com/PistonDevelopers/texture)",
+ "piston-texture 0.0.1 (git+https://github.com/pistondevelopers/texture)",
  "piston2d-graphics 0.0.26 (git+https://github.com/pistondevelopers/graphics)",
  "shader_version 0.0.5 (git+https://github.com/pistondevelopers/shader_version)",
 ]

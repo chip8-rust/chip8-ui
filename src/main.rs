@@ -12,6 +12,9 @@ extern crate opengl_graphics;
 extern crate log;
 extern crate env_logger;
 
+extern crate rustc_serialize;
+extern crate docopt;
+
 extern crate chip8_vm;
 
 use std::cell::RefCell;
@@ -22,53 +25,71 @@ use opengl_graphics::{
     Gl,
 };
 
-use std::env;
-use std::io::{Read, BufReader};
+use std::io::Read;
 use std::fs::File;
 use std::path::Path;
 use input::Button;
+
+use docopt::Docopt;
 
 use chip8_vm::vm::Vm;
 
 const TITLE: &'static str = "Chip8";
 const BEEP_TITLE: &'static str = "♬ Chip8 ♬";
 
-const INTRO_ROM: &'static [u8] = include_bytes!("intro/intro.ch8");
+const USAGE: &'static str = "
+CHIP-8 user interface.
+
+Usage:
+  chip8_ui [--] <rom> | -
+  chip8_ui -h | --help
+  chip8_ui -V | --version
+
+Options:
+  -h, --help     Show this screen.
+  -V, --version  Show version.
+";
+
+#[derive(RustcDecodable, Debug)]
+struct Args {
+    arg_rom: String,
+}
+
+fn create_vm<R>(rom: &mut R) -> Vm
+    where R: Read
+{
+    let mut vm = Vm::new();
+    match vm.load_rom(rom) {
+        Ok(_) => vm,
+        Err(e) => panic!("Error loading ROM: {}", e)
+    }
+}
+
+fn version() -> &'static str {
+    // TODO: There's also an optional _PRE part
+    concat!(
+        env!("CARGO_PKG_VERSION_MAJOR"), ".",
+        env!("CARGO_PKG_VERSION_MINOR"), ".",
+        env!("CARGO_PKG_VERSION_PATCH"),
+    )
+}
 
 fn main() {
     env_logger::init().unwrap();
 
-    let mut vm = Vm::new();
+    let docopt = Docopt::new(USAGE).unwrap()
+                        .help(true)
+                        .version(Some(version().to_string()));
+    let args: Args = docopt.decode().unwrap_or_else(|e| e.exit());
+    debug!("CLI args: {:?}", args);
 
-    let mut rom: Option<File> = None;
-
-    if let Some(rom_path) = env::args().skip(1).next() {
-        if let Ok(f) = File::open(&Path::new(&rom_path)) {
-            rom = Some(f);
-        } else {
-            error!("Could not open ROM {}", rom_path);
-        }
+    let mut vm = if "-" == args.arg_rom {
+        create_vm(&mut std::io::stdin())
     }
-
-    // rustc warns about the "trivial casts" to Read,
-    // but without those the match arms are incompatible.
-    // This part of the code might be obsoleted by #26
-    let intro_reader = &mut BufReader::new(INTRO_ROM) as &mut Read;
-    let mut rom_reader = match &mut rom {
-        &mut Some(ref mut r) => r as &mut Read,
-        _ => {
-            info!("You can provide a path to a CHIP-8 ROM to run it.");
-            intro_reader
-        }
+    else {
+        let mut file = File::open(&Path::new(&args.arg_rom)).unwrap();
+        create_vm(&mut file)
     };
-
-    match vm.load_rom(rom_reader) {
-        Ok(size) => debug!("Loaded ROM of size: {}", size),
-        Err(e) => {
-            error!("Error loading ROM: {}", e);
-            return;
-        }
-    }
 
     let (width, height) = (800, 400);
     let opengl = shader_version::OpenGL::_3_2;
