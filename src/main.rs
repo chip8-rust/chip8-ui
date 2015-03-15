@@ -1,9 +1,5 @@
 #![cfg_attr(test, allow(dead_code))]
 
-// TODO revisit these after 1.0.0beta
-#![feature(io)]
-#![feature(path)]
-
 extern crate shader_version;
 extern crate input;
 extern crate event;
