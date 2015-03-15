@@ -146,7 +146,7 @@ fn main() {
                         let x = x as f64 * w;
                         let y = y as f64 * h;
                         r.set(match *byte { 0 => off, _ => on })
-                        .draw([x, y, w, h], &c, gl);
+                        .draw([x, y, w, h], &c.draw_state, c.transform, gl);
                     }
                 }
             });
