@@ -4,7 +4,7 @@ extern crate shader_version;
 extern crate input;
 extern crate event;
 extern crate graphics;
-extern crate sdl2_window;
+extern crate glutin_window;
 extern crate window;
 extern crate opengl_graphics;
 extern crate quack;
@@ -16,7 +16,7 @@ extern crate env_logger;
 extern crate chip8_vm;
 
 use std::cell::RefCell;
-use sdl2_window::Sdl2Window;
+use glutin_window::GlutinWindow;
 use window::WindowSettings;
 use opengl_graphics::{
     Gl,
@@ -73,7 +73,7 @@ fn main() {
 
     let (width, height) = (800, 400);
     let opengl = shader_version::OpenGL::_3_2;
-    let window = Sdl2Window::new(
+    let window = GlutinWindow::new(
         opengl,
         WindowSettings {
             title: TITLE.to_string(),
@@ -124,9 +124,9 @@ fn main() {
         if let Some(args) = e.update_args() {
             vm.step(args.dt as f32);
             if vm.beeping() {
-                (*window.borrow_mut()).window.set_title(BEEP_TITLE).unwrap();
+                (*window.borrow_mut()).window.set_title(BEEP_TITLE);
             } else {
-                (*window.borrow_mut()).window.set_title(TITLE).unwrap();
+                (*window.borrow_mut()).window.set_title(TITLE);
             }
         }
         if let Some(args) = e.render_args() {

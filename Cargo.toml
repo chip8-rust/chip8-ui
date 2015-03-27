@@ -13,8 +13,8 @@ authors = [
     "robo9k <robo@9k.lv>",
 ]
 
-[dependencies.pistoncore-sdl2_window]
-git = "https://github.com/pistondevelopers/sdl2_window"
+[dependencies.pistoncore-glutin_window]
+git = "https://github.com/PistonDevelopers/glutin_window.git"
 
 [dependencies.pistoncore-event]
 git = "https://github.com/pistondevelopers/event"
