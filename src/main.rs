@@ -51,6 +51,9 @@ fn main() {
         }
     }
 
+    // rustc warns about the "trivial casts" to Read,
+    // but without those the match arms are incompatible.
+    // This part of the code might be obsoleted by #26
     let intro_reader = &mut BufReader::new(INTRO_ROM) as &mut Read;
     let mut rom_reader = match &mut rom {
         &mut Some(ref mut r) => r as &mut Read,
