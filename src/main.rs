@@ -78,7 +78,7 @@ fn main() {
             width: width,
             height: height
         }
-    );
+    ).exit_on_esc(true);
     let window = Sdl2Window::new(
         opengl,
         settings
