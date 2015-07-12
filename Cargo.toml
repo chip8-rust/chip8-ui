@@ -13,33 +13,13 @@ authors = [
     "robo9k <robo@9k.lv>",
 ]
 
-[dependencies.pistoncore-sdl2_window]
-git = "https://github.com/pistondevelopers/sdl2_window"
-
-[dependencies.pistoncore-event]
-git = "https://github.com/pistondevelopers/event"
-
-[dependencies.piston2d-graphics]
-git = "https://github.com/pistondevelopers/graphics"
-
-[dependencies.piston2d-opengl_graphics]
-git = "https://github.com/pistondevelopers/opengl_graphics"
-
-[dependencies.shader_version]
-git = "https://github.com/pistondevelopers/shader_version"
-
-[dependencies.pistoncore-input]
-git = "https://github.com/pistondevelopers/input"
-
-[dependencies.pistoncore-window]
-git = "https://github.com/pistondevelopers/window"
-
-[dependencies.quack]
-git = "https://github.com/pistondevelopers/quack"
-
 [dependencies]
 chip8_vm = "0.*"
 log = "0.3.1"
 env_logger = "0.3.0"
 docopt = "*"
 rustc-serialize = "*"
+piston = "0.3.0"
+piston2d-opengl_graphics = "0.4.0"
+piston2d-graphics = "0.4.0"
+pistoncore-sdl2_window = "0.4.0"

@@ -1,12 +1,9 @@
 #![cfg_attr(test, allow(dead_code))]
 
-extern crate shader_version;
-extern crate input;
-extern crate event;
+extern crate piston;
+extern crate opengl_graphics;
 extern crate graphics;
 extern crate sdl2_window;
-extern crate window;
-extern crate opengl_graphics;
 
 #[macro_use]
 extern crate log;
@@ -17,18 +14,17 @@ extern crate docopt;
 
 extern crate chip8_vm;
 
-use std::cell::RefCell;
+use opengl_graphics::{ GlGraphics, OpenGL };
 use std::rc::Rc;
-use sdl2_window::Sdl2Window;
-use window::WindowSettings;
-use opengl_graphics::{
-    Gl,
-};
+use std::cell::RefCell;
+use piston::window::{ AdvancedWindow, WindowSettings };
+use piston::input::{ Button, Key };
+use piston::event::*;
+use sdl2_window::Sdl2Window as Window;
 
 use std::io::Read;
 use std::fs::File;
 use std::path::Path;
-use input::Button;
 
 use docopt::Docopt;
 
@@ -91,47 +87,42 @@ fn main() {
         create_vm(&mut file)
     };
 
-    let (width, height) = (800, 400);
-    let opengl = shader_version::OpenGL::_3_2;
-    let settings = WindowSettings::new(
-        TITLE.to_string(),
-        window::Size {
-            width: width,
-            height: height
-        }
-    ).exit_on_esc(true);
-    let window = Sdl2Window::new(
-        opengl,
-        settings
-    );
+    let opengl = OpenGL::_3_2;
 
-    let ref mut gl = Gl::new(opengl);
+    let window: Window = WindowSettings::new(
+        TITLE.to_string(),
+        [800, 400]
+    )
+    .exit_on_esc(true)
+    .opengl(opengl)
+    .into();
+
+    let ref mut gl = GlGraphics::new(opengl);
     let window = Rc::new(RefCell::new(window));
 
     fn keymap(k: Option<Button>) -> Option<u8> {
-        use input::Key::*;
         if let Some(Button::Keyboard(k)) = k {
             return match k {
-                D1 => Some(0x1),
-                D2 => Some(0x2),
-                D3 => Some(0x3),
+                Key::D1 => Some(0x1),
+                Key::D2 => Some(0x2),
+                Key::D3 => Some(0x3),
 
-                Q  => Some(0x4),
-                W  => Some(0x5),
-                E  => Some(0x6),
+                Key::Q  => Some(0x4),
+                Key::W  => Some(0x5),
+                Key::E  => Some(0x6),
 
-                A  => Some(0x7),
-                S  => Some(0x8),
-                D  => Some(0x9),
+                Key::A  => Some(0x7),
+                Key::S  => Some(0x8),
+                Key::D  => Some(0x9),
 
-                Z  => Some(0xA),
-                X  => Some(0x0),
-                C  => Some(0xB),
+                Key::Z  => Some(0xA),
+                Key::X  => Some(0x0),
+                Key::C  => Some(0xB),
 
-                D4 => Some(0xC),
-                R  => Some(0xD),
-                F  => Some(0xE),
-                V  => Some(0xF),
+                Key::D4 => Some(0xC),
+                Key::R  => Some(0xD),
+                Key::F  => Some(0xE),
+                Key::V  => Some(0xF),
 
                 _ => None
             }
@@ -139,20 +130,18 @@ fn main() {
         return None
     }
 
-    for e in event::events(window.clone()) {
-        use event::{ ReleaseEvent, UpdateEvent, PressEvent, RenderEvent };
-
+    for e in window.clone().events() {
         if let Some(args) = e.update_args() {
             vm.step(args.dt as f32);
             if vm.beeping() {
-                (window.borrow_mut()).window.set_title(BEEP_TITLE).unwrap();
+                window.borrow_mut().set_title(BEEP_TITLE.to_string());
             } else {
-                (window.borrow_mut()).window.set_title(TITLE).unwrap();
+                window.borrow_mut().set_title(TITLE.to_string());
             }
         }
         if let Some(args) = e.render_args() {
             use graphics::*;
-            gl.draw([0, 0, args.width as i32, args.height as i32], |c, gl| {
+            gl.draw(args.viewport(), |c, gl| {
                 graphics::clear([0.0, 0.0, 0.0, 1.0], gl);
                 let r = Rectangle::new([1.0, 1.0, 1.0, 1.0]);
                 let off = [0.0, 0.0, 0.0, 1.0];
