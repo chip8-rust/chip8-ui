@@ -1,6 +1,7 @@
 #![cfg_attr(test, allow(dead_code))]
 
 extern crate piston;
+extern crate piston_window;
 extern crate opengl_graphics;
 extern crate graphics;
 extern crate sdl2_window;
@@ -15,12 +16,17 @@ extern crate docopt;
 extern crate chip8_vm;
 
 use opengl_graphics::{ GlGraphics, OpenGL };
-use std::rc::Rc;
-use std::cell::RefCell;
-use piston::window::{ AdvancedWindow, WindowSettings };
+use piston_window::{
+    UpdateEvent,
+    RenderEvent,
+    PressEvent,
+    ReleaseEvent,
+    AdvancedWindow,
+    PistonWindow,
+    WindowSettings
+};
 use piston::input::{ Button, Key };
-use piston::event::*;
-use sdl2_window::Sdl2Window as Window;
+use sdl2_window::Sdl2Window;
 
 use std::io::Read;
 use std::fs::File;
@@ -87,18 +93,18 @@ fn main() {
         create_vm(&mut file)
     };
 
-    let opengl = OpenGL::_3_2;
+    let opengl = OpenGL::V3_2;
 
-    let window: Window = WindowSettings::new(
+    let mut window: PistonWindow<(), Sdl2Window> = WindowSettings::new(
         TITLE.to_string(),
         [800, 400]
     )
     .exit_on_esc(true)
     .opengl(opengl)
-    .into();
+    .build()
+    .unwrap();
 
     let ref mut gl = GlGraphics::new(opengl);
-    let window = Rc::new(RefCell::new(window));
 
     fn keymap(k: Option<Button>) -> Option<u8> {
         if let Some(Button::Keyboard(k)) = k {
@@ -130,13 +136,15 @@ fn main() {
         return None
     }
 
-    for e in window.clone().events() {
+    // Clone the window so we can mutate the title while iterating events.
+    let window_events = window.clone();
+    for e in  window_events {
         if let Some(args) = e.update_args() {
             vm.step(args.dt as f32);
             if vm.beeping() {
-                window.borrow_mut().set_title(BEEP_TITLE.to_string());
+                window.set_title(BEEP_TITLE.to_string());
             } else {
-                window.borrow_mut().set_title(TITLE.to_string());
+                window.set_title(TITLE.to_string());
             }
         }
         if let Some(args) = e.render_args() {
