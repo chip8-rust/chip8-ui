@@ -14,13 +14,13 @@ authors = [
 ]
 
 [dependencies]
-chip8_vm = "0.*"
-log = "0.3.1"
-env_logger = "0.3.0"
-docopt = "*"
-rustc-serialize = "*"
-piston = "0.*"
-piston2d-opengl_graphics = "0.*"
-piston2d-graphics = "0.*"
-pistoncore-sdl2_window = "0.*"
-piston_window = "0.*"
+chip8_vm = "0.4.0"
+log = "0.3.5"
+env_logger = "0.3.2"
+docopt = "0.6.78"
+rustc-serialize = "0.3.18"
+piston = "0.17.0"
+piston2d-opengl_graphics = "0.23.0"
+piston2d-graphics = "0.13.0"
+pistoncore-sdl2_window = "0.24.0"
+piston_window = "0.35.0"
