@@ -95,8 +95,8 @@ fn main() {
 
     let opengl = OpenGL::V3_2;
 
-    let mut window: PistonWindow<(), Sdl2Window> = WindowSettings::new(
-        TITLE.to_string(),
+    let mut window: PistonWindow<Sdl2Window> = WindowSettings::new(
+        TITLE,
         [800, 400]
     )
     .exit_on_esc(true)
@@ -136,9 +136,7 @@ fn main() {
         return None
     }
 
-    // Clone the window so we can mutate the title while iterating events.
-    let window_events = window.clone();
-    for e in  window_events {
+    while let Some(e) = window.next() {
         if let Some(args) = e.update_args() {
             vm.step(args.dt as f32);
             if vm.beeping() {
